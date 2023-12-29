@@ -1,0 +1,25 @@
+.Conten-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px; 
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Conten-text {
+    text-align: justify;
+    margin-bottom: 1rem;
+    max-width: 80%;
+    margin-top: 15rem;
+  }
+  
+  .Conten-image {
+    width: 60%;
+    height: 60%;
+    margin: 1rem 0;
+  }
