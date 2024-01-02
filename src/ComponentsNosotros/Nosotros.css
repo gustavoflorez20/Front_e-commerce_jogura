@@ -1,0 +1,19 @@
+.Conten-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas, una para el texto y otra para la imagen */
+    gap: 2px; /* Separación entre las columnas */
+  }
+  
+  .Conten-text {
+    max-width: 400px; /* Ancho máximo para el bloque de texto */
+    align-self: start; /* Ajusta la alineación vertical del bloque de texto */
+  }
+  
+  .Conten-image {
+    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
+    border-radius: 62px; /* Ajusta el redondeo de la imagen según tus preferencias */
+    margin-top: 20px; /* Ajusta este valor según tus preferencias */
+  }
+  
+  
+  

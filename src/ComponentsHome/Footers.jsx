@@ -1,55 +1,73 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFacebookSquare, faYoutube, faGithub, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
+
+
 
 const Footers = () => {
   return (
-    <footer className="relative bg-blueGray-500 pt-8 pb-6">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap text-left lg:text-left">
-          <div className="w-full lg:w-6/12 px-4">
-            <h4 className="text-3xl fonat-semibold text-blueGray-700 text-black">¡Sabores con origen! </h4>
-            <h5 className="text-lg mt-0 mb-2 text-blueGray-600 text-black">
-            🏭𝗧𝗲𝗾𝘂𝗲𝗧𝗮𝗽𝗮𝘀 - Fábrica de tequeños y productos venezolanos.
-            </h5>
-            <a href="https://twitter.com/search?q=Tequetapas&src=typed_query" target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <FontAwesomeIcon icon={faTwitter} />
-            </button>
-            </a>
-            <a href="https://www.facebook.com/Tequetapasgroup" target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <FontAwesomeIcon icon={faFacebookSquare} />
-            </button>
-            </a>
-            <a href="https://www.youtube.com/@tequetapas4786" target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <FontAwesomeIcon icon={faYoutube} />
-            </button>
-            </a>
-            <a href="https://github.com/gustavoflorez20" target="_blank" rel="noopener noreferrer">
-  <button className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-    <FontAwesomeIcon icon={faGithub} />
-  </button>
-</a>
+    <footer className="bg-blue-100/80 font-sans dark:bg-orange-500">
+    <div className="container px-1 py-2 mx-auto">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
+            <div className="sm:col-span-2">
+                <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white-800 xl:text-2xl dark:text-white"> 🏭𝗧𝗲𝗾𝘂𝗲𝗧𝗮𝗽𝗮𝘀  </h1>
+                <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white-800 xl:text-2xl dark:text-white"> Fábrica de tequeños y productos venezolanos.  </h1>
+                <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white-800 xl:text-2xl dark:text-white">  #TequeñosEnEspaña #TequeTapas</h1>
 
-            #TequeñosEnEspaña #TequeTapas
-          </div>
-          <div className="w-full lg:w-6/12 px-4">
-            {/* ... (resto de tu código) ... */}
-          </div>
-        </div>
-        <hr className="my-6 border-blueGray-300" />
-        <div className="flex flex-wrap items-center md:justify-between justify-center">
-          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div className="text-sm text-blueGray-500 font-semibold py-1 text-black">
-              Copyright © <span id="get-current-year">2024</span>
-              <a href="https://www.creative-tim.com/product/notus-js" className="text-blueGray-500 hover:text-gray-800" target="_blank" rel="noopener noreferrer"> Madrid</a>
+                <div className="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+                   
+                </div>
             </div>
-          </div>
+
+            <div>
+                <p className="font-semibold text-white-800 dark:text-white">Enlaces Rápidos</p>
+
+                <div className="font-semibold text-white-800 dark:text-white">
+                    <p className="text-white-600 transition-colors duration-300 dark:text-white-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Home <a href="/"></a></p>
+                    <p className="text-white-600 transition-colors duration-300 dark:text-white-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Nosotros<a href="/nosotros"></a></p>
+                    <p className="text-white-600 transition-colors duration-300 dark:text-white-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Recetas <a href="/resetas"></a></p>
+                </div>
+            </div>
+
+            <div>
+                <p className="font-semibold text-white-800 dark:text-white">Aliados </p>
+
+                <div className="font-semibold text-white-800 dark:text-white">
+                <p className="text-white-600 transition-colors duration-300 dark:text-white-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">
+  <a href="https://maps.app.goo.gl/GrdPTH92umv3cV6S8">Tienda Madrid</a>
+</p>
+<p className="text-white-600 transition-colors duration-300 dark:text-white-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">
+  <a href="https://maps.app.goo.gl/k22JtRVCQWWKsdMj7">Tienda Valencia</a>
+</p>
+<p className="text-white-600 transition-colors duration-300 dark:text-white-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">
+  <a href="https://maps.app.goo.gl/Chp9GByqV4FUW8dX7">Tienda Barcelona</a>
+</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </footer>
+        
+       
+        
+        <div className="sm:flex sm:items-center sm:justify-between">
+            <div className="flex flex-1 gap-4 hover:cursor-pointer">
+                
+            </div>
+            
+            <div className="flex gap-4 hover:cursor-pointer">
+  <a href="https://www.facebook.com/Tequetapasgroup" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="30" height="30" alt="fb" />
+  </a>
+  <a href="https://twitter.com/search?q=Tequetapas&src=typed_query" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="30" height="30" alt="tw" />
+  </a>
+  <a href="https://www.instagram.com/tequetapasfoods/?hl=es" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="30" height="30" alt="inst" />
+  </a>
+  
+</div>
+            
+        </div>
+        <p className="font-sans p-1 text-start md:text-center md:text-lg md:p-1 text-white">© 2024 Jogura Inc. Todos los Derechos Reservados.</p>
+    </div>
+</footer>
   );
 };
 

@@ -10,6 +10,8 @@ import Promotionspage from './Containers/PromotionPage';
 import ShipPage from './Containers/ShipPage';
 import PayPage from './Containers/PayPage';
 import RecordPage from './Containers/RecordPage';
+import ShoppingCarPage from './Containers/ShoppingCarPage';
+
 function App() {
   return (
     
@@ -26,7 +28,7 @@ function App() {
       <Route path="/envios" element={<ShipPage />} />
       <Route path="/metodos" element={<PayPage />} />
       <Route path="/registro" element={<RecordPage />} />
-
+      <Route path="/carrito" element={<ShoppingCarPage />} />
     </Routes>
     </BrowserRouter>
     </div>

@@ -20,7 +20,7 @@ No nos hacemos responsables si tienes la necesidad de pedirte TODO😏
 </p>
 <div>
       <FacebookProvider appId="tu-id-de-app-de-facebook">
-        <EmbeddedPost href="https://www.facebook.com/Tequetapasgroup/videos/3025234517723013/" width="200" />
+        <EmbeddedPost href="https://www.facebook.com/Tequetapasgroup/videos/3025234517723013/" width="300" />
       </FacebookProvider>
     </div>
 

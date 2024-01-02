@@ -1,0 +1,17 @@
+.Conten-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas, una para el texto y otra para la imagen */
+    gap: 20px; /* Separación entre las columnas */
+  }
+  
+  .Conten-text {
+    max-width: 800px; /* Ancho máximo para el bloque de texto */
+  }
+  
+  .Conten-image {
+    width: 80%;
+    border-radius: 62px;
+    margin-top: 20px;
+    margin-left: 30px; /* Ajusta este valor según tus preferencias */
+}
+  

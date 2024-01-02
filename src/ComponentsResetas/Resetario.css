@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.Recetario {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: rgb(213, 221, 192);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+
+.Recetario h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.Recetario strong {
+  color: #0066cc;
+}
+
+.Recetario ul,
+.Recetario ol {
+  margin-bottom: 16px;
+}
+
+.Recetario li {
+  margin-bottom: 8px;
+}
+
+.Recetario a {
+  display: block;
+  margin-top: 16px;
+}
+
+.Recetario img {
+  max-width: 40%;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

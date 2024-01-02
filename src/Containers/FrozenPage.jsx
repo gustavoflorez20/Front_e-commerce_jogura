@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../ComponentsHome/header';
+import Header from '../ComponentsHome/Header';
 import Frozen  from '../ComponentsFrozen/Frozen';
 import Footers from '../ComponentsHome/Footers';
 

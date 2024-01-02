@@ -9,7 +9,7 @@ const RecetasPage = () => {
     <div>
       <Header/>
       <Resetas/>
-     <Footers/>
+      <Footers/>
     
     
       

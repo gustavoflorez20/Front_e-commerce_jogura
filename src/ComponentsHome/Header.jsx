@@ -1,56 +1,82 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import { Link } from 'react-router-dom';
+import { Fragment, useState } from "react";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 import {
-  ArrowPathIcon,
   Bars3Icon,
   TrashIcon,
   ShoppingCartIcon,
-  CircleStackIcon,
   XMarkIcon,
   SparklesIcon,
-  
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-
-
-
-
-
+  ShoppingBagIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
 
 const Productoss = [
-  { name: 'Congelados', description: 'Consulta nuestra Gran Variedad', href: '/productos', icon: SparklesIcon },
-  { name: 'Bebidas', description: 'Acompaña tu pedido Con una bebida tipica', href: '/drink', icon: TrashIcon },
-  { name: 'Promociones', description: 'Consulta Nuestras Promociones', href: '/promociones', icon: ShoppingCartIcon },
-  { name: 'Envios', description: 'Tiempos de espera y tarifas de envio', href: '/envios', icon: ArrowPathIcon},
-  { name: 'Metodos de Pago', description: 'Informacion sobre los como pagar tu pedido', href: '/metodos', icon: CircleStackIcon },
-]
+  {
+    name: "Congelados",
+    description: "Consulta nuestra Gran Variedad",
+    href: "/productos",
+    icon: SparklesIcon,
+  },
+  {
+    name: "Bebidas",
+    description: "Acompaña tu pedido Con una bebida tipica",
+    href: "/drink",
+    icon: TrashIcon,
+  },
+  {
+    name: "Promociones",
+    description: "Consulta Nuestras Promociones",
+    href: "/promociones",
+    icon: ShoppingCartIcon,
+  },
+];
 const callsToAction = [
-  { name: 'Instagram', href: 'https://www.instagram.com/tequetapasfoods/?hl=es', icon: PlayCircleIcon },
-  { name: 'Contacto', href: 'https://maps.app.goo.gl/GrdPTH92umv3cV6S8', icon: PhoneIcon },
-]
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/tequetapasfoods/?hl=es",
+    icon: PlayCircleIcon,
+  },
+  {
+    name: "Whatsapp",
+    href:
+      "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fxu4xpe&e=AT0KVyvqRRrLR--qgOz_McGvFme2ihffZkyBMVqyeBcHTu_YfWipBVMhNICX2znqKfGE1XW3Ch6MqcQLJNzev6QNpTLRJ1fg-VwWag",
+    icon: PhoneIcon,
+  },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white-400">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="bg-orange-500 ">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Tequetapas</span>
-            <img className="h-20 w-auto" src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UffffxC433MAX_TerAa&_nc_ht=scontent.fmad22-1.fna&oh=00_AfB3dpF39SLU7k9KqMbz6YXQJ0Yzgj2Y6xgkNevwU-aOWg&oe=658F4738" alt="tequetapas" />
+            <img
+              className="h-20 w-20 rounded-full"
+              src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TtMt3LFc1mgAX-EiyL3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfC5VrBB0asNvvVStJShAijgFTM-aZKPrehUe3J0wkHGrg&oe=659535F8"
+              alt="tequetapas"
+            />
           </a>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -59,9 +85,14 @@ export default function Header() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            
+              
               Productos
-              <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+              <ChevronDownIcon
+                className="h-5 w-5 flex-none text-gray-400"
+                aria-hidden="true"
+              />
             </Popover.Button>
 
             <Transition
@@ -81,10 +112,16 @@ export default function Header() {
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        <item.icon
+                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                          aria-hidden="true"
+                        />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <a
+                          href={item.href}
+                          className="block font-semibold text-white-900"
+                        >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
@@ -100,7 +137,10 @@ export default function Header() {
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                     >
-                      <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                      <item.icon
+                        className="h-5 w-5 flex-none text-gray-400"
+                        aria-hidden="true"
+                      />
                       {item.name}
                     </a>
                   ))}
@@ -108,29 +148,65 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/" className="text-sm font-semibold leading-6 text-white">
             Home
-            </Link>
-          <Link to='/recetas' className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            to="/recetas"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Recetas
           </Link>
-          <Link to="/nosotros" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            to="/nosotros"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Nosotros
-            </Link>
-            <Link to="/registro" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            to="/registro"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Registro
-            </Link>
-         
-         
-         
+          </Link>
+          <Link
+            to="/envios"
+            className="text-sm font-semibold leading-6 text-white"
+          >
+            Envios
+          </Link>
+          <Link
+            to="/metodos"
+            className="text-sm font-semibold leading-6 text-white"
+          >
+            Metodos de Pago
+          </Link>
+
+          <Link
+            to="/carrito"
+            className="text-sm font-semibold leading-6 text-white"
+          >
+            <ShoppingBagIcon
+              className="h-12 w-12 text-white"
+              aria-hidden="true"
+            />
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            to="/login"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
-            </Link>
+          </Link>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -138,7 +214,7 @@ export default function Header() {
               <span className="sr-only">Your Nosotros</span>
               <img
                 className="h-12 w-auto"
-                src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UffffxC433MAX_TerAa&_nc_ht=scontent.fmad22-1.fna&oh=00_AfB3dpF39SLU7k9KqMbz6YXQJ0Yzgj2Y6xgkNevwU-aOWg&oe=658F4738"
+                src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TtMt3LFc1mgAX-EiyL3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfC5VrBB0asNvvVStJShAijgFTM-aZKPrehUe3J0wkHGrg&oe=659535F8"
                 alt="tequetapas"
               />
             </a>
@@ -160,7 +236,10 @@ export default function Header() {
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                         Productos
                         <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                          className={classNames(
+                            open ? "rotate-180" : "",
+                            "h-5 w-5 flex-none"
+                          )}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
@@ -179,43 +258,56 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/recetas"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Recetas
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/nosotros"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Nosotros
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/registro"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Registrate
-                </a>
+                </Link>
               </div>
+              <Link
+                to="/envios"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              >
+                Envios
+              </Link>
+              <Link
+                to="/metodos"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              >
+                Metodos de Pago
+              </Link>
+
               <div className="py-6">
-                <a
-                  href="#"
+                <Link
+                  to="/loging"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
+  );
 }
