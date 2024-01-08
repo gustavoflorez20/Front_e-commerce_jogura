@@ -39,7 +39,7 @@ const Productoss = [
 const callsToAction = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/tequetapasfoods/?hl=es",
+    href: "hjttps://www.instagram.com/tequetapasfoods/?hl=es",
     icon: PlayCircleIcon,
   },
   {
@@ -64,14 +64,14 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to={"/"} className="-m-1.5 p-1.5">
             <span className="sr-only">Tequetapas</span>
             <img
               className="h-20 w-20 rounded-full"
               src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TtMt3LFc1mgAX-EiyL3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfC5VrBB0asNvvVStJShAijgFTM-aZKPrehUe3J0wkHGrg&oe=659535F8"
               alt="tequetapas"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
