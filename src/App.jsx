@@ -6,7 +6,7 @@ import LogingPage from './Containers/LogingPage';
 import FrozenPage from './Containers/FrozenPage';
 import DrinkPage from './Containers/DrinkPage';
 import Promotionspage from './Containers/PromotionPage';
-import ShipPage from './Containers/ShipPage';
+import UbicationPage from './Containers/UbicationPage';
 import PayPage from './Containers/PayPage';
 import RecordPage from './Containers/RecordPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage';
@@ -24,7 +24,7 @@ function App() {
       <Route path="/productos" element={<FrozenPage />} />
       <Route path="/drink" element={<DrinkPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
-      <Route path="/envios" element={<ShipPage />} />
+      <Route path="/envios" element={<UbicationPage />} />
       <Route path="/metodos" element={<PayPage />} />
       <Route path="/registro" element={<RecordPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
