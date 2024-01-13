@@ -9,6 +9,13 @@ import Promotionspage from './Containers/PromotionPage';
 import RecordPage from './Containers/RecordPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage'
 import TermsPage from './Containers/TermsPage';
+import PrivacyPage from './Containers/PrivacyPage';
+import CookiesPage from './Containers/CookiesPage';
+import LegalPage from './Containers/LegalPage';
+import FaQsPage from './Containers/FaQsPage';
+import AtcPage from './Containers/AtcPage';
+import WorkwUPage from './Containers/WorkwUPage';
+import DeliveryPage from './Containers/DeliveryPage.Jsx';
 
 
 function App() {
@@ -28,6 +35,13 @@ function App() {
       <Route path="/registro" element={<RecordPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
+      <Route path="/politicas" element= {<PrivacyPage/>} />
+      <Route path="/cookies" element= {<CookiesPage/>} />
+      <Route path="/legal" element= {<LegalPage/>} />
+      <Route path="/fAQs" element= {<FaQsPage/>} />
+      <Route path="/atencionAlCliente" element= {<AtcPage/>} />
+      <Route path="/trabajaConNosotros" element= {<WorkwUPage/>} />
+      <Route path="/entregaYRecogidas" element= {<DeliveryPage/>} />
 
     </Routes>
     </BrowserRouter>
