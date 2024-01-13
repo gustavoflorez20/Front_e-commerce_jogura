@@ -18,11 +18,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 
-
-
-
-
-const Productoss = [
+const Productos = [
   {
     name: "Congelados",
     description: "Consulta nuestra Gran Variedad",
@@ -74,8 +70,7 @@ export default function Header() {
             <span className="sr-only">Tequetapas</span>
             <img
               className="h-20 w-20 rounded-full"
-              src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TtMt3LFc1mgAX-EiyL3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfC5VrBB0asNvvVStJShAijgFTM-aZKPrehUe3J0wkHGrg&oe=659535F8"
-              alt="tequetapas"
+              src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
             />
           </a>
         </div>
@@ -91,7 +86,7 @@ export default function Header() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-xl text-white">
+            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
             
               
               Productos
@@ -112,7 +107,7 @@ export default function Header() {
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  {Productoss.map((item) => (
+                  {Productos.map((item) => (
                     <div
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -161,7 +156,6 @@ export default function Header() {
             to="/recetas"
             className="font-semibold leading-6 text-2xl text-white"
           >
-            Recetas
           </Link>
           <Link
             to="/nosotros"
@@ -250,7 +244,7 @@ export default function Header() {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...Productoss, ...callsToAction].map((item) => (
+                        {[...Productos, ...callsToAction].map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
@@ -264,18 +258,13 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
+                
                 <Link
-                  to="/"
+                  to="/Productos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                  >
+                </Link>
                   Home
-                </Link>
-                <Link
-                  to="/recetas"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Recetas
-                </Link>
                 <Link
                   to="/nosotros"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
