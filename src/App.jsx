@@ -9,6 +9,7 @@ import Promotionspage from './Containers/PromotionPage';
 import RecordPage from './Containers/RecordPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage'
 import TermsPage from './Containers/TermsPage';
+
 import PrivacyPage from './Containers/PrivacyPage';
 import CookiesPage from './Containers/CookiesPage';
 import LegalPage from './Containers/LegalPage';
@@ -16,6 +17,9 @@ import FaQsPage from './Containers/FaQsPage';
 import AtcPage from './Containers/AtcPage';
 import WorkwUPage from './Containers/WorkwUPage';
 import DeliveryPage from './Containers/DeliveryPage.Jsx';
+
+import UbicationPage from './Containers/UbicationPage';
+
 
 
 function App() {
@@ -30,11 +34,10 @@ function App() {
       <Route path="/productos" element={<FrozenPage />} />
       <Route path="/drink" element={<DrinkPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
-      
-      
       <Route path="/registro" element={<RecordPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
+
       <Route path="/politicas" element= {<PrivacyPage/>} />
       <Route path="/cookies" element= {<CookiesPage/>} />
       <Route path="/legal" element= {<LegalPage/>} />
@@ -42,6 +45,9 @@ function App() {
       <Route path="/atencionAlCliente" element= {<AtcPage/>} />
       <Route path="/trabajaConNosotros" element= {<WorkwUPage/>} />
       <Route path="/entregaYRecogidas" element= {<DeliveryPage/>} />
+
+      <Route path="/ubicacion" element= {<UbicationPage/>} />
+
 
     </Routes>
     </BrowserRouter>

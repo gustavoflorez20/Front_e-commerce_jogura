@@ -16,7 +16,7 @@ const Frozen = () => {
 
           <img
             className="mb-6 w-full h-auto" 
-            src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/245497714_1805295636325264_9084248589228716501_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=DmICYnfyS80AX8eOOPb&_nc_oc=AQm4Caj0Y6WzPILxAs-zIymC9dgZjgxiYj0XWKqqZKteiHwl3isLVaS-Xo5iUY0vyG8&_nc_ht=scontent.fmad22-1.fna&oh=00_AfBBTwoe6TXDqhf44kfLyhagQyZn_FKOSxvbNvBWUk5FdA&oe=659744B3" 
+            src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/223643901_1745312475656914_7048288701235607891_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=YsapUlPZ18IAX-lVGSG&_nc_ht=scontent.fmad22-1.fna&oh=00_AfABhZsgeY_khjUXWEB4mE6L0c89ueqNwZdKB2bG69sBJQ&oe=65A89204" 
             alt="Tequeños  Queso"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>
@@ -172,8 +172,8 @@ const Frozen = () => {
           </h2>
 
           <img
-            className="mb-6 w-full h-auto" 
-            src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/275052423_1909126339275526_3557618097490181669_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=Y7ZV3_fkXbUAX8SDPKd&_nc_oc=AQnK373T4679se3-lJOrHukAi5K0VT8-PRrWs-VWOxnWyyxlv0w7Nppkgq4neoLdY74&_nc_ht=scontent.fmad22-1.fna&oh=00_AfA2HqGE7BAI8Imx0oZMxM-eek_jhL1pcqc1oPvw000mHA&oe=659B4D64" 
+            className="mb-6 w-full h-auto " 
+            src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/275052423_1909126339275526_3557618097490181669_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=GQGmb_VOP7MAX90oeMK&_nc_oc=AQk-MBmQvlR1c5OY0whi65DiFqNMCu6LHIpITWtv_zMr10h3p0hVhXS1KtIfOxLzPho&_nc_ht=scontent.fmad22-1.fna&oh=00_AfB8yFH_B4tmimkltnt1Vb-LbSJvTOvCck5aAq87yqcy4Q&oe=65A72AE4" 
             alt="Queso de Mano"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>
@@ -194,7 +194,7 @@ const Frozen = () => {
           </h2>
 
           <img
-            className="mb-6 w-full h-auto" 
+            className="mb-6 w-full h-auto " 
             src="https://scontent.fmad22-1.fna.fbcdn.net/v/t1.6435-9/134437758_1591606777694152_2474489589198909635_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=810d5f&_nc_ohc=YPICzt_Re-MAX8vk0ze&_nc_ht=scontent.fmad22-1.fna&oh=00_AfD964atq0Q44Q5RtEaAP1sNE_mwA1LtsNHqc0qUKHbWrQ&oe=65BEAE5A" 
             alt="Hallaca"
           />
