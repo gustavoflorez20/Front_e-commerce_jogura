@@ -1,16 +1,20 @@
-import React from 'react'
-
 import Header from '../ComponentsHome/Header';
 import Conten from '../ComponentsHome/Conten';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
+/* import Navbar from '../ComponentsHome/Navbar' */
 
 
 const HomePage = () => {
   return (
     <div>
         <Header/>
+       {/*  <Navbar/> */}
         <Conten/>
-        <Footers />
+        <Section2/>
+        <Footer/>
+        
+        
     </div>
   )
 }

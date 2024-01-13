@@ -1,7 +1,8 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import Resetas from '../ComponentsResetas/Resetas';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
+
 
 
 const RecetasPage = () => {
@@ -9,7 +10,8 @@ const RecetasPage = () => {
     <div>
       <Header/>
       <Resetas/>
-      <Footers/>
+      <Section2/>
+      <Footer/>
     
     
       

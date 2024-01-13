@@ -1,14 +1,15 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import Promotion  from '../ComponentsPromotions/Promotion';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
 
 const PromotionPage = () => {
   return (
     <div>
         <Header/>
         <Promotion/>
-        <Footers />
+        <Section2 />
+        <Footer/>
 
         
 

@@ -1,14 +1,16 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import Frozen  from '../ComponentsFrozen/Frozen';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
+
 
 const FrozenPage = () => {
   return (
     <div>
         <Header/>
         <Frozen/>
-        <Footers />
+        <Section2 />
+        <Footer/>
 
         
     </div>

@@ -1,8 +1,7 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import ShoppingCar from '../ComponentsShoppingCar/ShoppingCar';
-import Footers from '../ComponentsHome/Footers';
-
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
 
 const ShoppingCarPage = () => {
   return (
@@ -10,7 +9,8 @@ const ShoppingCarPage = () => {
 
 <Header />
 <ShoppingCar />
-<Footers />
+<Section2 />
+<Footer/> 
 
     </div>
   )

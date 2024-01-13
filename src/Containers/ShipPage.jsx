@@ -1,15 +1,16 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import Ship from '../ComponentsShip/Ship';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
+
 
 const ShipPage = () => {
   return (
     <div>
       <Header/>
       <Ship/>
-     <Footers/>
-   
+     <Section2/>
+     <Footer/>   
 
 
 

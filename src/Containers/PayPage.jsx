@@ -1,13 +1,16 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import Pay  from '../ComponetsPay/Pay';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
+
+
 const PayPage = () => {
   return (
     <div>
         <Header/>
         <Pay/>
-        <Footers />
+        <Section2 />
+        <Footer/>
 
         
     </div>

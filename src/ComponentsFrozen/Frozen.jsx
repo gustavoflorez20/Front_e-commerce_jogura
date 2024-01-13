@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Frozen = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-12 flex items-center justify-center">
@@ -32,13 +33,13 @@ const Frozen = () => {
         <div className="p-1 bg-orange-200"></div>
         <div className="p-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-5">
-            Tequeños Nutella
+            Tequeños de Nutella
           </h2>
 
           <img
             className="mb-6 w-full h-auto" 
             src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/246152568_1809419035912924_4852617508220090434_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=_ZY3uFXUfoYAX8Bvpy3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfAESi_TuoxF4GDyXnjrznKl8Q1sknRcITQyHFnmBX63BQ&oe=6596476B" 
-            alt="Tequeños Nutella"
+            alt="Tequeños de Nutella"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>
           <ul className="text-sm text-gray-600 mb-6"></ul>
@@ -105,7 +106,7 @@ const Frozen = () => {
           <img
             className="mb-6 w-full h-auto" 
             src="https://scontent.fmad22-1.fna.fbcdn.net/v/t1.6435-9/161664598_1648143548707141_572440582547471514_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=810d5f&_nc_ohc=hjeHGyUmG-EAX9BBjHD&_nc_ht=scontent.fmad22-1.fna&oh=00_AfARk-gekL9n1T3nyXl2vfQmR7Ep8LgpVNd2LvrDnjNVvA&oe=65BE7F47" 
-            alt="Cachito Queso"
+            alt="Cachito con Queso"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>
           <ul className="text-sm text-gray-600 mb-6"></ul>

@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 
+
 import {
   Bars3Icon,
   TrashIcon,
@@ -15,6 +16,11 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+
+
+
+
+
 
 const Productoss = [
   {
@@ -85,7 +91,7 @@ export default function Header() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-xl text-white">
             
               
               Productos
@@ -118,13 +124,13 @@ export default function Header() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <a
-                          href={item.href}
+                        <Link to=
+                          {item.href}
                           className="block font-semibold text-white-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -135,7 +141,7 @@ export default function Header() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-3xl font-semibold leading-8  text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon
                         className="h-5 w-5 flex-none text-gray-400"
@@ -148,36 +154,36 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <Link to="/" className="text-sm font-semibold leading-6 text-white">
+          <Link to="/" className=" font-semibold leading-6 text-2xl text-white">
             Home
           </Link>
           <Link
             to="/recetas"
-            className="text-sm font-semibold leading-6 text-white"
+            className="font-semibold leading-6 text-2xl text-white"
           >
             Recetas
           </Link>
           <Link
             to="/nosotros"
-            className="text-sm font-semibold leading-6 text-white"
+            className=" font-semibold leading-6 text-2xl text-white"
           >
             Nosotros
           </Link>
           <Link
             to="/registro"
-            className="text-sm font-semibold leading-6 text-white"
+            className=" font-semibold leading-6 text-2xl text-white"
           >
             Registro
           </Link>
           <Link
             to="/envios"
-            className="text-sm font-semibold leading-6 text-white"
+            className=" font-semibold leading-6 text-2xl text-white"
           >
             Envios
           </Link>
           <Link
             to="/metodos"
-            className="text-sm font-semibold leading-6 text-white"
+            className=" font-semibold leading-6 text-2xl text-white"
           >
             Metodos de Pago
           </Link>

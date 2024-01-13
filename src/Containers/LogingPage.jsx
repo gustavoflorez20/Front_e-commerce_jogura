@@ -1,7 +1,8 @@
-import React from 'react'
 import Header from '../ComponentsHome/Header';
 import  LogingUser from '../ComponentsLogin/LogingUser';
-import Footers from '../ComponentsHome/Footers';
+import Section2 from '../ComponentsHome/Section2'
+import Footer from '../ComponentsHome/Footer';
+
 
 
 
@@ -10,7 +11,8 @@ const LogingPage = () => {
     <div>
       <Header/>
       <LogingUser/>
-      <Footers />
+      <Section2/>
+      <Footer/>
       
     </div>
   )
