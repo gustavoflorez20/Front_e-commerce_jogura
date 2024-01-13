@@ -6,9 +6,10 @@ import LogingPage from './Containers/LogingPage';
 import FrozenPage from './Containers/FrozenPage';
 import DrinkPage from './Containers/DrinkPage';
 import Promotionspage from './Containers/PromotionPage';
-import ShipPage from './Containers/ShipPage';
 import RecordPage from './Containers/RecordPage';
-import ShoppingCarPage from './Containers/ShoppingCarPage';
+import ShoppingCarPage from './Containers/ShoppingCarPage'
+import TermsPage from './Containers/TermsPage';
+
 
 function App() {
   return (
@@ -22,10 +23,12 @@ function App() {
       <Route path="/productos" element={<FrozenPage />} />
       <Route path="/drink" element={<DrinkPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
-      <Route path="/envios" element={<ShipPage />} />
-      <Route path="/envios" element={<UbicationPage />} />
+      
+      
       <Route path="/registro" element={<RecordPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
+      <Route path="/terminos" element= {<TermsPage/>} />
+
     </Routes>
     </BrowserRouter>
     </div>

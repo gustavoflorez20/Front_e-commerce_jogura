@@ -1,6 +1,6 @@
 import logoFooter from "../Images/LOGO2.png";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-orange-400   p-8 xl:p-10">
@@ -59,9 +59,11 @@ const Footer = () => {
         <div className="flex  items-center gap-10">
 
 
-          <p className="font-semibold font-Anton  text-white-800 dark:text-white  ">
-            Terminos y condiciones{" "}
-          </p>
+        <p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/terminos" className="text-white-800 dark:text-white">
+    Terminos y condiciones
+  </Link>{" "}
+</p>
 
           <p className="font-semibold font-Anton  text-white-800 dark:text-white ">
             Politica de privacidad{" "}
