@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import { FiShoppingCart } from "react-icons/fi";
 
 
 import {
@@ -9,7 +10,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
   SparklesIcon,
-  ShoppingBagIcon,
+  
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
@@ -152,11 +153,7 @@ export default function Header() {
           <Link to="/" className=" font-semibold leading-6 text-2xl text-white">
             Home
           </Link>
-          <Link
-            to="/recetas"
-            className="font-semibold leading-6 text-2xl text-white"
-          >
-          </Link>
+
           <Link
             to="/nosotros"
             className=" font-semibold leading-6 text-2xl text-white"
@@ -175,18 +172,13 @@ export default function Header() {
           >
             Envios
           </Link>
-          <Link
-            to="/metodos"
-            className=" font-semibold leading-6 text-2xl text-white"
-          >
-            Metodos de Pago
-          </Link>
+       
 
           <Link
             to="/carrito"
             className="text-sm font-semibold leading-6 text-white"
           >
-            <ShoppingBagIcon
+            <FiShoppingCart
               className="h-12 w-12 text-white"
               aria-hidden="true"
             />
@@ -195,10 +187,12 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             to="/login"
-            className="text-sm font-semibold leading-6 text-white"
+            className="text-lx font-semibold leading-6 text-2xl text-white"
           >
-            Log in <span aria-hidden="true">&rarr;</span>
+            Login <span aria-hidden="true">&rarr;</span>
           </Link>
+
+
         </div>
       </nav>
       <Dialog
@@ -262,9 +256,14 @@ export default function Header() {
                 <Link
                   to="/Productos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+
                   >
                 </Link>
                   Home
+
+               
+               
+
                 <Link
                   to="/nosotros"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -293,10 +292,10 @@ export default function Header() {
 
               <div className="py-6">
                 <Link
-                  to="/loging"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  to="/login"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 "
                 >
-                  Log in
+                  Login
                 </Link>
               </div>
             </div>
