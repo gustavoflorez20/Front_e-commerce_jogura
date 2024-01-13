@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import "./UbicationComp.css";
 import { useState } from "react";
 
+
 const ShipmentsComponent = () => {
   const [location, setLocation] = useState({
     lat: 39.57429594915982,
@@ -38,46 +39,54 @@ const ShipmentsComponent = () => {
         </MapContainer>
 
         <div >
-          <div className="text-center gap-4 mt-4 mr-10">
-            <h1>Descubre donde estamos.</h1>
-            <h2>Pincha aquí</h2>
+        <div className="text-center gap-4 mt-4 mr-10">
+    <h1>Descubre donde estamos.</h1>
+    <h2>Pincha aquí</h2>
 
-            <div className="button-group">
-              <div>
-                <p>tequetapas Madrid</p>
-                <button
-                  className="font-bold"
-                  onClick={() =>
-                    changeLocation(40.30140963672347, -3.4382311333776467)
-                  }
-                >
-                  Madrid
-                </button>
-              </div>
+    <div className="button-group">
+      <div className="mb-4">
+        <p>Tequetapas Madrid</p>
+        <button
+          className="font-bold"
+          onClick={() =>
+            changeLocation(40.30140963672347, -3.4382311333776467)
+          }
+        >
+          Madrid
+        </button>
+      </div>
 
-              <div className="font-semibold">
-                <p>tequetapas Valencia</p>
-                <button
-                  className="font-bold"
-                  onClick={() =>
-                    changeLocation(39.45922312927069, -0.3739818288356553)
-                  }
-                >
-                  Valencia
-                </button>
-              </div>
+      <div className="mb-4">
+        <p>Tequetapas Valencia</p>
+        <button
+          className="font-bold"
+          onClick={() =>
+            changeLocation(39.45922312927069, -0.3739818288356553)
+          }
+        >
+          Valencia
+        </button>
+      </div>
 
-              <div>
-                <p>tequetapas Barcelona</p>
-                <button
-                  className="font-bold"
-                  onClick={() =>
-                    changeLocation(41.38525396691657, 2.1504338404791024)
-                  }
-                >
-                  Barcelona
+      <div className="mb-4">
+        <p>Tequetapas Barcelona</p>
+        <button
+          className="font-bold"
+          onClick={() =>
+            changeLocation(41.38525396691657, 2.1504338404791024)
+          }
+        >
+          Barcelona
                 </button>
+
+  
+
+  
+ 
+  
+
               </div>
+              
             </div>
           </div>
         </div>

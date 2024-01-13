@@ -19,39 +19,22 @@ const Footer = () => {
               🏭𝗧𝗲𝗾𝘂𝗲𝗧𝗮𝗽𝗮𝘀 - Fábrica de tequeños y productos venezolanos.
             </h1>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="bg-social text-orange-500 block p-2 rounded-full">
-              <a
-                href="https://www.instagram.com/tequetapasfoods/?hl=es"
-                target="blank"
-              >
-                <FaInstagram size={24} />
-              </a>
-            </div>
-            <div className="bg-social  text-orange-500 block p-2 rounded-full">
-              <a
-                href="https://www.facebook.com/Tequetapasgroup/?locale=es_ES"
-                target="blank"
-              >
-                <FaFacebook size={24} />
-              </a>
-            </div>
-            <div className="bg-social  text-orange-500 block p-2 rounded-full">
-              <a
-                href="https://www.youtube.com/watch?v=BsWvr6K5jPU"
-                target="blank"
-              >
-                <FaYoutube size={24} />
-              </a>
-            </div>
-            <div className="bg-social  text-orange-500 block p-2 rounded-full">
-              <a href="https://www.tiktok.com/@tequetapasfoods" target="blank">
-                <FaTiktok size={24} />
-              </a>
-            </div>
+          
+            <div className="flex gap-4 hover:cursor-pointer">
+  <a href="https://www.facebook.com/Tequetapasgroup" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="40" height="40" alt="fb" />
+  </a>
+  <a href="https://twitter.com/search?q=Tequetapas&src=typed_query" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="40" height="40" alt="tw" />
+  </a>
+  <a href="https://www.instagram.com/tequetapasfoods/?hl=es" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="40" height="40" alt="inst" />
+  </a>
+  
+</div>
           </div>
         </div>
-      </div>
+    
 
       <section className="flex justify-between gap-4 p-8 ">
 

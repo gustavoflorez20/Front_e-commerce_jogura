@@ -67,7 +67,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Tequetapas</span>
             <img
               className="h-20 w-20 rounded-full"
@@ -167,10 +167,10 @@ export default function Header() {
             Registro
           </Link>
           <Link
-            to="/envios"
+            to="/ubicacion"
             className=" font-semibold leading-6 text-2xl text-white"
           >
-            Envios
+            Ubicacion
           </Link>
        
 

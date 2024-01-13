@@ -9,6 +9,7 @@ import Promotionspage from './Containers/PromotionPage';
 import RecordPage from './Containers/RecordPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage'
 import TermsPage from './Containers/TermsPage';
+import UbicationPage from './Containers/UbicationPage';
 
 
 function App() {
@@ -23,11 +24,10 @@ function App() {
       <Route path="/productos" element={<FrozenPage />} />
       <Route path="/drink" element={<DrinkPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
-      
-      
       <Route path="/registro" element={<RecordPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
+      <Route path="/ubicacion" element= {<UbicationPage/>} />
 
     </Routes>
     </BrowserRouter>
