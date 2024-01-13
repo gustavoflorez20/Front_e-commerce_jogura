@@ -44,45 +44,57 @@ const Footer = () => {
 
         <p className="font-semibold font-Anton text-white-800 dark:text-white">
   <Link to="/terminos" className="text-white-800 dark:text-white">
-    Terminos y condiciones
+    Terminos y Condiciones
   </Link>{" "}
 </p>
 
-          <p className="font-semibold font-Anton  text-white-800 dark:text-white ">
-            Politica de privacidad{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/politicas" className="text-white-800 dark:text-white">
+    Politicas de Privacidad
+  </Link>{" "}
+</p>
 
-          <p className="font-semibold font-Anton   rounded-3xl  text-white-800 dark:text-white ">
-            Politica de Cookies{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/cookies" className="text-white-800 dark:text-white">
+    Cookies
+  </Link>{" "}
+</p>
 
-          <p className="font-semibold font-Anton   rounded-3xl  text-white-800 dark:text-white ">
-            Aviso Legal{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/legal" className="text-white-800 dark:text-white">
+    Aviso Legal
+  </Link>{" "}
+</p>
 
-           {/*      <p className="font-semibold font-Anton  rounded-3xl  text-white-800 dark:text-white ">
-            Información al Consumidor{" "}
-          </p> */}
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/FAQs" className="text-white-800 dark:text-white">
+    FAQs
+  </Link>{" "}
+</p>
 
-          <p className="font-semibold font-Anton rounded-3xl   text-white-800 dark:text-white ">
-            FAQs{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/atencionAlCliente" className="text-white-800 dark:text-white">
+    Atencion de Cliente
+  </Link>{" "}
+</p>
 
-          <p className="font-semibold font-Anton  rounded-3xl text-white-800 dark:text-white  ">
-            Atención al Cliente{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/trabajaConNosotros" className="text-white-800 dark:text-white">
+    Trabaja con Nosotros
+  </Link>{" "}
+</p>
 
-          <p className="font-semibold font-Anton rounded-sm  text-white-800 dark:text-white  hover:bg-primary">
-            Trabaja con nosotros{" "}
-          </p>
-
-          <p className="font-semibold font-Anton rounded-sm text-white-800 dark:text-white  hover:bg-primary">
-          Entrega y recogida{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <Link to="/entregaYRecogidas" className="text-white-800 dark:text-white">
+    Entrega y Recogidas
+  </Link>{" "}
+</p>
       
-          <p className="font-semibold font-Anton rounded-sm   text-white-800 dark:text-white  hover:bg-primary">
-    Contactanos{" "}
-          </p>
+<p className="font-semibold font-Anton text-white-800 dark:text-white">
+  <a href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20" className="text-white-800 dark:text-white">
+    Contactanos
+  </a>{" "}
+</p>
 
           
         </div>
