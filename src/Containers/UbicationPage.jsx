@@ -1,6 +1,6 @@
 import Header from '../ComponentsHome/Header';
 import Ubication from '../ComponentsUbication/Ubication';
-import Section2 from '../ComponentsHome/Section2'
+/* import Section2 from '../ComponentsHome/Section2' */
 import Footer from '../ComponentsHome/Footer';
 
 
@@ -9,7 +9,7 @@ const ShipPage = () => {
     <div>
       <Header/>
       <Ubication/>
-     <Section2/>
+ {/*     <Section2/> */}
      <Footer/>   
 
 

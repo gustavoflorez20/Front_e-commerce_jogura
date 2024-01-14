@@ -3,9 +3,9 @@ display: flexbox;
 width: 700px;
 height: 500px;
 padding: auto;
-margin-top: 12px;
-margin-left: 12px;
-margin-bottom: 12px;
+margin-top: 15px;
+margin-left: 15px;
+margin-bottom: 15px;
 justify-content: flex-start;
 align-items: flex-start;
 }
