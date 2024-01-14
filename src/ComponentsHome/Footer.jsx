@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-orange-400   p-8 xl:p-10">
+    <footer className="bg-orange-500   p-8 xl:p-5">
 
 
       <div>
@@ -39,58 +39,58 @@ const Footer = () => {
       <section className="flex justify-between gap-4 p-8 ">
 
 
-        <div className="flex  items-center gap-10">
+        <div className="flex  items-center gap-24">
 
 
         <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/terminos" className="text-white-800 dark:text-white">
+  <Link to="/terminos" className="text-white-800 dark: text-white">
     Terminos y Condiciones
   </Link>{" "}
 </p>
 
 <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/politicas" className="text-white-800 dark:text-white">
+  <Link to="/politicas" className="text-white-800 dark: text-white">
     Politicas de Privacidad
   </Link>{" "}
 </p>
 
 <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/cookies" className="text-white-800 dark:text-white">
-    Cookies
+  <Link to="/cookies" className="text-white-800 dark: text-white">
+    Politica de Cookies
   </Link>{" "}
 </p>
 
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
+{/* <p className="font-semibold font-Anton text-white-800 dark:text-white">
   <Link to="/legal" className="text-white-800 dark:text-white">
     Aviso Legal
   </Link>{" "}
-</p>
+</p> */}
 
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
+{/* <p className="font-semibold font-Anton text-white-800 dark:text-white">
   <Link to="/FAQs" className="text-white-800 dark:text-white">
     FAQs
   </Link>{" "}
-</p>
+</p> */}
 
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
+{/* <p className="font-semibold font-Anton text-white-800 dark:text-white">
   <Link to="/atencionAlCliente" className="text-white-800 dark:text-white">
     Atencion de Cliente
   </Link>{" "}
-</p>
+</p> */}
 
 <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/trabajaConNosotros" className="text-white-800 dark:text-white">
+  <Link to="/trabajaConNosotros" className="text-white-800 dark: text-white">
     Trabaja con Nosotros
   </Link>{" "}
 </p>
 
 <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/entregaYRecogidas" className="text-white-800 dark:text-white">
+  <Link to="/entregaYRecogidas" className="text-white-800 dark: text-white">
     Entrega y Recogidas
   </Link>{" "}
 </p>
       
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
+<p className="font-semibold font-Anton text-white-800 dark: text-white">
   <a href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20" className="text-white-800 dark:text-white">
     Contactanos
   </a>{" "}
@@ -107,7 +107,7 @@ const Footer = () => {
 
 
       <div>
-        <p className="flex items-center justify-center font-semibold">
+        <p className="text-white flex items-center justify-center font-semibold">
           &copy; 2024 JOGURA. Todos los derechos reservados.
         </p>
       </div>

@@ -63,11 +63,11 @@ export default function Header() {
   return (
     <header className="bg-orange-500 ">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px20"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.0">
             <span className="sr-only">Tequetapas</span>
             <img
               className="h-20 w-20 rounded-full"
@@ -85,7 +85,14 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+
+{/*      homeee  
+          <Link to="/" className=" font-semibold leading-6 text-2x1 text-white">
+            Home
+          </Link> */} 
+
+
+          <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
             
@@ -150,9 +157,6 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <Link to="/" className=" font-semibold leading-6 text-2xl text-white">
-            Home
-          </Link>
 
           <Link
             to="/nosotros"
