@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-orange-400   p-8 xl:p-10">
+    <footer className="bg-orange-500   p-8 xl:p-10">
 
 
       <div>
