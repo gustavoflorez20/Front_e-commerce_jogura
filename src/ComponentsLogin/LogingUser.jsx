@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 const LogingUser = () => {
   return (
     <div>

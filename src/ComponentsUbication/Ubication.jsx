@@ -20,7 +20,7 @@ const ShipmentsComponent = () => {
     <>
       <div className=" flex">
         <div className="map-container">
-          <MapContainer center={location} zoom={5}>
+          <MapContainer center={location} zoom={10}>
             <TileLayer
               url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -37,25 +37,21 @@ const ShipmentsComponent = () => {
           </MapContainer>
 
           <div>
-            <div className="text-center gap-4 mt-4 mr-10 font-bold mt-8 ">
+            <div className="text-center gap-4 mt-4 mr-10">
               <h1>Descubre donde estamos.</h1>
-            </div>
-            <div>
-              <br />
-              <br />
-              <br />
-              <br />
+              <h2>Pincha aquí</h2>
 
-              <div className="button-group ml-6 mr-6  shadow-md shadow-orange-400">
+              <br/><br/><br/><br/>
+
+              <div className="button-group">
                 <div className="mb-4">
                   <h1>Tequetapas Madrid</h1>
                   <p>
                     Dirección: C. del Pilar, 7, 28500 Arganda del Rey, Madrid
                   </p>
-                  <p>Teléfono: 664 01 86 27</p>
-                  <br />
+                  <p>Teléfono: 664 01 86 27</p><br/>
                   <button
-                    className="font-bold text-white"
+                    className="font-bold"
                     onClick={() =>
                       changeLocation(40.30140963672347, -3.4382311333776467)
                     }
@@ -64,15 +60,14 @@ const ShipmentsComponent = () => {
                   </button>
                 </div>
 
-                <div className="mb-4  ">
+                <div className="mb-4">
                   <p>Tequetapas Valencia</p>
                   <p>
                     Dirección: C. del Pilar, 7, 28500 Arganda del Rey, Madrid
                   </p>
-                  <p>Teléfono: 664 01 86 27</p>
-                  <br />
+                  <p>Teléfono: 664 01 86 27</p><br/>
                   <button
-                    className="font-bold text-white"
+                    className="font-bold"
                     onClick={() =>
                       changeLocation(39.45922312927069, -0.3739818288356553)
                     }
@@ -86,10 +81,9 @@ const ShipmentsComponent = () => {
                   <p>
                     Dirección: C. del Pilar, 7, 28500 Arganda del Rey, Madrid
                   </p>
-                  <p>Teléfono: 664 01 86 27</p>
-                  <br />
+                  <p>Teléfono: 664 01 86 27</p><br/>
                   <button
-                    className="font-bold text-white"
+                    className="font-bold"
                     onClick={() =>
                       changeLocation(41.38525396691657, 2.1504338404791024)
                     }

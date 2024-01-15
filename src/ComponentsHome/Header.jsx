@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
-
+import { FaSearch } from "react-icons/fa";
 
 import {
   Bars3Icon,
@@ -36,19 +36,18 @@ const Productos = [
     name: "Promociones",
     description: "Consulta Nuestras Promociones",
     href: "/promociones",
-    icon: ShoppingCartIcon,
+    icon: PlayCircleIcon,
   },
 ];
 const callsToAction = [
   {
-    name: "Instagram",
-    href: "https://www.instagram.com/tequetapasfoods/?hl=es",
-    icon: PlayCircleIcon,
+    name: "Comprar",
+    href: "/carrito",
+    icon: FiShoppingCart,
   },
   {
-    name: "Whatsapp",
-    href:
-      "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fxu4xpe&e=AT0KVyvqRRrLR--qgOz_McGvFme2ihffZkyBMVqyeBcHTu_YfWipBVMhNICX2znqKfGE1XW3Ch6MqcQLJNzev6QNpTLRJ1fg-VwWag",
+    name: "Contacto",
+    href:"https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20",
     icon: PhoneIcon,
   },
 ];
@@ -85,7 +84,7 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-
+        <input className='border-2 border-black rounded-md'   type="text" /> <a href="#"className="text-3xl font-extrabold leading-6 text-black-400 rounded-3xl p-2 text-white "><FaSearch /></a>
 {/*      homeee  
           <Link to="/" className=" font-semibold leading-6 text-2x1 text-white">
             Home
@@ -165,16 +164,16 @@ export default function Header() {
             Nosotros
           </Link>
           <Link
-            to="/registerUsers"
+            to="/registro"
             className=" font-semibold leading-6 text-2xl text-white"
           >
-            Registrate
+            Registro
           </Link>
           <Link
             to="/ubicacion"
             className=" font-semibold leading-6 text-2xl text-white"
           >
-            Sedes
+            Ubicacion
           </Link>
        
 
