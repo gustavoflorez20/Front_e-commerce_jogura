@@ -3,10 +3,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-
     <footer className="bg-orange-500   p-8 xl:p-5">
-
-
       <div>
         <div className="flex items-center justify-between gap-4 border-b p-8 border-primary">
           <img
@@ -20,92 +17,107 @@ const Footer = () => {
               🏭𝗧𝗲𝗾𝘂𝗲𝗧𝗮𝗽𝗮𝘀 - Fábrica de tequeños y productos venezolanos.
             </h1>
           </div>
-          
-            <div className="flex gap-4 hover:cursor-pointer">
-  <a href="https://www.facebook.com/Tequetapasgroup" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="40" height="40" alt="fb" />
-  </a>
-  <a href="https://twitter.com/search?q=Tequetapas&src=typed_query" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="40" height="40" alt="tw" />
-  </a>
-  <a href="https://www.instagram.com/tequetapasfoods/?hl=es" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="40" height="40" alt="inst" />
-  </a>
-  
-</div>
+
+          <div className="flex gap-4 hover:cursor-pointer">
+            <a
+              href="https://www.facebook.com/Tequetapasgroup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg"
+                width="40"
+                height="40"
+                alt="fb"
+              />
+            </a>
+            <a
+              href="https://twitter.com/search?q=Tequetapas&src=typed_query"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg"
+                width="40"
+                height="40"
+                alt="tw"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/tequetapasfoods/?hl=es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg"
+                width="40"
+                height="40"
+                alt="inst"
+              />
+            </a>
           </div>
         </div>
-    
+      </div>
 
-      <section className="flex justify-between gap-4 p-8 ">
+      <section className="flex justify-between  gap-4 p-8 ">
+        <div className="flex  items-center gap-20">
+          <p className="font-semibold font-Anton text-white-800 dark:text-white">
+            <Link to="/terminos" className="text-white-800 dark: text-white">
+              Terminos y Condiciones
+            </Link>{" "}
+          </p>
 
+          <p className="font-semibold font-Anton text-white-800 dark:text-white">
+            <Link to="/politicas" className="text-white-800 dark: text-white">
+              Politicas de Privacidad
+            </Link>{" "}
+          </p>
 
-        <div className="flex  items-center gap-24">
+          <p className="font-semibold font-Anton text-white-800 dark:text-white">
+            <Link to="/cookies" className="text-white-800 dark: text-white">
+              Politica de Cookies
+            </Link>{" "}
+          </p>
 
+          <p className="font-semibold font-Anton text-white-800 dark:text-white">
+            <Link
+              to="/trabajaConNosotros"
+              className="text-white-800 dark: text-white"
+            >
+              Trabaja con Nosotros
+            </Link>{" "}
+          </p>
 
-        <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/terminos" className="text-white-800 dark: text-white">
-    Terminos y Condiciones
-  </Link>{" "}
-</p>
+          <p className="font-semibold font-Anton text-white-800 dark:text-white">
+            <Link
+              to="/entregaYRecogidas"
+              className="text-white-800 dark: text-white"
+            >
+              Entrega y Recogidas
+            </Link>{" "}
+          </p>
 
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/politicas" className="text-white-800 dark: text-white">
-    Politicas de Privacidad
-  </Link>{" "}
-</p>
+          <p className="font-semibold font-Anton text-white-800 dark: text-white">
+            <a
+              href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
+              className="text-white-800 dark:text-white"
+            >
+              Contactanos
+            </a>{" "}
+          </p>
 
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/cookies" className="text-white-800 dark: text-white">
-    Politica de Cookies
-  </Link>{" "}
-</p>
-
-{/* <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/legal" className="text-white-800 dark:text-white">
-    Aviso Legal
-  </Link>{" "}
-</p> */}
-
-{/* <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/FAQs" className="text-white-800 dark:text-white">
-    FAQs
-  </Link>{" "}
-</p> */}
-
-{/* <p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/atencionAlCliente" className="text-white-800 dark:text-white">
-    Atencion de Cliente
-  </Link>{" "}
-</p> */}
-
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/trabajaConNosotros" className="text-white-800 dark: text-white">
-    Trabaja con Nosotros
-  </Link>{" "}
-</p>
-
-<p className="font-semibold font-Anton text-white-800 dark:text-white">
-  <Link to="/entregaYRecogidas" className="text-white-800 dark: text-white">
-    Entrega y Recogidas
-  </Link>{" "}
-</p>
-      
-<p className="font-semibold font-Anton text-white-800 dark: text-white">
-  <a href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20" className="text-white-800 dark:text-white">
-    Contactanos
-  </a>{" "}
-</p>
-
-          
+          <p className="font-semibold font-Anton text-white-800 dark: text-white">
+            <a
+              href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
+              className="text-white-800 dark:text-white"
+            >
+              Atencion al cliente
+            </a>{" "}
+          </p>
         </div>
-        
 
         <br />
-        
       </section>
-
-
 
       <div>
         <p className="text-white flex items-center justify-center font-semibold">

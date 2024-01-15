@@ -165,16 +165,16 @@ export default function Header() {
             Nosotros
           </Link>
           <Link
-            to="/registro"
+            to="/registerUsers"
             className=" font-semibold leading-6 text-2xl text-white"
           >
-            Registro
+            Registrate
           </Link>
           <Link
             to="/ubicacion"
             className=" font-semibold leading-6 text-2xl text-white"
           >
-            Ubicacion
+            Sedes
           </Link>
        
 
