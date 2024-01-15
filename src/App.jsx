@@ -6,7 +6,7 @@ import LogingPage from './Containers/LogingPage';
 import FrozenPage from './Containers/FrozenPage';
 import DrinkPage from './Containers/DrinkPage';
 import Promotionspage from './Containers/PromotionPage';
-import RecordPage from './Containers/RecordPage';
+import RegisterPage from './Containers/RegisterPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage'
 import TermsPage from './Containers/TermsPage';
 
@@ -19,7 +19,6 @@ import WorkwUPage from './Containers/WorkwUPage';
 import DeliveryPage from './Containers/DeliveryPage.Jsx';
 
 import UbicationPage from './Containers/UbicationPage';
-import FormsPage from './Containers/FormsPage';
 
 
 
@@ -35,9 +34,10 @@ function App() {
       <Route path="/productos" element={<FrozenPage />} />
       <Route path="/drink" element={<DrinkPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
-      <Route path="/registro" element={<RecordPage />} />
+      <Route path="/registerUsers" element={<RegisterPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
+
       <Route path="/politicas" element= {<PrivacyPage/>} />
       <Route path="/cookies" element= {<CookiesPage/>} />
       <Route path="/legal" element= {<LegalPage/>} />
@@ -45,8 +45,8 @@ function App() {
       <Route path="/atencionAlCliente" element= {<AtcPage/>} />
       <Route path="/trabajaConNosotros" element= {<WorkwUPage/>} />
       <Route path="/entregaYRecogidas" element= {<DeliveryPage/>} />
+
       <Route path="/ubicacion" element= {<UbicationPage/>} />
-      <Route path= "/contactanos" element = {<FormsPage/>}/>
 
 
     </Routes>

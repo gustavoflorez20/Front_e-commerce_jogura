@@ -1,51 +1,45 @@
-
+import React from 'react'
 
 const Terms = () => {
   return (
     <div>
       
-    <h1 className="font-bold">TERMINOS Y CONDICIONES</h1>
+    TERMINOS Y CONDICIONES
 
-    La presente Política de Privacidad tiene por objeto informar a los usuarios del sitio web sobre el tratamiento y protección de los datos personales de los usuarios y clientes que puedan ser recabados por la navegación o contratación de servicios a través de su sitio web.<br/><br/>
+    La presente Política de Privacidad tiene por objeto informar a los usuarios del sitio web sobre el tratamiento y protección de los datos personales de los usuarios y clientes que puedan ser recabados por la navegación o contratación de servicios a través de su sitio web.
     
-    En este sentido, TEQUETAPAS FOODS, S.L. (en adelante, “TEQUETAPAS FOODS ESPAÑA”) garantiza el cumplimiento de lo dispuesto en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, en el Reglamento General de Protección de Datos (EU) 2016/679 y en lo dispuesto en el artículo 10 de la Ley 34/2002, del 11 de julio, de servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE).<br/><br/>
+    En este sentido, TEQUETAPAS FOODS, S.L. (en adelante, “TEQUETAPAS FOODS ESPAÑA”) garantiza el cumplimiento de lo dispuesto en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, en el Reglamento General de Protección de Datos (EU) 2016/679 y en lo dispuesto en el artículo 10 de la Ley 34/2002, del 11 de julio, de servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE).
     
-    <h1 className="font-bold">RESPONSABLE DEL TRATAMIENTO</h1><br/>
+    RESPONSABLE DEL TRATAMIENTO
     
-    Denominación social: TEQUETAPAS FOODS, S.L.<br/>
-    N.I.F.: B- 88095674<br/>
-    Domicilio social: Calle de Severo Ochoa 7, Nave 5, Modulo A, 28521 Rivas Vaciamadrid (Madrid)<br/>
-    Registro mercantil de Madrid: xxxxxxxx, Madrid, xxxxx.<br/>
-    Tomo xx.xxxx, Folio x, Libro x, Hoja M xxxxxx.<br/>
-    Contacto: xxxxxxxxxxxx<br/>
-    Sitio Web: http://es.tequetapasfoods.com/<br/><br/>
+    Denominación social: TEQUETAPAS FOODS, S.L.
+    N.I.F.: B- 88095674
+    Domicilio social: Calle de Severo Ochoa 7, Nave 5, Modulo A, 28521 Rivas Vaciamadrid (Madrid)
+    Registro mercantil de Madrid: xxxxxxxx, Madrid, xxxxx.
+    Tomo xx.xxxx, Folio x, Libro x, Hoja M xxxxxx.
+    Contacto: xxxxxxxxxxxx
+    Sitio Web: http://es.tequetapasfoods.com/
     El usuario podrá contactar con el Delegado de Protección de Datos para resolver sus dudas relacionadas con el tratamiento de sus datos personales a la siguiente dirección: [●].
     
-    <span>TEQUETAPAS FOODS ESPAÑA </span>   se compromete a conservar la información facilitada por los usuarios en la más estricta confidencialidad, evitando accesos no autorizados, manipulación de información, la pérdida, destrucción o robo de información. Para ello, TEQUETAPAS FOODS ESPAÑA aplicará las medidas de seguridad que establece la legislación vigente.
+    TEQUETAPAS FOODS ESPAÑA se compromete a conservar la información facilitada por los usuarios en la más estricta confidencialidad, evitando accesos no autorizados, manipulación de información, la pérdida, destrucción o robo de información. Para ello, TEQUETAPAS FOODS ESPAÑA aplicará las medidas de seguridad que establece la legislación vigente.
     
-    <br/>AMBITO DE APLICACIÓN<br/><br/>
+    AMBITO DE APLICACIÓN
     
-    La presente Política de Privacidad resulta de aplicación a todos los usuarios que utilicen los servicios de la página web, con independencia del lugar y del momento en que operen.<br/><br/>
+    La presente Política de Privacidad resulta de aplicación a todos los usuarios que utilicen los servicios de la página web, con independencia del lugar y del momento en que operen.
     
     RECOGIDA, FINALIDAD Y TRATAMIENTO DE DATOS
     
     TEQUETAPAS FOODS ESPAÑA tiene el deber de informar a los usuarios de su sitio web acerca de la recogida de datos de carácter personal que pueda llevarse a cabo, bien mediante el envío de correo electrónico o bien al contactar a través de los formularios de contacto del sitio web. En este sentido, TEQUETAPAS FOODS ESPAÑA será considerado como responsable del tratamiento de los datos recabados mediante los medios anteriormente descritos.
     
     Con carácter enunciativo, TEQUETAPAS FOODS ESPAÑA informa que podrá tratar los datos personales de los usuarios para las siguientes finalidades:
-    <ul>
-
-<li>Gestionar adecuadamente la página web y velar por la seguridad de los usuarios.</li>
     
-    <li>• Facilitar la navegación y orientarla a las preferencias de los usuarios.</li>
-
-<li>• Comprobar en determinados casos la veracidad de sus informaciones.</li>
-<li>• La atención en la gestión al cliente, usuario o interesado y contestar a las preguntas, sugerencias o reclamaciones que hagan llegar.</li>    
-    <li>• La inclusión en la agenda de contactos.</li>
-    <li>• La prestación de servicios.</li>
+    • Gestionar adecuadamente la página web y velar por la seguridad de los usuarios.
+    • Facilitar la navegación y orientarla a las preferencias de los usuarios.
+    • Comprobar en determinados casos la veracidad de sus informaciones.
+    • La atención en la gestión al cliente, usuario o interesado y contestar a las preguntas, sugerencias o reclamaciones que hagan llegar.
+    • La inclusión en la agenda de contactos.
+    • La prestación de servicios.
     
-
-    </ul>
-    •     
     Todos los datos personales, que sean recogidos a través del sitio web, y por tanto tengan la consideración de datos de carácter personal, serán incorporados en el Registro de Actividad titularidad del responsable del fichero (TEQUETAPAS FOODS ESPAÑA, SL).
     
     Asimismo, TEQUETAPAS FOODS ESPAÑA se compromete a tratar los datos de carácter personal de conformidad con lo establecido en la normativa aplicable y, en particular, a tratar aquellos datos a los que tenga acceso aplicando las medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado, garantizando en todo momento la confidencialidad, integridad y disponibilidad permanentes de los sistemas y servicios de tratamiento.
