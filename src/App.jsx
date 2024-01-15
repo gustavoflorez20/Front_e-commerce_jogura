@@ -6,7 +6,7 @@ import LogingPage from './Containers/LogingPage';
 import FrozenPage from './Containers/FrozenPage';
 import DrinkPage from './Containers/DrinkPage';
 import Promotionspage from './Containers/PromotionPage';
-import RecordPage from './Containers/RecordPage';
+import RegisterPage from './Containers/RegisterPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage'
 import TermsPage from './Containers/TermsPage';
 
@@ -34,7 +34,7 @@ function App() {
       <Route path="/productos" element={<FrozenPage />} />
       <Route path="/drink" element={<DrinkPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
-      <Route path="/registro" element={<RecordPage />} />
+      <Route path="/registerUsers" element={<RegisterPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
 
