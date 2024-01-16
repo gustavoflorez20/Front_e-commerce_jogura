@@ -1,5 +1,5 @@
 import logoFooter from "../Images/LOGO2.png";
-import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -102,7 +102,7 @@ const Footer = () => {
               to="/atencionAlCliente"
               className="text-white-800 dark: text-white"
             >
-              Atencion al cliente
+              Atencion al Cliente
             </Link>{" "}
           </p>
         </div>
