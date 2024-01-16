@@ -30,7 +30,7 @@ const ShipmentsComponent = () => {
               <Popup>
                 <div>
                   <h2>Sede Madrid</h2>
-                  <p className="font-extrabold">Que tapas</p>
+                  <p className="font-extrabold">Tequetapas</p>
                 </div>
               </Popup>
             </Marker>
@@ -48,9 +48,9 @@ const ShipmentsComponent = () => {
 
               <div className="button-group ml-6 mr-6  shadow-md shadow-orange-400">
                 <div className="mb-4">
-                  <h1>Tequetapas Madrid</h1>
+                  <h1>Tequetapas Foods Madrid</h1>
                   <p>
-                    Dirección: C. del Pilar, 7, 28500 Arganda del Rey, Madrid
+                    Dirección: Calle Fundicion 18, 28522 - Rivas Vaciamadrid, Madrid
                   </p>
                   <p>Teléfono: 664 01 86 27</p>
                   <br />

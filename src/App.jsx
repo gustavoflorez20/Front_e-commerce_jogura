@@ -37,7 +37,6 @@ function App() {
       <Route path="/registerUsers" element={<RegisterPage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
-
       <Route path="/politicas" element= {<PrivacyPage/>} />
       <Route path="/cookies" element= {<CookiesPage/>} />
       <Route path="/legal" element= {<LegalPage/>} />

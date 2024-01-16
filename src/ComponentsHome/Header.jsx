@@ -10,7 +10,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
   SparklesIcon,
-  
+
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
@@ -27,8 +27,8 @@ const Productos = [
     icon: SparklesIcon,
   },
   {
-    name: "Bebidas",
-    description: "Acompaña tu pedido Con una bebida tipica",
+    name: "Lacteos",
+    description: "Disfruta del verdadero sabor Venezolano",
     href: "/drink",
     icon: TrashIcon,
   },
@@ -61,16 +61,15 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-orange-500 ">
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px20"
-        aria-label="Global"
-      >
+    <header className="bg-orange-500">
+     
+        <nav className="flex items-center gap-20 border-b p-8">
+
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.0">
-            <span className="sr-only">Tequetapas</span>
+          <a href="/" className="-m-6 p-1">
+            <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-20 w-20 rounded-full"
+              className="h-40 w-40 rounded-full"
               src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
             />
           </a>
@@ -82,24 +81,26 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
 
-{/*      homeee  
-          <Link to="/" className=" font-semibold leading-6 text-2x1 text-white">
-            Home
-          </Link> */} 
 
 
-          <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        {/* A qui esta la barra de busqueda 
+        <input className='border-black rounded-md ' type="text" placeholder="Buscar productos" /> */}
+
+        
+        
+        
+        
+        <Popover.Group className="hidden lg:flex lg:gap-x-20">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
-            
-              
+
               Productos
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-gray-400"
+                className="h-5 w-5 flex-none text-gray-900"
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -134,7 +135,7 @@ export default function Header() {
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                        <p className="mt-1 text-gray-400">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -157,38 +158,31 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-
           <Link
             to="/nosotros"
-            className=" font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold leading-6 text-2xl text-white"
           >
             Nosotros
           </Link>
-          <Link
+
+          <p className="font-semibold font-Anton text-white-800 dark: text-white">
+            <a
+              href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lx font-semibold leading-6 text-2xl text-white"
+            >
+              Pedidos
+            </a>
+          </p>
+
+          {/* <Link
             to="/registerUsers"
-            className=" font-semibold leading-6 text-2xl text-white"
+            className=" text-lx font-semibold leading-6 text-2xl text-white"
           >
             Registrate
-          </Link>
-          <Link
-            to="/ubicacion"
-            className=" font-semibold leading-6 text-2xl text-white"
-          >
-            Sedes
-          </Link>
-       
-
-          <Link
-            to="/carrito"
-            className="text-sm font-semibold leading-6 text-white"
-          >
-            <FiShoppingCart
-              className="h-12 w-12 text-white"
-              aria-hidden="true"
-            />
-          </Link>
-        </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          </Link> */}
+          
           <Link
             to="/login"
             className="text-lx font-semibold leading-6 text-2xl text-white"
@@ -196,8 +190,16 @@ export default function Header() {
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
 
-
-        </div>
+          <Link
+            to="/carrito"
+            className="text-lx font-semibold leading-6 text-2xl text-white"
+          >
+            <FiShoppingCart
+              className="h-12 w-12 text-white"
+              aria-hidden="true"
+            />
+          </Link>
+        </Popover.Group>
       </nav>
       <Dialog
         as="div"
@@ -256,17 +258,14 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                
+
                 <Link
                   to="/Productos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 
-                  >
+                >
                 </Link>
-                  Home
-
-               
-               
+                Home
 
                 <Link
                   to="/nosotros"

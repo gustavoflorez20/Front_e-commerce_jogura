@@ -88,31 +88,22 @@ const Footer = () => {
             </Link>{" "}
           </p>
 
+         <p className="font-semibold font-Anton text-white-800 dark:text-white">
+          <Link
+            to="/ubicacion"
+            className=" text-white-800 dark: text-white"
+          >
+            Donde Estamos Ubicados
+          </Link>{" "}
+          </p>
+          
           <p className="font-semibold font-Anton text-white-800 dark:text-white">
             <Link
-              to="/entregaYRecogidas"
+              to="/atencionAlCliente"
               className="text-white-800 dark: text-white"
             >
-              Entrega y Recogidas
-            </Link>{" "}
-          </p>
-
-          <p className="font-semibold font-Anton text-white-800 dark: text-white">
-            <a
-              href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
-              className="text-white-800 dark:text-white"
-            >
-              Contactanos
-            </a>{" "}
-          </p>
-
-          <p className="font-semibold font-Anton text-white-800 dark: text-white">
-            <a
-              href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
-              className="text-white-800 dark:text-white"
-            >
               Atencion al cliente
-            </a>{" "}
+            </Link>{" "}
           </p>
         </div>
 
