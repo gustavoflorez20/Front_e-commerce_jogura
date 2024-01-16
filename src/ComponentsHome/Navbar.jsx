@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex items-center">
           <input className='border-2 border-black rounded-md p-2' type="text" placeholder="Buscar productos" />
           <a href="#" className="text-3xl font-extrabold leading-6 text-black-400 rounded-3xl p-2 text-white "><FaSearch /></a>
-        </div>
+          </div>
       </nav>
     </header>
   );
