@@ -2,7 +2,14 @@ import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
+
 import Quesos from '../Images/QuesosCanaima.png';
+
+import { FaSearch } from "react-icons/fa";
+
+
+
+
 
 import {
   Bars3Icon,
@@ -20,6 +27,8 @@ import {
 
 
 const Productos = [
+
+  
   {
     name: "Congelados",
     description: "Consulta nuestra Gran Variedad",
@@ -36,14 +45,14 @@ const Productos = [
     name: "Promociones",
     description: "Consulta Nuestras Promociones",
     href: "/promociones",
-    icon: ShoppingCartIcon,
+    icon:PlayCircleIcon ,
   },
 ];
 const callsToAction = [
   {
-    name: "Instagram",
-    href: "https://www.instagram.com/tequetapasfoods/?hl=es",
-    icon: PlayCircleIcon,
+    name: "Comprar",
+    href: "/",
+    icon: ShoppingCartIcon ,
   },
   {
     name: "Whatsapp",
@@ -69,11 +78,27 @@ export default function Header() {
           <a href="/" className="-m-1 p-1">
             <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-40 w-40 rounded-full"
+              className="h-20 w-20 rounded-full"
               src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
             />
           </a>
         </div> */}
+
+   
+          
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </div>
+
+
 
         {/* Boton de busqueda de productos */}
         <div>
@@ -82,8 +107,24 @@ export default function Header() {
             placeholder="Buscar productos" />
         </div>
 
+
         {/* Logica de boton desplegable de procutos */}
         <Popover.Group className="flex items-center justify-betwee ">
+
+
+        <div className="flex">
+  <input className='border-black rounded-md w-54 h-8 mr-2' type="text" placeholder="a comer ..." />
+  <a href="#" className="text-3xl font-extrabold leading-6 text-black-400 rounded-3xl p-2 text-white"><FaSearch /></a>
+</div>
+
+        
+        
+        
+        
+        <Popover.Group className="hidden lg:flex lg:gap-x-20">
+          <Popover className="relative">
+            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
+
 
         {/* Esto hace que funcione el desplegable del submenu  */}
           <Popover className="relative"> 
