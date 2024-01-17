@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../ComponentsHome/Header'
-import Privacy from '../ComponentsPrivacy/Privacy'
+import Privacy from '../ComponentsLegals/Privacy'
 import Footer from '../ComponentsHome/Footer'
 
 const PrivacyPage = () => {

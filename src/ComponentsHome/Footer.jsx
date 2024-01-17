@@ -1,16 +1,31 @@
 import logoFooter from "../Images/LOGO2.png";
 
+import Quesos from "../Images/QuesosCanaima.png";
+import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
+
+
+
 import { Link } from "react-router-dom";
+
+
 const Footer = () => {
   return (
     <footer className="bg-orange-500   p-8 xl:p-5">
       <div>
-        <div className="flex items-center justify-between gap-4 border-b p-8 border-primary">
-          <img
+        <div className="flex  justify-evenly gap-4 border-b p-8 border-primary">
+        <div className="flex gap-10 mr-10">
+        <img
             className="w-20  bg-white rounded-full"
             src={logoFooter}
             alt="LogoFooter"
           />
+          <img
+            className="w-20  bg-white rounded-full "
+            src={Quesos}
+            alt="Canaima"
+          />
+        </div>
+  
           <div className="text-black">
             <h1 className="text-lg font-bold mb-2">
               ¡Sabores con origen! <br />
@@ -59,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <section className="flex justify-between  gap-4 p-8 ">
+      <section className="flex justify-center  gap-4 p-8 ">
         <div className="flex  items-center gap-20">
           <p className="font-semibold font-Anton text-white-800 dark:text-white">
             <Link to="/terminos" className="text-white-800 dark: text-white">

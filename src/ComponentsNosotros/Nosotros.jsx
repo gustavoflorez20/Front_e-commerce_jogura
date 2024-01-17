@@ -79,11 +79,12 @@ const Nosotros = () => {
             alt="CEO"
             className="w-40 h-40 rounded-full border-color: rgb(220 38 38)"
           />
-          <h2>Mauro Mendoza</h2>
+          <h2>Horacio Hernandez</h2>
           <h3>CEO</h3>
         </div>
+        
 
-        <div className="flex flex-col items-center">
+        {/* <div className="flex flex-col items-center">
           <img
             src={Logistico}
             alt="CEO"
@@ -91,7 +92,7 @@ const Nosotros = () => {
           />
           <h2>Joel Lozada</h2>
           <h3>Logistica</h3>
-        </div>
+        </div> */}
 
         <div className="flex flex-col items-center">
           <img
@@ -99,7 +100,7 @@ const Nosotros = () => {
             alt="CEO"
             className="w-40 h-40 rounded-full border-color: rgb(220 38 38)"
           />
-          <h2>Karla Acevedo</h2>
+          <h2>Lilimar Salazar</h2>
           <h3>CEO</h3>
         </div>
 
@@ -109,7 +110,7 @@ const Nosotros = () => {
             alt="CEO"
             className="w-40 h-40 rounded-full border-color: rgb(220 38 38)"
           />
-          <h2>Mauro Mendoza</h2>
+          <h2>Nelson Hernandez</h2>
           <h3>CEO</h3>
         </div>
 
@@ -119,10 +120,20 @@ const Nosotros = () => {
             alt="CEO"
             className="w-40 h-40 rounded-full border-color: rgb(220 38 38)"
           />
-          <h2>Mauro Mendoza</h2>
+          <h2>Javier Dominguez</h2>
+          <h3>CEO</h3>
+        </div>
+        <div className="flex flex-col items-center">
+          <img
+            src={Jefe}
+            alt="CEO"
+            className="w-40 h-40 rounded-full border-color: rgb(220 38 38)"
+          />
+          <h2>Marco de Sousa</h2>
           <h3>CEO</h3>
         </div>
       </div>
+
     </section>
   );
 };

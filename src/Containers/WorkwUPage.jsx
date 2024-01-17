@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../ComponentsHome/Header'
-import WorkwU from '../ComponentsWorkwU/WorkwU'
+import WorkwU from '../ComponentsLegals/WorkwU'
 import Footer from '../ComponentsHome/Footer'
 
 const WorkwUPage = () => {
