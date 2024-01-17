@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../ComponentsHome/Header'
-import Cookies from '../ComponentsCookies/Cookies'
+import Cookies from '../ComponentsLegals/Cookies'
 import Footer from '../ComponentsHome/Footer'
 
 const CookiesPage = () => {

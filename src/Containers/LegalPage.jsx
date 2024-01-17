@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../ComponentsHome/Header'
-import Legal from '../ComponentsLegal/Legal'
+import Legal from '../ComponentsLegals/Legal'
 import Footer from '../ComponentsHome/Footer'
 
 const LegalPage = () => {
