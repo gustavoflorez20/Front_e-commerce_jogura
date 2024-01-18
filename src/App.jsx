@@ -16,6 +16,7 @@ import WorkwUPage from './Containers/WorkwUPage';
 import DeliveryPage from './Containers/DeliveryPage.Jsx';
 import UbicationPage from './Containers/UbicationPage';
 import LoginListPage from './Containers/LoginListPage';
+import InventoryPage from './Containers/InventoryPage';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <Route path="/ubicacion" element= {<UbicationPage/>} />
       <Route path="/registersUser" element= {<RegisterPage/>} />
       <Route path="/clientRegisterUser" element= {<LoginListPage/>} />
+      <Route path="/inventario" element={<InventoryPage />} />
 
     </Routes>
     </BrowserRouter>
