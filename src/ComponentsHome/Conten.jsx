@@ -4,7 +4,8 @@ import './Conten.css';
 
 const Conten = () => {
   return (
-    <div className="Conten-container">
+    
+    <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200 Conten-container">
       <div className="Conten-video">
         <FacebookProvider appId="tu-id-de-app-de-facebook">
           <EmbeddedPost href="https://www.facebook.com/Tequetapasgroup/videos/3025234517723013/" width="500" showText="false" />

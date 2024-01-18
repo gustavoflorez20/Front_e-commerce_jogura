@@ -1,12 +1,11 @@
 import ReactPlayer from "react-player";
 import Jefe from "../Images/JEFEDEOPERACIONES.jpg";
-import Logistico from "../Images/Logistico.jpeg";
 import Jefa from "../Images/Mujer.jpeg";
 
 const Nosotros = () => {
   return (
     <section className="w-90vh">
-      <div className="flex flex-col md:flex-row mt-8">
+      <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
         <div className="md:w-2/5 order-2 md:order-1 flex justify-center ml-8 text-justify md:justify-start rounded-md">
           <ReactPlayer
             url="https://youtu.be/BsWvr6K5jPU?si=GHuZtjO_5jiNXm-o"
@@ -45,7 +44,7 @@ const Nosotros = () => {
 
 
 {/* NUESTRA RAZON DE SER */}
-<div className="flex flex-row mt-40">
+<div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
   <img
     className="ml-16 w-96 h-auto"
     src="https://scontent.fmad19-1.fna.fbcdn.net/v/t39.30808-6/313320284_633721148189213_8351421474518426025_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=amoiKoXA2wYAX-8LnPW&_nc_ht=scontent.fmad19-1.fna&oh=00_AfBryHzaUNIVEamy0Twgrf1RMhv18SZIa8yxI4SYlKPz-A&oe=65A77D39"

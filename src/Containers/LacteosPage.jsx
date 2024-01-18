@@ -1,21 +1,13 @@
 import Header from '../ComponentsHome/Header';
-import Drink  from '../ComponentsDrink/Drink';
+import Lacteos  from '../ComponentsLacteos/Lacteos';
 import Section2 from '../ComponentsHome/Section2'
 import Footer from '../ComponentsHome/Footer';
 
-
-
-
-
-
-
-
-
-const DrinkPage = () => {
+const LacteosPage = () => {
   return (
     <div>
         <Header/>
-        <Drink/>
+        <Lacteos/>
         <Section2/>
         <Footer/>
 
@@ -24,4 +16,4 @@ const DrinkPage = () => {
   )
 }
 
-export default DrinkPage
+export default LacteosPage

@@ -1,12 +1,11 @@
 import React from "react";
 
-const Drink = () => {
+const Lacteos = () => {
   return (
-    <section className="">
-      <div className="">
+<section className="flex relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
 
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Queso de Mano
@@ -26,9 +25,9 @@ const Drink = () => {
           </div>
         </div>
 
-        {/* <!-- Pricing Card 2 --> */}
+     
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Queso Guayanes
@@ -48,9 +47,9 @@ const Drink = () => {
           </div>
         </div>
 
-        {/* <!-- Pricing Card 3 --> */}
+      
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Queso Telita
@@ -70,9 +69,9 @@ const Drink = () => {
           </div>
         </div>
 
-        {/* <!-- Pricing Card 4 --> */}
+      
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">Queso Trenza</h2>
             <img
@@ -90,9 +89,9 @@ const Drink = () => {
           </div>
         </div>
 
-        {/* <!-- Pricing Card 3 --> */}
+       
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Queso de Mano Familiar
@@ -112,9 +111,9 @@ const Drink = () => {
           </div>
         </div>
 
-        {/* <!-- Pricing Card 5 --> */}
+        
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Barra de queso Llanero</h2>
@@ -132,11 +131,10 @@ const Drink = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div>
-        {/* <!-- Pricing Card Drinks 1 --> */}
+     
+    
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-4">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Queso llanero 500gr
@@ -155,8 +153,10 @@ const Drink = () => {
             </button>
           </div>
         </div>
+       
+       
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-4">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Nata Criolla 250ml
@@ -175,8 +175,10 @@ const Drink = () => {
             </button>
           </div>
         </div>
+        
+        
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-4">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Nata Criolla 500ml
@@ -195,8 +197,10 @@ const Drink = () => {
             </button>
           </div>
         </div>
+        
+       
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-          <div className="p-1 bg-orange-200"></div>
+          <div className="p-1 bg-gray-200"></div>
           <div className="p-4">
             <h2 className="text-3xl font-bold text-gray-800 mb-5">
               Nata Criolla 1000ml
@@ -215,10 +219,10 @@ const Drink = () => {
             </button>
           </div>
         </div>
-      </div>
+      
 
     </section>
   );
 };
 
-export default Drink;
+export default Lacteos;
