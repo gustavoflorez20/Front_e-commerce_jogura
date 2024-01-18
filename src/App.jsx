@@ -3,7 +3,7 @@ import HomePage from './Containers/HomePage';
 import NosotrosPage from './Containers/NosotrosPage';
 import LogingPage from './Containers/LogingPage';
 import FrozenPage from './Containers/FrozenPage';
-import DrinkPage from './Containers/DrinkPage';
+import LacteosPage from './Containers/LacteosPage';
 import Promotionspage from './Containers/PromotionPage';
 import RegisterPage from './Containers/RegisterPage';
 import ShoppingCarPage from './Containers/ShoppingCarPage'
@@ -15,7 +15,7 @@ import AtcPage from './Containers/AtcPage';
 import WorkwUPage from './Containers/WorkwUPage';
 import DeliveryPage from './Containers/DeliveryPage.Jsx';
 import UbicationPage from './Containers/UbicationPage';
-
+import LoginListPage from './Containers/LoginListPage';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
       <Route path="/nosotros" element={<NosotrosPage />} />
       <Route path="/login" element={<LogingPage />} />
       <Route path="/productos" element={<FrozenPage />} />
-      <Route path="/drink" element={<DrinkPage />} />
+      <Route path="/Lacteos" element={<LacteosPage />} />
       <Route path="/promociones" element={<Promotionspage />} />
       <Route path="/carrito" element={<ShoppingCarPage />} />
       <Route path="/terminos" element= {<TermsPage/>} />
@@ -40,7 +40,7 @@ function App() {
       <Route path="/entregaYRecogidas" element= {<DeliveryPage/>} />
       <Route path="/ubicacion" element= {<UbicationPage/>} />
       <Route path="/registersUser" element= {<RegisterPage/>} />
-
+      <Route path="/clientRegisterUser" element= {<LoginListPage/>} />
 
     </Routes>
     </BrowserRouter>
