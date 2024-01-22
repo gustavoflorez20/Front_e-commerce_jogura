@@ -6,14 +6,16 @@ function Create() {
     const [products, setProducts] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [precio, setPrecio] = useState('');
-  
+    const [imagen, setImagen] = useState('');
 
   const handleAdd = () => {
     axios
       .post('http://localhost:3001/Products',
        { products: products 
       ,cantidad : cantidad 
-      , precio:precio })
+      , precio:precio,
+    imagen:imagen})
+
       .then((result) => {
         location.reload();
       })
@@ -28,6 +30,8 @@ function Create() {
   
 
   return (
+    <div className='lista'>
+      <h2>Lista de Productos</h2> 
     <div className='create_form'>
         <br />
       <input
@@ -37,18 +41,25 @@ function Create() {
         onKeyPress={handleKeyPress} 
       />
       
-        <br />
+        
       <input
         type='text'
         placeholder='Cantidad'
         onChange={(e) => setCantidad(e.target.value)}
         onKeyPress={handleKeyPress} 
       />
-          <br />
+        
       <input
         type='text'
         placeholder='Precio'
         onChange={(e) => setPrecio(e.target.value)}
+        onKeyPress={handleKeyPress} 
+      />
+      <br />
+        <input
+        type='text'
+        placeholder='Url'
+        onChange={(e) => setImagen(e.target.value)}
         onKeyPress={handleKeyPress} 
       />
        <br />
@@ -56,6 +67,7 @@ function Create() {
       <button type='button' onClick={handleAdd}>
         Agregar
       </button>
+    </div>
     </div>
   );
 }

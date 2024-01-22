@@ -34,7 +34,7 @@ const Productos = [
   {
     name: "Lacteos",
     description: "Disfruta del verdadero sabor Venezolano",
-    href: "/drink",
+    href: "/Lacteos" ,
     icon: TrashIcon,
   },
   {
@@ -186,12 +186,12 @@ export default function Header() {
             </a>
           </p>
 
-          {/* <Link
-            to="/registerUsers"
+          <Link
+            to="/inventario"
             className=" text-lx font-semibold leading-6 text-2xl text-white"
           >
-            Registrate
-          </Link> */}
+            Inv
+          </Link> 
           
           <Link
             to="/login"

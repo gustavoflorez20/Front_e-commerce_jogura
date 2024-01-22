@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { BsFillTrashFill  } from 'react-icons/bs';
-import Create from './Create';
+import { BsFillTrashFill } from 'react-icons/bs';
 import axios from 'axios';
-import '../ComponentsInventory/Inventory.css'
-import { Link } from 'react-router-dom'
+import '../ComponentsInventory/Inventory.css';
+
+
+
+
+
+
+
+
+
 
 function Home() {
   const [todos, setTodos] = useState([]);
@@ -13,61 +20,73 @@ function Home() {
   }, []);
 
   const fetchTodos = () => {
-    axios.get('http://localhost:3001/Products')
-      .then(result => setTodos(result.data))
-      .catch(err => console.log(err));
-  };
-
-  const handleEditm = (id) => {
-    axios.patch(`http://localhost:3001/Products/${id}`)
-      .then(result => {
-        console.log(result);
-        fetchTodos(); 
-      })
-      .catch(err => console.log(err));
+    axios
+      .get('http://localhost:3001/Products')
+      .then((result) => setTodos(result.data))
+      .catch((err) => console.log(err));
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/Products/${id}`)
-      .then(result => {
+    axios
+      .delete(`http://localhost:3001/Products/${id}`)
+      .then((result) => {
         console.log(result);
-        fetchTodos(); 
+        fetchTodos();
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   return (
-    <div className='lista'>
-      <h2>Lista de Productos</h2> 
-      <Create />
-      <br/>
-      {todos.length === 0 ? (
-        <div>
+    
+    <div className="bg-gray-100 min-h-screen py-12 flex items-center justify-center">
           
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    
+ 
+
+      <br />
+      {todos.length === 0 ? (
+        <div></div>
       ) : (
-        todos.map(todo => (
-            <div className='Products' key={todo._id}>
- <div className='checkbox'>
-  <p>
-    Producto: {todo.producto},<br />
-    Cantidad: {todo.cantidad},<br />
-    Precio: {todo.precio}
-  </p>
-</div>
-  <div>
-    <span>
-        <br />
-      <BsFillTrashFill className='icon' onClick={() => handleDelete(todo._id)} />
-    </span>
-  </div>
-</div>
-          ))
-        )}
-       <h2> 2024 JOGURA. Todos los derechos reservados.</h2>
-       <Link to="/">Salir</Link>
+        todos.map((todo) => (
+          <div className='Products' key={todo._id}>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+            <div className="p-1 bg-orange-200"></div>
+            <div className="p-8">
+              <h2 className="text-3xl font-bold text-gray-800 mb-5">
+                Producto: {todo.producto},<br />
+                Cantidad: {todo.cantidad},<br />
+                Precio: {todo.precio}
+                <br />
+                
+
+              </h2>
+             
+              <p className="text-4xl font-bold text-gray-800 mb-6"></p>
+              <ul className="text-sm text-gray-600 mb-6"></ul>
+            </div>
+            <div className="p-4">
+              <button className="w-full bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800">
+                Pruebalo!
+              </button>
+            </div>
+
+            <span>
+              <br />
+              <BsFillTrashFill className='icon' onClick={() => handleDelete(todo._id)} />
+            </span>
+          </div>
+          
+        
+          </div>
+        ))
+      )}
+      
     </div>
+    
   );
+  
 }
 
 export default Home;
