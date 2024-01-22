@@ -1,11 +1,51 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import Logo from '../Images/LOGO2.PNG';
 
 const LoginListUser = () => {
+
+  const [loginUsers, setLoginUsers] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleChangeUsers = (event) => {
+    const { name, value } = event.target;
+    setLoginUsers((prevLogin) => ({
+      ...prevLogin,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmitUsers = (event) => {
+    event.preventDefault();
+    postUserLogin();
+  };
+
+  const postUserLogin = async () => {
+    try {
+      const url = "http://172.16.1.127:3001/User";
+      const objectPosLogin = {
+        username: loginUsers.username, 
+        password: loginUsers.password,
+      };
+
+      const usersSuccessfully = await axios.post(url, objectPosLogin);
+      console.log("Conectado con éxito:", usersSuccessfully.data);
+    } catch (error) {
+      console.error("Error al conectarse:", error);
+    }
+  };
+
+
+
   return (
     <div>
       
+    <form onSubmit={handleSubmitUsers}>
+
       <div className="relative py-10 bg-gradient-to-br from-sky-50 to-gray-200">
         <div className="relative container m-auto px-6 text-gray-500 md:px-6 xl:px-20">
           <div className="m-auto md:w-8/1 lg:w-6/12 xl:w-6/12">
@@ -23,16 +63,17 @@ const LoginListUser = () => {
                       Correo Electrónico
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="string"
+                      id="username"
+                      name="username"
+                      value={loginUsers.username}
+                      onChange={handleChangeUsers}
                       className="mt-1 p-2 w-full border rounded-md"
                       placeholder="correo@example.com"
                      
                     />
                   </div>
 
-                  {/* Input para contraseña */}
                   <div className="mb-4">
                     <label htmlFor="password" className="block text-1x2 font-medium text-gray-700">
                       Contraseña
@@ -41,6 +82,8 @@ const LoginListUser = () => {
                       type="password"
                       id="password"
                       name="password"
+                      value={loginUsers.password}
+                      onChange={handleChangeUsers}
                       className="mt-1 p-2 w-full border rounded-md"
                       placeholder="********"
                     
@@ -64,6 +107,7 @@ const LoginListUser = () => {
           </div>
         </div>
       </div>
+    </form>
     </div>
   );
 };
