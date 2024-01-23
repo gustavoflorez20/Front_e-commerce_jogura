@@ -57,11 +57,13 @@ function Home() {
               <h2 className="text-3xl font-bold text-gray-800 mb-5">
                 Producto: {todo.producto},<br />
                 Cantidad: {todo.cantidad},<br />
-                Precio: {todo.precio}
+                Precio: {todo.precio},
+                Url:{todo.imagenUrl}
                 <br />
-                
-
               </h2>
+              {todo.imagenUrl && (
+              <img src={todo.imagenUrl} alt={`Imagen de ${todo.producto}`} className="max-w-full mb-3" />
+              )}
              
               <p className="text-4xl font-bold text-gray-800 mb-6"></p>
               <ul className="text-sm text-gray-600 mb-6"></ul>
