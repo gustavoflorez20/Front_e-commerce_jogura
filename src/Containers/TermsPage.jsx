@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import Terms from '../ComponentsLegals/Terms'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header'
+import Terms from '../Routes/Terms'
+import Footer from '../Routes/Footer'
 
 const TermsPage = () => {
   return (

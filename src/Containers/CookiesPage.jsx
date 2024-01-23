@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import Cookies from '../ComponentsLegals/Cookies'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header'
+import Cookies from '../Routes//Cookies'
+import Footer from '../Routes/Footer'
 
 const CookiesPage = () => {
   return (

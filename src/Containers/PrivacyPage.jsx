@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import Privacy from '../ComponentsLegals/Privacy'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header'
+import Privacy from '../Routes/Privacy'
+import Footer from '../Routes/Footer'
 
 const PrivacyPage = () => {
   return (
