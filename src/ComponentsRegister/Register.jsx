@@ -10,6 +10,7 @@ export default function Register() {
     phone: "",
     address: "",
     password: "",
+    edad: ""
   });
 
   const handleChange = (e) => {
@@ -26,7 +27,7 @@ export default function Register() {
   };
 
   // POST AGREGAR USUARIOS//
-  // ESTA FUNCION SE IRA A LA CARPETA USE CONTEXT QUE SE DEBE CREAR Y LLEVAR LA LOGICA//
+  // ESTA FUNCION  NO SE IRA A LA CARPETA USE CONTEXT SE QUEDA EN LOCAL STORAGE POR TEMAS DE ACTUALIZACION DE LA PAHGINA Y PODEMOS PERDER LA INFO  EN LA//
   const postUser = async () => {
     try {
       const url = "http://172.16.1.127:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
@@ -38,6 +39,7 @@ export default function Register() {
         phone: formData.phone,
         address: formData.address,
         password: formData.password,
+        edad : formData.edad
       };
 
       const answer = await axios.post(url, objectPost);
@@ -46,6 +48,21 @@ export default function Register() {
       console.error("Error al enviar la solicitud:", error);
     }
   };
+
+ 
+/*   const age = async calculateAge (formData.birthdate);   CALCULO DE LA EDAD
+  if (age >= 18) {
+    await postUser();
+  } else {
+    alert('No cumples con la mayoría de edad');
+  }
+}; */
+
+
+
+
+
+
 
   return (
     <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
