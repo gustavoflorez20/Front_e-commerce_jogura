@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import '../Styles/Conten.css';
-import logoP from '../Images/Fondoprincipal.jpg';
+import '../Styles/Conten.css'
 import CookieAlert from '../Routes/CookieAlert';
 
 const Conten = () => {
@@ -20,9 +19,9 @@ const Conten = () => {
       {showCookieAlert && <CookieAlert onClose={handleCookieAlertClose} />}
       <div className="imagen">
         <animated.img
-          src={logoP}
+          src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706127416/foto_principal_de_home_rc0dt9.jpg"
           alt="Logo Tequetapas"
-          width="800"
+          width="15000"
           onMouseEnter={() => set({ transform: 'scale(1.1)' })}
           onMouseLeave={() => set({ transform: 'scale(1)' })}
           style={props}

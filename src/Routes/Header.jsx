@@ -3,28 +3,11 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
+import {Bars3Icon, TrashIcon, ShoppingCartIcon, XMarkIcon, SparklesIcon,} from "@heroicons/react/24/outline";
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon,} from "@heroicons/react/20/solid";
 
 
-
-
-import {
-  Bars3Icon,
-  TrashIcon,
-  ShoppingCartIcon,
-  XMarkIcon,
-  SparklesIcon,
-
-} from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-
-
-const Productos = [
-
-  
+const Productos = [ 
   {
     name: "Congelados",
     description: "Consulta nuestra Gran Variedad",
@@ -42,44 +25,39 @@ const Productos = [
     description: "Consulta Nuestras Promociones",
     href: "/promociones",
     icon:PlayCircleIcon ,
-  },
-];
+  },];
 const callsToAction = [
   {
     name: "Comprar",
-    href: "/",
+    href: "/carrito",
     icon: ShoppingCartIcon ,
   },
   {
     name: "Whatsapp",
     href:
-      "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fxu4xpe&e=AT0KVyvqRRrLR--qgOz_McGvFme2ihffZkyBMVqyeBcHTu_YfWipBVMhNICX2znqKfGE1XW3Ch6MqcQLJNzev6QNpTLRJ1fg-VwWag",
+      "https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20",
     icon: PhoneIcon,
-  },
-];
+  },];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-orange-500">
+    <header className="bg-orange-600">
      
         <nav className="flex items-center gap-20 border-b p-8">
 
-        <div className="flex lg:flex-1">
+        <div className="flex">
           <a href="/" className="-m-6 p-1">
             <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-20 w-20 rounded-full"
+              className="h-20 w-30 rounded-full"
               src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
             />
           </a>
-   
-          
         </div>
         <div className="flex lg:hidden">
           <button
@@ -92,21 +70,14 @@ export default function Header() {
           </button>
         </div>
 
-
-
-
+        <Popover.Group className="hidden lg:flex lg:gap-x-28">
         <div className="flex">
-  <input className='border-black rounded-md w-54 h-8 mr-2' type="text" placeholder="a comer ..." />
-  <a href="#" className="text-3xl font-extrabold leading-6 text-black-400 rounded-3xl p-2 text-white"><FaSearch /></a>
-</div>
-
-        
-        
-        
-        
-        <Popover.Group className="hidden lg:flex lg:gap-x-20">
+  {/* <input className='border-black rounded-md w-54 h-8 mr-2' type="text" placeholder="a comer ..." /> */}
+  <a href="#" className="text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white"><FaSearch /></a>
+</div>   
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
+            
+            <Popover.Button className="flex items-center gap-x-1 font-semibold text-2xl text-white">
 
               Productos
               <ChevronDownIcon
@@ -170,39 +141,32 @@ export default function Header() {
           </Popover>
           <Link
             to="/nosotros"
-            className="text-lx font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold text-2xl text-white"
           >
             Nosotros
           </Link>
 
-          <p className="font-semibold font-Anton text-white-800 dark: text-white">
+        
             <a
               href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lx font-semibold leading-6 text-2xl text-white"
+              className="text-lx font-semibold text-2xl text-white"
             >
               Pedidos
             </a>
-          </p>
-
-          <Link
-            to="/inventario"
-            className=" text-lx font-semibold leading-6 text-2xl text-white"
-          >
-            Inv
-          </Link> 
+        
           
           <Link
             to="/login"
-            className="text-lx font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold text-2xl text-white"
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
 
           <Link
             to="/carrito"
-            className="text-lx font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold text-2xl text-white"
           >
             <FiShoppingCart
               className="h-12 w-12 text-white"

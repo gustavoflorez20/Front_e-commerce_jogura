@@ -38,7 +38,7 @@ const Frozen = () => {
 
           <img
             className="mb-6 w-full h-auto" 
-            src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/246152568_1809419035912924_4852617508220090434_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=_ZY3uFXUfoYAX8Bvpy3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfAESi_TuoxF4GDyXnjrznKl8Q1sknRcITQyHFnmBX63BQ&oe=6596476B" 
+            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047085/Teque%C3%B1oChocolate_rqq2vi.jpg" 
             alt="Tequeños de Chocolate"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>
@@ -60,7 +60,7 @@ const Frozen = () => {
 
           <img
             className="mb-6 w-full h-auto" 
-            src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/245256122_1806969332824561_3594248169345443282_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=95066_CTJj4AX-m3FWn&_nc_ht=scontent.fmad22-1.fna&oh=00_AfCmHqP8tb7QcGsqgb3Qit8EEkGb98SQRNo8ukCtrF5X4g&oe=6595FF94" 
+            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047094/Teque%C3%B1oPlatanoMacho_yshxkf.jpg" 
             alt="Tequeyoyo"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Logo from '../Images/LOGO2.PNG';
+import Logo from '../Images/LogoTequetapas.png'
 
 const LoginListUser = () => {
 

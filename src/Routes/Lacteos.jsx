@@ -1,14 +1,4 @@
 import React from "react";
-import queso1 from "../Images/QuesodeManoArepero.jpg"
-import queso2 from "../images/QuesodeManoFamiliar.jpg"
-import queso3 from "../images/QuesodeTrenza.jpg"
-import queso4 from "../images/QuesoGuayanes.jpg"
-import queso5 from "../images/QuesoTelita.jpg"
-import queso6 from "../images/Quesolatino.jpg"
-import queso7 from "../images/Quesollaneropeq.webp"
-import nata1 from "../images/natacriolla.jpg"
-import nata2 from "../images/natacriolla.jpg"
-import nata3 from "../images/natacriolla.jpg"
 
 const Lacteos = () => {
   return (
@@ -22,7 +12,7 @@ const Lacteos = () => {
             </h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso1}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706129668/QuesodeManoArepero_qdzfcf.jpg"
               alt="Queso de Mano arepero"
             />
             <p className="text-3xl font-bold text-gray-800 mb-10"></p>
@@ -44,7 +34,7 @@ const Lacteos = () => {
             </h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso4}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047080/QuesoGuayanes_zfrjga.jpg"
               alt="Queso Guayanes"
             />
             <p className="text-3xl font-bold text-gray-800 mb-10"></p>
@@ -66,7 +56,7 @@ const Lacteos = () => {
             </h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso5}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047084/QuesoTelita_t8caat.jpg"
               alt="Queso Telita"
             />
             <p className="text-3xl font-bold text-gray-800 mb-20"></p>
@@ -86,7 +76,7 @@ const Lacteos = () => {
             <h2 className="text-center text-3xl font-bold text-gray-800 mb-20">Queso Trenza</h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso3}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047079/QuesodeTrenza_ydiqex.jpg"
               alt="Queso trenza"
             />
             <p className="text-4xl font-bold text-gray-800 mb-20"></p>
@@ -108,7 +98,7 @@ const Lacteos = () => {
             </h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso2}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047078/QuesodeManoFamiliar_fxcg5b.jpg"
               alt="Queso de Mano Familiar"
             />
             <p className="text-4xl font-bold text-gray-800 mb-20"></p>
@@ -129,7 +119,7 @@ const Lacteos = () => {
               Barra de queso Llanero</h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso6}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047081/Quesolatino_ji0pfp.jpg"
               alt="Barra de queso Llanero"
             />
             <p className="text-4xl font-bold text-gray-800 mb-20"></p>
@@ -151,7 +141,7 @@ const Lacteos = () => {
             </h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={queso7}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047081/Quesolatino_ji0pfp.jpg"
               alt="Queso llanero 500gr"
             />
             <p className="text-4xl font-bold text-gray-800 mb-20"></p>
@@ -173,7 +163,7 @@ const Lacteos = () => {
             </h2>
             <img
               className="mb-20 w-auto h-auto"
-              src={nata1}
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047073/nata_dlmsw7.jpg"
               alt="Nata criolla 250ml"
             />
             <p className="text-4xl font-bold text-gray-800 mb-20"></p>
@@ -187,7 +177,7 @@ const Lacteos = () => {
         </div>
         
         
-        <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+        {/* <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
           <div className="p-1 bg-gray-200"></div>
           <div className="p-20">
             <h2 className="text-center text-3xl font-bold text-gray-800 mb-20">
@@ -228,7 +218,7 @@ const Lacteos = () => {
               Lo quiero!
             </button>
           </div>
-        </div>
+        </div> */}
       
 </div>
     </section>

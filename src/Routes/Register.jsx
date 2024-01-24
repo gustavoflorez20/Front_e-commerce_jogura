@@ -1,4 +1,4 @@
-import Logo from "../Images/LOGO2.PNG";
+import Logo from "../Images/LogoTequetapas.png"
 import axios from "axios";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ export default function Register() {
     phone: "",
     address: "",
     password: "",
-    edad: ""
+    
   });
 
   const handleChange = (e) => {

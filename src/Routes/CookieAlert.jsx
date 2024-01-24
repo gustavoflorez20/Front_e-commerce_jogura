@@ -18,9 +18,9 @@ const CookieAlert = ({ onClose }) => {
       <div className="cookie-alert">
         <div className="cookie-alert-content">
           <p>
-            {/* Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies. */}
+            Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies.
           </p>
-          <button onClick={handleClose}>""</button>
+          <button onClick={handleClose}></button>
         </div>
       </div>
     )
