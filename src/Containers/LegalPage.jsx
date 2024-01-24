@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import Legal from '../ComponentsLegals/Legal'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header'
+import Legal from '../Routes/Legal'
+import Footer from '../Routes/Footer'
 
 const LegalPage = () => {
   return (

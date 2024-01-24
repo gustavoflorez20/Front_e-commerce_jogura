@@ -1,8 +1,7 @@
-import Header from '../ComponentsHome/Header';
-import Frozen  from '../ComponentsFrozen/Frozen';
-import Section2 from '../ComponentsHome/Section2'
-import Footer from '../ComponentsHome/Footer';
-
+import Header from '../Routes/Header';
+import Frozen  from '../Routes/Frozen';
+import Section2 from '../Routes/Section2'
+import Footer from '../Routes/Footer';
 
 
 const FrozenPage = () => {
@@ -10,7 +9,6 @@ const FrozenPage = () => {
     <div>
         <Header/>
         <Frozen/>
-        
         <Section2 />
         <Footer/>
 

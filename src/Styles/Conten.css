@@ -1,0 +1,19 @@
+.Conten-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+}
+
+.Conten-video {
+  width: auto;
+  max-width: auto;
+  margin-bottom: 40px;
+}
+
+.Conten-text {
+  font-size: 1.2rem; 
+  line-height: 1.5;
+  color: #333; 
+  text-align: center;
+}

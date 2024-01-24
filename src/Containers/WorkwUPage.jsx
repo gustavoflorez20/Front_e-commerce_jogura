@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import WorkwU from '../ComponentsLegals/WorkwU'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header';
+import WorkwU from '../Routes/WorkwU';
+import Footer from '../Routes/Footer';
 
 const WorkwUPage = () => {
   return (

@@ -1,7 +1,7 @@
-import Header from '../ComponentsHome/Header';
-import Ubication from '../ComponentsUbication/Ubication';
-/* import Section2 from '../ComponentsHome/Section2' */
-import Footer from '../ComponentsHome/Footer';
+import Header from '../Routes/Header';
+import Ubication from '../Routes/Ubication';
+/* import Section2 from '../Routes/Section2' */
+import Footer from '../Routes/Footer';
 
 
 const ShipPage = () => {

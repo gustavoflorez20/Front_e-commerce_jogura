@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import Atc from '../ComponentsLegals/Atc'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header'
+import Atc from '../Routes/Atc'
+import Footer from '../Routes/Footer'
 
 const AtcPage = () => {
   return (

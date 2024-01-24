@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../ComponentsHome/Header'
-import Delivery from '../ComponentsLegals/Delivery'
-import Footer from '../ComponentsHome/Footer'
+import Header from '../Routes/Header';
+import Delivery from '../Routes/Delivery'
+import Footer from '../Routes/Footer'
 
 const DeliveryPage = () => {
   return (
