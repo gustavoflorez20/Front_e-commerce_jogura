@@ -30,7 +30,7 @@ export default function Register() {
   // ESTA FUNCION  NO SE IRA A LA CARPETA USE CONTEXT SE QUEDA EN LOCAL STORAGE POR TEMAS DE ACTUALIZACION DE LA PAHGINA Y PODEMOS PERDER LA INFO  EN LA//
   const postUser = async () => {
     try {
-      const url = "http://172.16.1.127:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
+      const url = "http://127.0.0.1:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
 
       const objectPost = {
         firstName: formData.firstName,

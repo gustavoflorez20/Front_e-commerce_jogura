@@ -58,7 +58,7 @@ function Create() {
       <br />
         <input
         type='text'
-        placeholder='Url'
+        placeholder='imagen'
         onChange={(e) => setImagen(e.target.value)}
         onKeyPress={handleKeyPress} 
       />

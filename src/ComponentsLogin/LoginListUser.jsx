@@ -26,7 +26,7 @@ const LoginListUser = () => {
 
   const postUserLogin = async () => {
     try {
-      const url = "http://172.16.1.127:3001/User";
+      const url = "http://127.0.0.1:3001/User";
       const objectPosLogin = {
         username: loginUsers.username, 
         password: loginUsers.password,

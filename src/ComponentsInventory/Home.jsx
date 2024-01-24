@@ -54,16 +54,16 @@ function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
             <div className="p-1 bg-orange-200"></div>
             <div className="p-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-5">
-                Producto: {todo.producto},<br />
-                Cantidad: {todo.cantidad},<br />
-                Precio: {todo.precio},
-                Url:{todo.imagenUrl}
-                <br />
-              </h2>
-              {todo.imagenUrl && (
-              <img src={todo.imagenUrl} alt={`Imagen de ${todo.producto}`} className="max-w-full mb-3" />
-              )}
+            <h2 className="text-3xl font-bold text-gray-800 mb-5 text-center">
+  {todo.producto}<br />
+  
+  {todo.precio}<br />
+</h2>
+{todo.imagen && (
+  <div className="flex justify-center">
+    <img src={todo.imagen} alt={`Imagen de ${todo.producto}`} className="max-w-full mb-3" style={{ maxWidth: '40%' }} />
+  </div>
+)}
              
               <p className="text-4xl font-bold text-gray-800 mb-6"></p>
               <ul className="text-sm text-gray-600 mb-6"></ul>
@@ -74,9 +74,9 @@ function Home() {
               </button>
             </div>
 
-            <span>
+            <span className="flex justify-center items-center">
               <br />
-              <BsFillTrashFill className='icon' onClick={() => handleDelete(todo._id)} />
+              <BsFillTrashFill className='icon' onClick={() => handleDelete(todo._id)}justify-center />
             </span>
           </div>
           
