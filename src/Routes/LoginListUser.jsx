@@ -1,11 +1,51 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import Logo from '../Images/LOGO2.png';
+import axios from 'axios';
+import Logo from '../Images/LOGO2.PNG';
 
 const LoginListUser = () => {
+
+  const [loginUsers, setLoginUsers] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleChangeUsers = (event) => {
+    const { name, value } = event.target;
+    setLoginUsers((prevLogin) => ({
+      ...prevLogin,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmitUsers = (event) => {
+    event.preventDefault();
+    postUserLogin();
+  };
+
+  const postUserLogin = async () => {
+    try {
+      const url = "http://127.0.0.1:3001/User";
+      const objectPosLogin = {
+        username: loginUsers.username, 
+        password: loginUsers.password,
+      };
+
+      const usersSuccessfully = await axios.post(url, objectPosLogin);
+      console.log("Conectado con éxito:", usersSuccessfully.data);
+    } catch (error) {
+      console.error("Error al conectarse:", error);
+    }
+  };
+
+
+
   return (
     <div>
       
+    <form onSubmit={handleSubmitUsers}>
+
       <div className="relative py-10 bg-gradient-to-br from-sky-50 to-gray-200">
         <div className="relative container m-auto px-6 text-gray-500 md:px-6 xl:px-20">
           <div className="m-auto md:w-8/1 lg:w-6/12 xl:w-6/12">
@@ -13,7 +53,7 @@ const LoginListUser = () => {
               <div className="p-6 sm:p-20">
                 <div className=" grid space-y-4">
                 <div className="flex flex-col items-center space-y-4">
-                {/* <img className="rounded-full" src={Logo}/> */}
+                <img className="rounded-full" src={Logo}/>
                   <h2 className="text-center text-2xl text-cyan-900 font-bold">Inicia sesión para Comenzar <br /> Lo mejor de Tequetapas</h2> 
                 </div>
 
@@ -23,16 +63,17 @@ const LoginListUser = () => {
                       Correo Electrónico
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="mt-2 p-2 w-full border rounded-md"
+                      type="string"
+                      id="username"
+                      name="username"
+                      value={loginUsers.username}
+                      onChange={handleChangeUsers}
+                      className="mt-1 p-2 w-full border rounded-md"
                       placeholder="correo@example.com"
                      
                     />
                   </div>
 
-                  {/* Input para contraseña */}
                   <div className="mb-4">
                     <label htmlFor="password" className="block text-1x2 font-medium text-gray-700">
                       Contraseña
@@ -41,14 +82,16 @@ const LoginListUser = () => {
                       type="password"
                       id="password"
                       name="password"
-                      className="mt-2 p-2 w-full border rounded-md"
+                      value={loginUsers.password}
+                      onChange={handleChangeUsers}
+                      className="mt-1 p-2 w-full border rounded-md"
                       placeholder="********"
                     
                     />
                   </div>
 
                   {/* Botón de inicio de sesión */}
-                  <button className=" group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                  <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
                     <Link to="/clientRegisterUser" className="text-lx font-semibold leading-6 text-2xl text-white">
                       <h2 className="text-center text-1xl text-cyan-900 font-bold">Iniciar Sesión</h2>
                     </Link>
@@ -64,6 +107,7 @@ const LoginListUser = () => {
           </div>
         </div>
       </div>
+    </form>
     </div>
   );
 };

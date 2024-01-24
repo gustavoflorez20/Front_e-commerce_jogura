@@ -1,7 +1,10 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
+
+
 const LogingUser = () => {
+
   return (
     <div>
       <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
@@ -37,11 +40,19 @@ const LogingUser = () => {
                       <h2 className="text-center text-1xl text-cyan-900 font-bold">Registrarse</h2>
                     </Link>
                   </button>
+                  <button  type='submit'   className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                    <Link to="/clientRegisterUser" className="text-lx font-semibold leading-6 text-2xl text-white">
+                      <h2 className="text-center text-1xl text-cyan-900 font-bold">Iniciar Sesión</h2>
+                    </Link>
+                  </button>
                 </div>
-                <div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
+                <div className="mt-10 space-y-4 text-gray-600 text-center sm:-mb-8">
                   <p className="text-xs">Al proceder, usted acepta nuestra <a href="#" className="underline">Condiciones de uso</a> y confirma que has leído nuestra <a href="#" className="underline">Declaración de privacidad y cookies</a>.</p>
                   <p className="text-xs">Este sitio está protegido por reCAPTCHA y el <a href="#" className="underline">Política de privacidad de Google</a> y <a href="#" className="underline">Términos de servicio</a> aplicar.</p>
+                
+                
                 </div>
+                
               </div>
             </div>
           </div>

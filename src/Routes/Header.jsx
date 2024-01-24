@@ -3,8 +3,9 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
-import LogoC from "../images/LogoCanaima.png";
-import LogoT from "../images/LogoTequetapas.png";
+
+
+
 
 import {
   Bars3Icon,
@@ -23,7 +24,7 @@ import {
 
 const Productos = [
 
-
+  
   {
     name: "Congelados",
     description: "Consulta nuestra Gran Variedad",
@@ -33,25 +34,26 @@ const Productos = [
   {
     name: "Lacteos",
     description: "Disfruta del verdadero sabor Venezolano",
-    href: "/Lacteos",
+    href: "/Lacteos" ,
     icon: TrashIcon,
   },
   {
     name: "Promociones",
     description: "Consulta Nuestras Promociones",
     href: "/promociones",
-    icon: PlayCircleIcon,
+    icon:PlayCircleIcon ,
   },
 ];
 const callsToAction = [
   {
     name: "Comprar",
-    href: "/carrito",
-    icon: ShoppingCartIcon,
+    href: "/",
+    icon: ShoppingCartIcon ,
   },
   {
     name: "Whatsapp",
-    href: "https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20",
+    href:
+      "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fxu4xpe&e=AT0KVyvqRRrLR--qgOz_McGvFme2ihffZkyBMVqyeBcHTu_YfWipBVMhNICX2znqKfGE1XW3Ch6MqcQLJNzev6QNpTLRJ1fg-VwWag",
     icon: PhoneIcon,
   },
 ];
@@ -64,18 +66,21 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
+    <header className="bg-orange-500">
+     
+        <nav className="flex items-center gap-20 border-b p-8">
 
-    <header className="bg-orange-600">
-      <nav className="flex items-center gap-20 border-b p-8">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-6 p-1">
+            <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-30 w-40 rounded-full"
-              src={LogoT}
+              className="h-20 w-20 rounded-full"
+              src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
             />
           </a>
+   
+          
         </div>
-
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -87,16 +92,21 @@ export default function Header() {
           </button>
         </div>
 
+
+
+
         <div className="flex">
-          <input className='border-black rounded-md w-54 h-8 mr-20' type="text" placeholder="Busqueda rapida" />
-          <a href="#" className="text-3xl font-extrabold leading-6 text-black-400 rounded-3xl p-2 text-white"><FaSearch /></a>
-        </div>
+  <input className='border-black rounded-md w-54 h-8 mr-2' type="text" placeholder="a comer ..." />
+  <a href="#" className="text-3xl font-extrabold leading-6 text-black-400 rounded-3xl p-2 text-white"><FaSearch /></a>
+</div>
 
-
-
+        
+        
+        
+        
         <Popover.Group className="hidden lg:flex lg:gap-x-20">
           <Popover className="relative">
-            <Popover.Button className=" mr-10 flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
+            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-2xl text-white">
 
               Productos
               <ChevronDownIcon
@@ -160,7 +170,7 @@ export default function Header() {
           </Popover>
           <Link
             to="/nosotros"
-            className=" mr-5 text-lx font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold leading-6 text-2xl text-white"
           >
             Nosotros
           </Link>
@@ -170,29 +180,29 @@ export default function Header() {
               href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
               target="_blank"
               rel="noopener noreferrer"
-              className=" mr-5 text-lx font-semibold leading-6 text-2xl text-white"
+              className="text-lx font-semibold leading-6 text-2xl text-white"
             >
-              Pedidos via WhatsApp
+              Pedidos
             </a>
           </p>
 
-          {/* <Link
-            to="/registerUsers"
+          <Link
+            to="/inventario"
             className=" text-lx font-semibold leading-6 text-2xl text-white"
           >
-            Registrate
-          </Link> */}
-
+            Inv
+          </Link> 
+          
           <Link
             to="/login"
-            className="mr-5 text-lx font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold leading-6 text-2xl text-white"
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
 
           <Link
             to="/carrito"
-            className="mr-3 text-lx font-semibold leading-6 text-2xl text-white"
+            className="text-lx font-semibold leading-6 text-2xl text-white"
           >
             <FiShoppingCart
               className="h-12 w-12 text-white"
@@ -200,27 +210,18 @@ export default function Header() {
             />
           </Link>
         </Popover.Group>
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-6 p-1">
-            <span className="sr-only">Canaima</span>
-            <img
-              className="h-30 w-40 rounded-full"
-              src={LogoC}
-            />
-          </a>
-        </div>
       </nav>
       <Dialog
         as="div"
         className="lg:hidden"
         open={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
+        onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Nosotros</span>
+              <span className="sr-only">Your Nosotros</span>
               <img
                 className="h-12 w-auto"
                 src="https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TtMt3LFc1mgAX-EiyL3&_nc_ht=scontent.fmad22-1.fna&oh=00_AfC5VrBB0asNvvVStJShAijgFTM-aZKPrehUe3J0wkHGrg&oe=659535F8"
@@ -310,15 +311,8 @@ export default function Header() {
                   Login
                 </Link>
               </div>
-
             </div>
-
           </div>
-
-
-
-
-
         </Dialog.Panel>
       </Dialog>
     </header>
