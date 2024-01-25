@@ -8,9 +8,7 @@ export default function Register() {
     lastName: "",
     email: "",
     phone: "",
-    address: "",
     password: "",
-    
   });
 
   const handleChange = (e) => {
@@ -30,17 +28,16 @@ export default function Register() {
   // ESTA FUNCION  NO SE IRA A LA CARPETA USE CONTEXT SE QUEDA EN LOCAL STORAGE POR TEMAS DE ACTUALIZACION DE LA PAHGINA Y PODEMOS PERDER LA INFO  EN LA//
   const postUser = async () => {
     try {
-      const url = "http://127.0.0.1:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
+      const url = "http://192.168.1.113:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
 
       const objectPost = {
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
         phone: formData.phone,
-        address: formData.address,
         password: formData.password,
-        edad : formData.edad
-      };
+  
+          };
 
       const answer = await axios.post(url, objectPost);
       console.log("Respuesta del servidor:", answer.data);
@@ -49,19 +46,15 @@ export default function Register() {
     }
   };
 
- 
-/*   const age = async calculateAge (formData.birthdate);   CALCULO DE LA EDAD
+
+/* FUNCION PARA CALCULAR LA MAYORIA DE EDAD */
+  /*   const age = async calculateAge (formData.birthdate);   CALCULO DE LA EDAD
   if (age >= 18) {
     await postUser();
   } else {
     alert('No cumples con la mayoría de edad');
   }
 }; */
-
-
-
-
-
 
 
   return (
@@ -86,7 +79,7 @@ export default function Register() {
                     htmlFor="firstName"
                     className="block text-2xl font-medium text-gray-900"
                   >
-                    Nombres
+                    Nombre
                   </label>
                   <input
                     type="string"
@@ -105,7 +98,7 @@ export default function Register() {
                   htmlFor="lastName"
                   className="block text-2xl font-medium text-gray-700"
                 >
-                  Apellidos
+                  Apellido
                 </label>
                 <input
                   type="string"
@@ -159,25 +152,6 @@ export default function Register() {
                   htmlFor="address"
                   className="block text-2xl font-medium text-gray-700"
                 >
-                  Dirección de Envío
-                </label>
-                <textarea
-                  type="string"
-                  id="address"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleChange}
-                  className="mt-1 p-2 w-full border rounded-md"
-                  rows="1"
-                  required
-                ></textarea>
-              </div>
-
-              <div className="mb-4">
-                <label
-                  htmlFor="address"
-                  className="block text-2xl font-medium text-gray-700"
-                >
                   Password
                 </label>
                 <textarea
@@ -203,4 +177,3 @@ export default function Register() {
     </div>
   );
 }
-// text-2xl group h-12 px-6 bg-orange-500 border-2 border-orange-500 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800

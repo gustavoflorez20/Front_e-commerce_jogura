@@ -70,7 +70,7 @@ export default function Header() {
           </button>
         </div>
 
-        <Popover.Group className="hidden lg:flex lg:gap-x-28">
+        <Popover.Group className="flex lg:gap-x-32">
         <div className="flex">
   {/* <input className='border-black rounded-md w-54 h-8 mr-2' type="text" placeholder="a comer ..." /> */}
   <a href="#" className="text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white"><FaSearch /></a>
@@ -126,7 +126,7 @@ export default function Header() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-3xl font-semibold leading-8  text-gray-900 hover:bg-gray-100"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-3xl font-semibold leading-8 text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon
                         className="h-5 w-5 flex-none text-gray-400"
@@ -153,10 +153,10 @@ export default function Header() {
               rel="noopener noreferrer"
               className="text-lx font-semibold text-2xl text-white"
             >
-              Pedidos
+              Pedidos falta icono
             </a>
         
-          
+              
           <Link
             to="/login"
             className="text-lx font-semibold text-2xl text-white"

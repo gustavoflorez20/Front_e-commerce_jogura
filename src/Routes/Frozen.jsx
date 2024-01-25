@@ -60,7 +60,7 @@ const Frozen = () => {
 
           <img
             className="mb-6 w-full h-auto" 
-            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047094/Teque%C3%B1oPlatanoMacho_yshxkf.jpg" 
+            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706130180/teque%C3%B1oplatanotequetapas_qa9x7b.jpg" 
             alt="Tequeyoyo"
           />
           <p className="text-4xl font-bold text-gray-800 mb-6"></p>
