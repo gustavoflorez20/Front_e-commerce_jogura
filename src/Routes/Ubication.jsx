@@ -18,9 +18,9 @@ const ShipmentsComponent = () => {
 
   return (
     <>
-      <div className=" flex">
+      <div>
         <div className="map-container">
-          <MapContainer center={location} zoom={5}>
+          <MapContainer center={location} zoom={8}>
             <TileLayer
               url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -37,7 +37,7 @@ const ShipmentsComponent = () => {
           </MapContainer>
 
           <div>
-            <div className="text-center gap-4 mt-4 mr-10 font-bold mt-8 ">
+            <div className="text-center gap-4  mr-10 font-bold mt-8 ">
               <h1>Descubre donde estamos.</h1>
             </div>
             <div>

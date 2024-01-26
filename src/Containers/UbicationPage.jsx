@@ -1,7 +1,7 @@
 import Header from '../Routes/Header';
 import Ubication from '../Routes/Ubication';
-/* import Section2 from '../Routes/Section2' */
 import Footer from '../Routes/Footer';
+import '../Styles/UbicationComp.css'
 
 
 const ShipPage = () => {
@@ -9,7 +9,6 @@ const ShipPage = () => {
     <div>
       <Header/>
       <Ubication/>
- {/*     <Section2/> */}
      <Footer/>   
 
 
