@@ -4,7 +4,7 @@ import Jefa from "../Images/Mujer.jpeg";
 
 const Nosotros = () => {
   return (
-    <section className="w-90vh">
+    <section className="container mx-auto my-8 p-8 bg-gray-100">
       <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
         <div className="md:w-2/5 order-2 md:order-1 flex justify-center ml-8 text-justify md:justify-start rounded-md">
           <ReactPlayer

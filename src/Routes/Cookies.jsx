@@ -3,7 +3,7 @@ import '../Styles/Cookies.css'
 
 const Cookies = () => {
   return (
-    <div className='cookie'>
+    <div className='container mx-auto my-8 p-8 bg-gray-100'>
       
       SOBRE ESTA POLÍTICA DE COOKIES <br /><br />
 

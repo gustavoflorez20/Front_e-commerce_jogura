@@ -3,7 +3,7 @@ import '../Styles/Promotion.css';
 
 const Promotion = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-12 flex justify-center">
+    <div className="container mx-auto my-8 p-8 bg-gray-100">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
   
   {/* Promocion 1 */}

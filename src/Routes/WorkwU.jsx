@@ -28,7 +28,7 @@ const WorkwU = () => {
             <p className="text-sm text-gray-500">Adjunta tu currículum en formato PDF o Word.</p>
           </div>
 
-          <button type="submit" className="bg-orange-500 text-white py-3 px-6 rounded hover:bg-blue-600 cursor-pointer">
+          <button type="submit" className="bg-orange-600 text-white py-3 px-6 rounded hover:bg-blue-600 cursor-pointer">
             Enviar
           </button>
         </form>

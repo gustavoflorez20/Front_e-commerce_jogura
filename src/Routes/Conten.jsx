@@ -6,7 +6,7 @@ import CookieAlert from '../Routes/CookieAlert';
 const Conten = () => {
   const [props, set] = useSpring(() => ({
     transform: 'scale(1)',
-    config: { tension: 150, friction: 10 },
+    config: { tension: 100, friction: 15 },
   }));
   const [showCookieAlert, setShowCookieAlert] = useState(true);
 
@@ -21,7 +21,7 @@ const Conten = () => {
         <animated.img
           src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706127416/foto_principal_de_home_rc0dt9.jpg"
           alt="Logo Tequetapas"
-          width="15000"
+          width="10000"
           onMouseEnter={() => set({ transform: 'scale(1.1)' })}
           onMouseLeave={() => set({ transform: 'scale(1)' })}
           style={props}

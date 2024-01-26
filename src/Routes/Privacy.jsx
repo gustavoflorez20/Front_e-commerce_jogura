@@ -3,7 +3,7 @@ import '../Styles/Privacy.css';
 
 const Privacy = () => {
   return (
-    <div className="Privacy">
+    <div className="container mx-auto my-8 p-8 bg-gray-100">
 
       <p>
         POLÍTICA DE PRIVACIDAD <br /><br />

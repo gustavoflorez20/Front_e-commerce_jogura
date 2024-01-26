@@ -2,7 +2,7 @@ import React from "react";
 
 const Lacteos = () => {
   return (
-<section className=" bg-gray-100 min-h-screen py-12 flex items-center justify-center">
+<section className=" container mx-auto my-8 p-8 bg-gray-100">
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
           <div className="p-1 bg-gray-200"></div>

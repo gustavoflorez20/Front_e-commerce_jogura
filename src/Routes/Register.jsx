@@ -69,11 +69,11 @@ export default function Register() {
                 alt="Logo Tequetapas"
               />
             </div>
-            <h2 className="text-3xl font-bold mb-4 text-center">
+            <h2 className="text-3xl font-bold mb-4 text-center text-gray-900 ">
               Registro de Usuario
             </h2>
             <form onSubmit={handleSubmit}>
-              <div className="flex ">
+             
                 <div className="mb-4">
                   <label
                     htmlFor="firstName"
@@ -91,12 +91,12 @@ export default function Register() {
                     required
                   />
                 </div>
-              </div>
+            
 
               <div className="mb-4">
                 <label
                   htmlFor="lastName"
-                  className="block text-2xl font-medium text-gray-700"
+                  className="block text-2xl font-medium text-gray-900"
                 >
                   Apellido
                 </label>

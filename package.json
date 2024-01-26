@@ -19,6 +19,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "axios": "^1.6.5",
     "cors": "^2.8.5",
+    "feather-icons-react": "^0.7.0",
     "react": "^18.2.0",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",

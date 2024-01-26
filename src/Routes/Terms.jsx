@@ -3,7 +3,7 @@ import '../Styles/Terms.css';
 
 const Terms = () => {
   return (
-    <div className='terms'>
+    <div className='container mx-auto my-8 p-8 bg-gray-100'>
 
       <div>
         <h1>Terminos y Condiciones </h1>

@@ -1,10 +1,5 @@
 import React from "react";
-import LogoT from "../Images/LogoTequetapas.PNG";
-import LogoC from "../Images/LogoCanaima.PNG";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
-
-
-
 import { Link } from "react-router-dom";
 
 
@@ -17,12 +12,12 @@ const Footer = () => {
         <span className="sr-only">Tequetapas Foods</span>
         <img
             className="w-20  bg-white rounded-full"
-            src={LogoT}
+            src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
             alt="LogoTequetapas"
           />
           <img
             className="w-20  bg-white rounded-full "
-            src={LogoC}
+            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
             alt="LogoCanaima"
           />
         </div>
