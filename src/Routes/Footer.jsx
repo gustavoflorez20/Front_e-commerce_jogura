@@ -109,7 +109,7 @@ const Footer = () => {
             to="/ubicacion"
             className=" text-white-800 dark: text-white"
           >
-            Donde Estamos Ubicados
+           Nuestras sedes
           </Link>{" "}
           </p>
           

@@ -16,7 +16,7 @@ align-items: flex-start;
     display: flex;
     justify-content: space-between;
     align-items: stretch; 
-    
+    margin-left: 16px;
 
   }
   
@@ -25,7 +25,7 @@ align-items: flex-start;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22px;
+    gap: 2px;
   }
   
   .button-group button {
