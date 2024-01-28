@@ -60,7 +60,7 @@ export default function Header() {
             <span className="sr-only">Tequetapas Foods</span>
             <img
               className="h-20 w-30 rounded-full"
-              src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/302154806_580306793530649_3335504125470527494_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=jKnCPHQLjowAX-ap5Km&_nc_ht=scontent-mad1-1.xx&oh=00_AfC1_UoJGodRFSKVc8HloQATcDn1fA88v8Pjn0GE4rZahA&oe=65A70238"
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
               alt="Tequetapas Foods"
             />
           </a>
@@ -68,7 +68,7 @@ export default function Header() {
         
         <Popover.Group className="hidden lg:flex lg:gap-x-32">
           <div className="flex">
-            <a href="#" className="text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white">
+            <a href="#" className="ml-10 text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white">
               <FaSearch />
             </a>
           </div>
@@ -165,11 +165,21 @@ export default function Header() {
             className="text-lx font-semibold text-2xl text-white"
           >
             <FiShoppingCart
-              className="h-12 w-12 text-white"
+              className="h-12 w-12 text-white mr-10"
               aria-hidden="true"
             />
           </Link>
         </Popover.Group>
+        <div className="flex">
+          <a href="/" className="-m-6 p-1">
+            <span className="sr-only">Tequetapas Foods</span>
+            <img
+              className="h-20 w-30 rounded-full"
+              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
+              alt="Canaima"
+            />
+          </a>
+        </div>
       </nav>
     </header>
   );
