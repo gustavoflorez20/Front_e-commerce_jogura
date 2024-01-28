@@ -1,10 +1,10 @@
 import React from "react";
 
 const Frozen = () => {
-  const handleQuantityChange = (product) => {
-    // Implementa lógica para manejar cambios en la cantidad del producto
-    console.log(`Cantidad seleccionada para ${product} cambió`);
-  };
+  // const handleQuantityChange = (product) => {
+  //   // Implementa lógica para manejar cambios en la cantidad del producto
+  //   console.log(`Cantidad seleccionada para ${product} cambió`);
+  // };
 
   const handlePriceClick = (product) => {
     // Implementa lógica para manejar el clic en el precio del producto
@@ -16,7 +16,7 @@ const Frozen = () => {
       
       name: "Tequeño Tradicional", 
       price: "35,00€",
-      image: "https://scontent.fmad22-1.fna.fbcdn.net/v/t39.30808-6/223643901_1745312475656914_7048288701235607891_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c83dfd&_nc_ohc=YsapUlPZ18IAX-lVGSG&_nc_ht=scontent.fmad22-1.fna&oh=00_AfABhZsgeY_khjUXWEB4mE6L0c89ueqNwZdKB2bG69sBJQ&oe=65A89204",
+      image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706047092/teque%C3%B1oOriginal2_voyrwj.jpg",
     },
     {
       name: "Tequeños de Chocolate y Avellanas",
@@ -59,20 +59,21 @@ const Frozen = () => {
               />
               <ul className="text-sm text-gray-600 mb-6"></ul>
             </div>
-            <div className="p-4 flex justify-between items-center">
+            <div className="p-4 flex justify-center items-center">
               {/* Botón de Comprar */}
               <button
                 className="w-1/2 bg-orange-600 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800 mr-2"
               >
                 Comprar
               </button>
+              
               {/* Botón de Cantidades */}
-              <button
+              {/* <button
                 onClick={() => handleQuantityChange(producto.name)}
                 className="w-1/2 bg-orange-600 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
               >
                 Cantidades
-              </button>
+              </button> */}
             </div>
           </div>
         ))}
