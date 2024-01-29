@@ -7,8 +7,8 @@ const LoginListPage = () => {
   return (
     <div>
     <Header/>
-    <Section2/>
     <LoginListUser/>
+    <Section2/>
     <Footer/>
     </div>
   )
