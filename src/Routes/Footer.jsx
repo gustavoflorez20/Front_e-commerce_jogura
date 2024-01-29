@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-orange-600   p-8 xl:p-5">
       <div>
+        
         <div className="flex  justify-evenly gap-4 border-b p-8 border-primary">
         <div className="flex gap-10 mr-10">
         <span className="sr-only">Tequetapas Foods</span>
