@@ -65,20 +65,28 @@ export default function Header() {
             />
           </a>
         </div>
-        
-        <Popover.Group className="hidden lg:flex lg:gap-x-32">
+
+        <Popover.Group className="lg:flex lg:gap-x-32 ">
           <div className="flex">
-            <a href="#" className="ml-10 text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-white lg:hidden "
+            >
+              <Bars3Icon className="h-6 w-6 " aria-hidden="true" />
+            </button>
+          </div>
+          <div>
+            <a href="#" className="text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white">
               <FaSearch />
             </a>
           </div>
           <Popover className="relative">
 
-            <Popover.Button className="flex items-center gap-x-1 font-semibold text-2xl text-white">
+            <Popover.Button className="mt-5 flex items-center gap-x-1 font-semibold text-2xl text-white">
 
               Productos
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-gray-900"
+                className="h-5 w-5 flex-none text-white-900"
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -138,7 +146,7 @@ export default function Header() {
           </Popover>
           <Link
             to="/nosotros"
-            className="text-lx font-semibold text-2xl text-white"
+            className="text-lx font-semibold text-2xl text-white mt-5"
           >
             Nosotros
           </Link>
@@ -147,7 +155,7 @@ export default function Header() {
             href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lx font-semibold text-2xl text-white"
+            className="mt-5 text-lx font-semibold text-2xl text-white"
           >
             Pedidos <FaWhatsapp className="inline-block" />
           </a>
@@ -155,14 +163,14 @@ export default function Header() {
 
           <Link
             to="/login"
-            className="text-lx font-semibold text-2xl text-white"
+            className="mt-5 text-lx font-semibold text-2xl text-white"
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
 
           <Link
             to="/carrito"
-            className="text-lx font-semibold text-2xl text-white"
+            className="mt-5 text-lx font-semibold text-2xl text-white"
           >
             <FiShoppingCart
               className="h-12 w-12 text-white mr-10"
