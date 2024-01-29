@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 const LogingUser = () => {
@@ -38,7 +38,7 @@ const LogingUser = () => {
                     </Link>
                   </button>
                   <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
-                    <Link to="/login" className="text-lx font-semibold leading-6 text-2xl text-white">
+                    <Link to="/clientRegisterUser" className="text-lx font-semibold leading-6 text-2xl text-white">
                       <h2 className="text-center text-1xl text-cyan-900 font-bold">Iniciar Sesion</h2>
                     </Link>
                   </button>
