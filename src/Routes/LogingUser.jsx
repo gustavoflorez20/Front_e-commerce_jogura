@@ -4,15 +4,22 @@ import { Link } from 'react-router-dom';
 const LogingUser = () => {
   return (
     <div>
-      <div className="container mx-auto my-8 p-8 bg-gray-100">
+      <div className="relative bg-gradient-to-br from-sky-50 to-gray-200">
         <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
           <div className="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
             <div className="rounded-xl bg-white shadow-xl">
-              <div className="p-6 sm:p-16">
+              <div className="p-6 sm:p-20">
+              <div className=" grid space-y-4">
                 <div className="flex flex-col items-center space-y-4">
-                  <img src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg" loading="lazy" className="w-20 md:w-24 lg:w-32 xl:w-40 rounded-full" alt="Tequetapas"/> {/* Modificado para centrar y ajustar el tamaño */}
-                  <h2 className="text-center text-2xl text-cyan-900 font-bold">Inicia sesión para Comenzar <br /> Lo mejor de Tequetapas</h2> 
+                  <img src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg" 
+                  className="w-20 md:w-24 lg:w-32 xl:w-40 rounded-full" 
+                  alt="Logo Tequetapas"/> 
+                  <h2 className="text-center text-2xl text-cyan-900 font-bold">
+                    Inicia sesión para Comenzar <br /> 
+                    Lo mejor de Tequetapas</h2> 
                 </div>
+
+
                 <div className="mt-16 grid space-y-4">
                   <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
                     <div className="relative flex items-center space-x-4 justify-center">
@@ -32,14 +39,14 @@ const LogingUser = () => {
                       <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue Con Facebook</span>
                     </div>
                   </button>
-                  <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
-                    <Link to="/registersUser" className="text-lx font-semibold leading-6 text-2xl text-white">
-                      <h2 className="text-center text-1xl text-cyan-900 font-bold">Registrarse</h2>
+                  <button className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
+                    <Link to="/registersUser" className="text-lx font-semibold leading-6 text-2xl">
+                      <h2 className="text-center text-1xl  text-white font-bold">Registrarse</h2>
                     </Link>
                   </button>
-                  <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                  <button className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
                     <Link to="/clientRegisterUser" className="text-lx font-semibold leading-6 text-2xl text-white">
-                      <h2 className="text-center text-1xl text-cyan-900 font-bold">Iniciar Sesion</h2>
+                      <h2 className="text-center text-1xl  text-white font-bold">Iniciar Sesion</h2>
                     </Link>
                   </button>
 
@@ -51,6 +58,7 @@ const LogingUser = () => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
