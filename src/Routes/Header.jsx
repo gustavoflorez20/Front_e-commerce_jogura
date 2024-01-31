@@ -178,6 +178,14 @@ export default function Header() {
             />
           </Link>
         </Popover.Group>
+
+        <Link
+            to="/miPerfil"
+            className="mt-5 text-lx font-semibold text-2xl text-white"
+          >
+            Mi Perfil
+          </Link>
+
         <div className="flex">
           <a href="/" className="-m-6 p-1">
             <span className="sr-only">Tequetapas Foods</span>
