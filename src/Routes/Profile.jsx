@@ -1,117 +1,194 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Profile = () => {
-  // Estado para almacenar la información del perfil
-  const [profileInfo, setProfileInfo] = useState({
-    name: '',
-    email: '',
-    address: '', // Nueva adición: dirección de domicilio
-    age: '',     // Nueva adición: edad
-    // Agrega más campos según sea necesario
+  const [formData, setFormData] = useState({
   });
 
-  // Manejar cambios en los campos del formulario
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setProfileInfo((prevInfo) => ({
-      ...prevInfo,
-      [name]: value,
-    }));
+  const [isRegistered, setIsRegistered] = useState(true);
+
+  const handleChange = (e) => {
   };
 
-  // Manejar el envío del formulario
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aquí puedes agregar lógica para enviar la información del perfil al servidor
-    console.log('Información del perfil:', profileInfo);
+  const handleSubmitRegister = (e) => {
+    e.preventDefault();
+
+    
+    if (formData.newPassword !== formData.confirmPassword) {
+      alert("Las contraseñas no coinciden");
+      return;
+    }
+
+    console.log("Formulario enviado:", formData);
+    setIsRegistered(true);
+  };
+
+  const postUser = async () => {
+    try {
+    } catch (error) {
+      console.error("Error al enviar la solicitud:", error);
+    }
   };
 
   return (
-    <div>
-      <div className="relative bg-gradient-to-br from-sky-50 to-gray-200">
-        <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
+    <form onSubmit={handleSubmitRegister}>
+      <div className="container mx-auto my-8 p-8 bg-gray-100">
+        <div className="relative container m-auto px-6 text-gray-600 md:px-12 xl:px-40">
           <div className="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
-            <div className="rounded-xl bg-white shadow-xl">
-              <div className="p-6 sm:p-20">
-                <div className="grid space-y-4">
-                  <div className="flex flex-col items-center space-y-4">
-                    <img
-                      src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
-                      className="w-20 md:w-24 lg:w-32 xl:w-40 rounded-full"
-                      alt="Logo Tequetapas"
-                    />
-                    <h2 className="text-center text-2xl text-gray-900 font-bold">
-                      Perfil de Usario
-                    </h2>
-                  </div>
+            <div className="rounded-xl bg-white shadow-xl ">
+              <div className="p-6 sm:p-20 ">
+                <div className=" grid space-y-4">
+                <div className="flex flex-col items-center space-y-4">
+                  <img className="w-20 md:w-24 lg:w-32 xl:w-40 rounded-full"
+                    src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
+                    alt="Logo Tequetapas" />
+                  <h2 className="text-center text-4xl text-gray-900 font-bold">
+                    Mi Perfil</h2>
+                </div>
 
-                  <form onSubmit={handleSubmit}>
-                    <div className="mt-16 grid space-y-4 text-gray-900">
-                      <label>
-                        Nombre:
-                        <input
-                          type="text"
-                          name="name"
-                          value={profileInfo.name}
-                          onChange={handleInputChange}
-                        />
-                      </label>
-                    </div>
-                    <div className="mt-16 grid space-y-4 text-gray-900">
-                      <label>
-                        Apellidos:
-                        <input
-                          type="text"
-                          name="lastName"
-                          value={profileInfo.name}
-                          onChange={handleInputChange}
-                        />
-                      </label>
-                    </div>
-                    <div className="mt-16 grid space-y-4 text-gray-900">
-                      <label>
-                        Edad:
-                        <input
-                          type="number"
-                          name="age"
-                          value={profileInfo.age}
-                          onChange={handleInputChange}
-                        />
-                      </label>
-                    </div>
-                    <div className="mt-16 grid space-y-4 text-gray-900">
-                      <label>
-                        Correo Electrónico:
-                        <input
-                          type="email"
-                          name="email"
-                          value={profileInfo.email}
-                          onChange={handleInputChange}
-                        />
-                      </label>
-                    </div>
-                    <div className="mt-16 grid space-y-4 text-gray-900">
-                      <label>
-                        Dirección de Domicilio:
-                        <input
-                          type="text"
-                          name="address"
-                          value={profileInfo.address}
-                          onChange={handleInputChange}
-                        />
-                      </label>
-                    </div>
-                    
-                    <button>
-                    <Link to="/" className="text-lx font-semibold leading-8 text-2xl text-white ">
-                      <h2 className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
-                        Guardar</h2>
-                    </Link>
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Nombre:
+                  </label>
+                  <input
+                    type="string"
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                    disabled={isRegistered}  // Deshabilita el campo si isRegistered es true
+                  />
+                </div>
+
+
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Apellido:
+                  </label>
+                  <input
+                    type="string"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                    disabled={isRegistered}  // Deshabilita el campo si isRegistered es true
+                  />
+                </div>
+
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Email:
+                  </label>
+                  <input
+                    type="string"
+                    id="email"  // <-- Corregir el id a "email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                    disabled={isRegistered}  // Deshabilita el campo si isRegistered es true
+                  />
+                </div>
+
+
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="phone"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Teléfono:
+                  </label>
+                  <input
+                    type="string"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                  />
+                </div>
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="address"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Domicilio:
+                  </label>
+                  <input
+                    type="string"
+                    id="address"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                  />
+                </div>
+
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="newPassword"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Nueva Contraseña:
+                  </label>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    name="newPassword"
+                    value={formData.newPassword}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                  />
+                </div>
+
+                <div className="mt-16 grid space-y-4">
+                  <label
+                    htmlFor="confirmPassword"
+                    className="block text-2xl font-medium text-gray-900"
+                  >
+                    Confirmar Contraseña:
+                  </label>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    className="mt-2 p-2 w-full border rounded-md"
+                    required
+                  />
+                </div>
+
+                <div className="text-lx font-semibold leading-6 text-2xl text-white">
+                  <button
+                    onClick={postUser}
+                    type="submit"
+                    className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800"
+                  >Guardar Cambios
                   </button>
-                    
-                  </form>
+                </div>
+
+
+                <div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
+                  <p className="text-xs">Al proceder, usted acepta nuestra <a href="/terminos" className="underline">Condiciones de uso</a> y confirma que has leído nuestra <a href="/cookies" className="underline">Declaración de privacidad y cookies</a>.</p>
+                  <p className="text-xs">Este sitio está protegido por reCAPTCHA y el <a href="/politicas" className="underline">Política de privacidad de Google</a> y <a href="/terminos" className="underline">Términos de servicio</a> aplicar.</p>
                 </div>
               </div>
             </div>
@@ -119,8 +196,8 @@ const Profile = () => {
         </div>
       </div>
     </div>
-
-  );
-};
+  </form>
+);
+}
 
 export default Profile;

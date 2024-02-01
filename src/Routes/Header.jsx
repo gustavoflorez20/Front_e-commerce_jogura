@@ -59,7 +59,7 @@ export default function Header() {
           <a href="/" className="-m-6 p-1">
             <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-20 w-30 rounded-full"
+              className="h-30 w-30 rounded-full"
               src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
               alt="Tequetapas Foods"
             />
@@ -67,16 +67,16 @@ export default function Header() {
         </div>
 
         <Popover.Group className="lg:flex lg:gap-x-32 ">
-          <div className="flex">
+          {/* <div className="flex">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-white lg:hidden "
             >
               <Bars3Icon className="h-6 w-6 " aria-hidden="true" />
             </button>
-          </div>
+          </div> */}
           <div>
-            <a href="#" className="text-3xl font-extrabold text-black-400 rounded-3xl p-2 text-white">
+            <a href="#" className="flex text-4xl font-extrabold text-black-400 rounded-3xl p-8 text-white">
               <FaSearch />
             </a>
           </div>
@@ -146,7 +146,7 @@ export default function Header() {
           </Popover>
           <Link
             to="/nosotros"
-            className="text-lx font-semibold text-2xl text-white mt-5"
+            className="text-lx font-semibold text-2xl text-white mt-4"
           >
             Nosotros
           </Link>
@@ -155,7 +155,7 @@ export default function Header() {
             href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 text-lx font-semibold text-2xl text-white"
+            className="mt-4 text-lx font-semibold text-2xl text-white"
           >
             Pedidos <FaWhatsapp className="inline-block" />
           </a>
@@ -163,17 +163,17 @@ export default function Header() {
 
           <Link
             to="/login"
-            className="mt-5 text-lx font-semibold text-2xl text-white"
+            className="mt-4 text-lx font-semibold text-2xl text-white"
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
 
           <Link
             to="/carrito"
-            className="mt-5 text-lx font-semibold text-2xl text-white"
+            className="mt-4 text-lx font-semibold text-2xl text-white"
           >
             <FiShoppingCart
-              className="h-12 w-12 text-white mr-10"
+              className="h-12 w-12 text-white mr-5"
               aria-hidden="true"
             />
           </Link>
@@ -190,7 +190,7 @@ export default function Header() {
           <a href="/" className="-m-6 p-1">
             <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-20 w-30 rounded-full"
+              className="h-30 w-30 rounded-full"
               src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
               alt="Canaima"
             />

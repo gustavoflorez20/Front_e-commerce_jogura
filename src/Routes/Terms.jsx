@@ -1,19 +1,18 @@
 import React from 'react'
-import '../Styles/Terms.css';
 
 const Terms = () => {
   return (
     <div className='container mx-auto my-8 p-8 bg-gray-100'>
 
       <div>
-        <h1>Terminos y Condiciones </h1>
+      <strong> <h1>Terminos y Condiciones </h1></strong>
       </div> <br /> <br />
 
       <p>La presente Política de Privacidad tiene por objeto informar a los usuarios del sitio web sobre el tratamiento y protección de los datos personales de los usuarios y clientes que puedan ser recabados por la navegación o contratación de servicios a través de su sitio web.</p> <br /><br />
 
       <p>En este sentido, TEQUETAPAS FOODS, S.L. (en adelante, “TEQUETAPAS FOODS ESPAÑA”) garantiza el cumplimiento de lo dispuesto en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, en el Reglamento General de Protección de Datos (EU) 2016/679 y en lo dispuesto en el artículo 10 de la Ley 34/2002, del 11 de julio, de servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE).</p> <br /><br />
 
-      <h1>RESPONSABLE DEL TRATAMIENTO</h1> <br />
+     <strong> <h1>RESPONSABLE DEL TRATAMIENTO</h1> </strong>
 
       <p>→ Denominación social: TEQUETAPAS FOODS, S.L. <br />
         → N.I.F.: B- 88095674 <br />
@@ -27,7 +26,7 @@ const Terms = () => {
 
       TEQUETAPAS FOODS ESPAÑA se compromete a conservar la información facilitada por los usuarios en la más estricta confidencialidad, evitando accesos no autorizados, manipulación de información, la pérdida, destrucción o robo de información. Para ello, TEQUETAPAS FOODS ESPAÑA aplicará las medidas de seguridad que establece la legislación vigente. <br /> <br />
 
-      <h1>AMBITO DE APLICACIÓN</h1> <br />
+      <strong><h1>AMBITO DE APLICACIÓN</h1></strong> <br />
 
       La presente Política de Privacidad resulta de aplicación a todos los usuarios que utilicen los servicios de la página web, con independencia del lugar y del momento en que operen. <br />
 
@@ -48,13 +47,13 @@ const Terms = () => {
 
       Asimismo, TEQUETAPAS FOODS ESPAÑA se compromete a tratar los datos de carácter personal de conformidad con lo establecido en la normativa aplicable y, en particular, a tratar aquellos datos a los que tenga acceso aplicando las medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado, garantizando en todo momento la confidencialidad, integridad y disponibilidad permanentes de los sistemas y servicios de tratamiento. <br /> <br />
 
-      <h1>LEGITIMACIÓN </h1> <br />
+      <strong><h1>LEGITIMACIÓN </h1></strong> <br />
 
       La base legal para el tratamiento de los datos personales de los usuarios es el consentimiento. Para contactar con TEQUETAPAS FOODS ESPAÑA, el usuario deberá aceptar la presente Política de Privacidad. <br />
 
       El usuario podrá retirar su consentimiento en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada. <br /> <br />
 
-      <h1>CATEGORÍA DE DATOS PERSONALES</h1> <br />
+      <strong><h1>CATEGORÍA DE DATOS PERSONALES</h1> </strong><br />
 
       Atendiendo a las finalidades anteriormente descritas, TEQUETAPAS FOODS ESPAÑA, trata las siguientes categorías de datos: <br />
 
@@ -65,24 +64,24 @@ const Terms = () => {
       Datos académicos y profesionales. <br />
       Datos especialmente sensibles (enfermedades, alergias…etc.) <br /> <br />
 
-      <h1>CONSERVACIÓN DE LOS DATOS</h1> <br />
+     <strong> <h1>CONSERVACIÓN DE LOS DATOS</h1></strong> <br />
 
       TEQUETAPAS FOODS ESPAÑA, SL conservará los datos personales durante el período de tiempo necesario para cumplir con las finalidades para las cuales se recabaron, siempre que no se solicite la supresión de los mismos y, en todo caso, durante los plazos legalmente establecidos. <br /> <br />
 
-      <h1>COMUNICACIÓN DE LOS DATOS</h1> <br />
+     <strong><h1>COMUNICACIÓN DE LOS DATOS</h1></strong>  <br />
 
       TEQUETAPAS FOODS ESPAÑA, SL informa que determinados datos de los usuarios en el marco de la normativa vigente o de la relación contractual que mantenga con TEQUETAPAS FOODS ESPAÑA, SL pueden ser comunicados o cedidos a: <br />
 
       – Terceros a los que se deban comunicar los datos por obligación legal. <br />
       – Otros terceros, si así los usuarios lo han consentido. <br /> <br />
 
-      <h1>SEGURIDAD DE LOS DATOS</h1> <br />
+     <strong> <h1>SEGURIDAD DE LOS DATOS</h1></strong> <br />
 
       Con el objetivo de salvaguardar la seguridad de los datos personales, TEQUETAPAS FOODS ESPAÑA, SL está adoptando las medidas de índole técnica y organizativa necesarias para garantizar la seguridad, integridad y confidencialidad de los datos personales suministrados con el objetivo de evitar su alteración, pérdida, y/o tratamientos o accesos no autorizados. <br />
 
       Con el fin de mantener los datos personales de los usuarios actualizados en el Registro de Actividades del Tratamiento, los usuarios deberán informar de cualquier cambio que se produzca respecto a ellos, de lo contrario TEQUETAPAS FOODS ESPAÑA no se hará responsable de aquellos datos que no sean exactos o veraces, así como de las consecuencias que puedan causar a la propia sociedad o a terceros. <br /> <br />
 
-      <h1>DERECHOS DE LOS USUARIOS</h1>  <br />
+     <strong> <h1>DERECHOS DE LOS USUARIOS</h1> </strong> <br />
 
       La Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales y el Reglamento General de Protección de Datos recogen una serie de derechos a favor de los titulares cuyos datos personales son tratados. <br />
 
@@ -122,13 +121,13 @@ const Terms = () => {
 
       En particular, TEQUETAPAS FOODS ESPAÑA, SL informa del derecho que asiste a los usuarios de presentar una reclamación ante la Agencia Española de Protección de Datos, especialmente cuando no haya obtenido satisfacción en el ejercicio de sus derechos, a través de la web www.aepd.es. <br /> <br />
 
-      <h1>CORREOS COMERCIALES</h1> <br />
+      <strong><h1>CORREOS COMERCIALES</h1> </strong><br />
 
       De conformidad con lo dispuesto en la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, http://www.es.tequetapasfoods.com/ no realiza prácticas SPAM, por lo que no envía correos comerciales por vía electrónica que no hayan sido previamente solicitados o autorizados por el usuario. En consecuencia, en cada uno de los formularios de la web, el usuario tiene la posibilidad de dar su consentimiento expreso para recibir el boletín, con independencia de la información comercial que pueda ser solicitada eventualmente. <br /> <br />
 
       Asimismo, http://www.es.tequetapasfoods.com/ se compromete a no enviar comunicaciones comerciales sin identificarlas como tales y a identificar claramente a TEQUETAPAS FOODS ESPAÑA, SL como la persona en nombre de la cual se realizan dichas comunicaciones. <br /> <br />
 
-      <h1>MODIFICACIONES EN LA POLÍTICA DE PRIVACIDAD </h1><br />
+      <strong><h1>MODIFICACIONES EN LA POLÍTICA DE PRIVACIDAD </h1></strong><br />
 
       TEQUETAPAS FOODS ESPAÑA, se reserva el derecho de modificar la presente Política de Privacidad en cualquier momento. En caso de modificación, se anunciará en la página web los cambios introducidos respecto a la actual política de privacidad. El usuario deberá leer las modificaciones antes de continuar usando la web.
     </div>

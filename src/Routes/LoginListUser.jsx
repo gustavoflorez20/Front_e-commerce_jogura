@@ -41,7 +41,7 @@ const LoginListUser = () => {
 
   return (
     <form onSubmit={handleSubmitLogin}>
-      <div className="relative bg-gradient-to-br from-sky-50 to-gray-200">
+      <div className="container mx-auto my-8 p-8 bg-gray-100">
         <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
           <div className="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
             <div className="rounded-xl bg-white shadow-xl">
@@ -97,35 +97,15 @@ const LoginListUser = () => {
                   <button>
                     <Link to="" className="text-lx font-semibold leading-6 text-2xl text-white">
                       <h2 className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
-                        Registrarse</h2>
+                        Iniciar Sesion</h2>
                     </Link>
                   </button>
 
                 </div>
 
-                <div className="mt-10 space-y-4 text-gray-600 text-center sm:-mb-8">
-                  <p className="text-xs">
-                    Al proceder, usted acepta nuestra{" "}
-                    <a href="#" className="underline">
-                      Condiciones de uso
-                    </a>{" "}
-                    y confirma que has leído nuestra{" "}
-                    <a href="#" className="underline">
-                      Declaración de privacidad y cookies
-                    </a>
-                    .
-                  </p>
-                  <p className="text-xs">
-                    Este sitio está protegido por reCAPTCHA y el{" "}
-                    <a href="#" className="underline">
-                      Política de privacidad de Google
-                    </a>{" "}
-                    y{" "}
-                    <a href="#" className="underline">
-                      Términos de servicio
-                    </a>{"/"}
-                    aplicar.
-                  </p>
+                <div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
+                  <p className="text-xs">Al proceder, usted acepta nuestra <a href="/terminos" className="underline">Condiciones de uso</a> y confirma que has leído nuestra <a href="/cookies" className="underline">Declaración de privacidad y cookies</a>.</p>
+                  <p className="text-xs">Este sitio está protegido por reCAPTCHA y el <a href="/politicas" className="underline">Política de privacidad de Google</a> y <a href="/terminos" className="underline">Términos de servicio</a> aplicar.</p>
                 </div>
               </div>
             </div>

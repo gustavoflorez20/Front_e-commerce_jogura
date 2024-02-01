@@ -17,10 +17,10 @@ const ShipmentsComponent = () => {
   };
 
   return (
-    <>
+    <div className="container mx-auto my-8 p-8 bg-gray-100">
       <div>
         <div className="map-container">
-          <MapContainer center={location} zoom={8}>
+          <MapContainer center={location} zoom={5}>
             <TileLayer
               url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -84,7 +84,7 @@ const ShipmentsComponent = () => {
                 <div className="mb-4">
                   <p>Tequetapas Barcelona</p>
                   <p>
-                    Dirección: C. del Pilar, 7, 28500 Arganda del Rey, Madrid
+                    Dirección: Calle Carrasco i Formiguera, N6, Local 8  08902 Hospitalet de Llobregat
                   </p>
                   <p>Teléfono: 664 01 86 27</p>
                   <br />
@@ -102,7 +102,7 @@ const ShipmentsComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
