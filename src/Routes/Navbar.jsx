@@ -9,7 +9,7 @@ import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className='bg-orange-400 flex items-center w-full p-2'>
+    <header className='container mx-auto my-8 p-8 bg-gray-100'>
       <div className="flex items-center justify-between gap-4 p-8">
         <img
           className="w-20 bg-white rounded-full"
