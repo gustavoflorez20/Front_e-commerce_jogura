@@ -54,9 +54,9 @@ export default function Header() {
 
   return (
     <header className="bg-orange-600">
-      <nav className="flex items-center justify-between p-4 lg:p-8">
+      <nav className="flex items-center justify-between p-2 lg:p-4">
         <div className="flex">
-          <a href="/" className="-m-6 p-1">
+          <a href="/" className="-m-2 p-2">
             <span className="sr-only">Tequetapas Foods</span>
             <img
               className="h-30 w-30 rounded-full"
@@ -66,7 +66,7 @@ export default function Header() {
           </a>
         </div>
 
-        <Popover.Group className="lg:flex lg:gap-x-32 ">
+        <Popover.Group className="lg:flex lg:gap-x-24 ">
           {/* <div className="flex">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -146,7 +146,7 @@ export default function Header() {
           </Popover>
           <Link
             to="/nosotros"
-            className="text-lx font-semibold text-2xl text-white mt-4"
+            className="text-lx font-semibold text-2xl text-white mt-5"
           >
             Nosotros
           </Link>
@@ -179,15 +179,15 @@ export default function Header() {
           </Link>
         </Popover.Group>
 
-        <Link
+        {/* <Link
             to="/miPerfil"
             className="mt-5 text-lx font-semibold text-2xl text-white"
           >
             Mi Perfil
-          </Link>
+          </Link> */}
 
         <div className="flex">
-          <a href="/" className="-m-6 p-1">
+          <a href="/" className="-m-2 p-2">
             <span className="sr-only">Tequetapas Foods</span>
             <img
               className="h-30 w-30 rounded-full"

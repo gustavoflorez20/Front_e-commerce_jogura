@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <section className="flex justify-center  gap-4 p-8 ">
+      <section className="flex justify-center  gap-2 p-4">
         <div className="flex  items-center gap-20">
           <p className="font-semibold font-Anton text-white-800 dark:text-white">
             <Link to="/terminos" className="text-white-800 dark: text-white">
@@ -122,11 +122,12 @@ const Footer = () => {
         <br />
       </section>
 
-      <div>
-        <p className="text-white flex items-center justify-center font-semibold">
-          &copy; 2024 JOGURA. Todos los derechos reservados.
-        </p>
-      </div>
+      <div className="border border-black mt-10 text-center">
+  <p className="text-black font-semibold">
+    &copy; 2024 JOGURA. Todos los derechos reservados.
+  </p>
+</div>
+
     </footer>
   );
 };
