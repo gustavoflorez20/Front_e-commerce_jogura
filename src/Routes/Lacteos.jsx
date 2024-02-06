@@ -9,25 +9,37 @@ const Lacteos = () => {
   const productos = [
     {
       name: "Queso de Mano",
-      price: "Precio: 4,00€",
+      price: "Desde: 4,00€",
       image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706129668/QuesodeManoArepero_qdzfcf.jpg",
-      shortDescription: "Quieres probar el autentico queso de mano Venezolano..."
+      shortDescription: "Quieres probar el autentico queso de mano Venezolano, Presentacion de 500gr - 2,2kg - 5,6kg."
     },
     {
       name: "Queso Guayanes",
       price: "Precio: 4,00€",
       image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706739862/QuesoGuayanes_tf7rmm.jpg",
-      shortDescription: "Arepita con Quesito Guayanes..."
+      shortDescription: "Arepita con Quesito Guayanes 500gr..."
     },
     {
-      name: "Queso Llanero",
-      price: "Precio: 7,50€",
+      name: "Queso Llanero 2kg",
+      price: "Precio: 7,50€/kg",
       image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706739862/barradequeso_fzaecf.jpg",
       shortDescription: "Autentico queso Llanero Venezolano"
     },
     {
-      name: "Nata Criolla",
+      name: "Nata Criolla 250ml",
       price: "Desde: 2,50€",
+      image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706739862/natacriolla1_ve1om0.jpg",
+      shortDescription: "La mejor opcion, en 3 diferentes presantaciones",
+    },
+    {
+      name: "Nata Criolla 500ml",
+      price: "Desde: 4,50€",
+      image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706739862/natacriolla1_ve1om0.jpg",
+      shortDescription: "La mejor opcion, en 3 diferentes presantaciones",
+    },
+    {
+      name: "Nata Criolla 1Lt",
+      price: "Desde: 7,00€",
       image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706739862/natacriolla1_ve1om0.jpg",
       shortDescription: "La mejor opcion, en 3 diferentes presantaciones",
     },

@@ -22,12 +22,13 @@ const Clients = () => {
       </div>
 
       <div className="flex justify-center gap-16">
-        <img src={Tio} alt="Papelon" className="w-40 rounded-full" />
-        <img src={Burger} alt="Burguerie" className="w-40 rounded-full" />
+      <img src={Cachapa} alt="LaCachapera" className="w-40 rounded-full" />   
+      <img src={Tio} alt="Papelon" className="w-40 rounded-full" />
         {/* <img src={ilmorso} alt="ilmorso" className="w-40 rounded-full" /> */}
-        <img src={Cachapa} alt="LaCachapera" className="w-40 rounded-full" />
         <img src={Brutal} alt="Brutal58" className="w-40 rounded-full" />
+        <img src={Burger} alt="Burguerie" className="w-40 rounded-full" />
         <img src={Arepas} alt="Arepas" className="w-40 rounded-full" />
+        
       </div>
     </div>
   );
