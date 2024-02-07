@@ -23,7 +23,7 @@ const Frozen = () => {
       name: "Tequeños Platano 🤤",
       price: "Precio: 32,00€",
       image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1706735859/Teque%C3%B1oPlatanoMacho2_nlfq1j.jpg",
-      shortDescription: "Te dejo por aqui un sabor increible."
+      shortDescription: "Te dejo por aqui un sabor increible, no lo dejes pasar..."
     },
     {
       name: "Tequeño de Maiz 😍",
@@ -40,7 +40,7 @@ const Frozen = () => {
     {
       name: "Cachito Jamon 🥰",
       price: "Precio: 27,00€",
-      image: "https://scontent.fmad22-1.fna.fbcdn.net/v/t1.6435-9/164059961_1652867384901424_8254027222998946438_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=810d5f&_nc_ohc=NHTS-G2rAT0AX8Iag7Q&_nc_ht=scontent.fmad22-1.fna&oh=00_AfBq1HsMrCNVTTtC9xVdyHKpTIa_rhjttCIitFMc9EAzKw&oe=65BE860F",
+      image: "https://res.cloudinary.com/djkxqbsns/image/upload/v1707335090/cachitodejamon_hobkc5.jpg",
       shortDescription: "Quieres recordar tus desayunos? 20ud."
     },
 

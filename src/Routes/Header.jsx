@@ -43,8 +43,8 @@ const callsToAction = [
     icon: ShoppingCartIcon,
   },
   {
-    name: "Whatsapp",
-    href: "https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20",
+    name: "Contacto Comercial",
+    href: "/ubicacion",
     icon: FaWhatsapp,
   },
 ];
@@ -181,7 +181,7 @@ export default function Header() {
 
         {/* <Link
             to="/miPerfil"
-            className="mt-5 text-lx font-semibold text-2xl text-white"
+            className="text-lx font-semibold text-2xl text-white"
           >
             Mi Perfil
           </Link> */}

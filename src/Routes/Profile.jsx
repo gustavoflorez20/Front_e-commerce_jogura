@@ -120,6 +120,7 @@ const Profile = () => {
                     onChange={handleChange}
                     className="mt-2 p-2 w-full border rounded-md"
                     required
+                    placeholder="Movil"
                   />
                 </div>
                 <div className="mt-16 grid space-y-4">
@@ -137,6 +138,7 @@ const Profile = () => {
                     onChange={handleChange}
                     className="mt-2 p-2 w-full border rounded-md"
                     required
+                    placeholder="Calle/Avenida, Portal, Escalera, Piso, Puerta, Codigo Postal"
                   />
                 </div>
 
@@ -144,6 +146,7 @@ const Profile = () => {
                   <label
                     htmlFor="newPassword"
                     className="block text-2xl font-medium text-gray-900"
+                    
                   >
                     Nueva Contraseña:
                   </label>
@@ -155,6 +158,7 @@ const Profile = () => {
                     onChange={handleChange}
                     className="mt-2 p-2 w-full border rounded-md"
                     required
+                    placeholder="********"
                   />
                 </div>
 
@@ -173,6 +177,7 @@ const Profile = () => {
                     onChange={handleChange}
                     className="mt-2 p-2 w-full border rounded-md"
                     required
+                    placeholder="********"
                   />
                 </div>
 

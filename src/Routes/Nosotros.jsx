@@ -19,7 +19,7 @@ const Nosotros = () => {
   ];
 
   return (
-    <section className="container mx-auto my-8 p-8 bg-gray-100">
+    <section className="text-xl container mx-auto my-8 p-8 bg-gray-100">
       {/* Sección de Video */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="md:w-1/4 order-2 md:order-1 justify-center mr-auto text-justify md:justify-start" style={slide}>

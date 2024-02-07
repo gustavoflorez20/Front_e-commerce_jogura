@@ -105,7 +105,7 @@ const Footer = () => {
             to="/ubicacion"
             className=" text-white-800 dark: text-white"
           >
-           Nuestras sedes
+           Nuestras Sedes
           </Link>{" "}
           </p>
           
