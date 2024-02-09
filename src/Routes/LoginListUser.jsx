@@ -33,7 +33,7 @@ const LoginListUser = () => {
       };
 
       const answer = await axios.post(url, credentials);
-      console.log("Conectado sin problema:", answer.data.Token);
+      console.log("Conectado sin problema:", answer.data.token);
     } catch (error) {
       console.error("Error al enviar la solicitud:", error);
     }
@@ -94,11 +94,10 @@ const LoginListUser = () => {
                   </div>
 
 
-                  <button>
-                    <Link to="" className="text-lx font-semibold leading-6 text-2xl text-white">
-                      <h2 className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
-                        Iniciar Sesion</h2>
-                    </Link>
+                  <button type="submit" className="text-lx font-semibold leading-6 text-2xl text-white">
+                    <h2 className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
+                      Iniciar Sesión
+                    </h2>
                   </button>
 
                 </div>
