@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginListUser = () => {
   const [formLogin, setFormLogin] = useState({
@@ -17,15 +17,16 @@ const LoginListUser = () => {
     });
   };
 
-  const handleSubmitLogin = (e) => {
+  const handleSubmitLogin = async (e) => {
     e.preventDefault();
-    console.log("Conectado al server:", formLogin);
-    connectLogin();
+    console.log("Conectado al servidor:", formLogin);
+    await connectLogin();
+   
   };
 
   const connectLogin = async () => {
     try {
-      const url = "http://172.16.1.127:3001/User/login";
+      const url = "http://localhost:3001/User/login";
 
       const credentials = {
         email: formLogin.email,
@@ -34,8 +35,10 @@ const LoginListUser = () => {
 
       const answer = await axios.post(url, credentials);
       console.log("Conectado sin problema:", answer.data.token);
+      toast.success("Logueado", { position: "top-right" });
     } catch (error) {
       console.error("Error al enviar la solicitud:", error);
+      toast.error("Contraseña Incorrecta", { position: "bottom-left" });
     }
   };
 
@@ -46,17 +49,18 @@ const LoginListUser = () => {
           <div className="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
             <div className="rounded-xl bg-white shadow-xl">
               <div className="p-6 sm:p-20">
-                <div className=" grid space-y-4">
+                <div className="grid space-y-4">
                   <div className="flex flex-col items-center space-y-4">
-                    <img className="w-20 md:w-24 lg:w-32 xl:w-40 rounded-full" 
-                      src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg" 
-                      alt="Logo Tequetapas"/>
-                     <h2 className="text-center text-2xl text-cyan-900 font-bold">
+                    <img
+                      className="w-20 md:w-24 lg:w-32 xl:w-40 rounded-full"
+                      src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
+                      alt="Logo Tequetapas"
+                    />
+                    <h2 className="text-center text-2xl text-cyan-900 font-bold">
                       Inicia sesión para Comenzar <br /> Lo mejor de Tequetapas
                     </h2>
                   </div>
 
-                  {/* Input para correo electrónico */}
                   <div className="mb-4">
                     <label
                       htmlFor="email"
@@ -65,7 +69,7 @@ const LoginListUser = () => {
                       Correo Electrónico
                     </label>
                     <input
-                      type="string"
+                      type="text"
                       id="email"
                       name="email"
                       value={formLogin.email}
@@ -93,18 +97,40 @@ const LoginListUser = () => {
                     />
                   </div>
 
-
-                  <button type="submit" className="text-lx font-semibold leading-6 text-2xl text-white">
+                  <button
+                    type="submit"
+                    className="text-lx font-semibold leading-6 text-2xl text-white"
+                  >
                     <h2 className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800">
                       Iniciar Sesión
                     </h2>
                   </button>
-
+                  <ToastContainer />
                 </div>
 
                 <div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
-                  <p className="text-xs">Al proceder, usted acepta nuestra <a href="/terminos" className="underline">Condiciones de uso</a> y confirma que has leído nuestra <a href="/cookies" className="underline">Declaración de privacidad y cookies</a>.</p>
-                  <p className="text-xs">Este sitio está protegido por reCAPTCHA y el <a href="/politicas" className="underline">Política de privacidad de Google</a> y <a href="/terminos" className="underline">Términos de servicio</a> aplicar.</p>
+                  <p className="text-xs">
+                    Al proceder, usted acepta nuestra{" "}
+                    <a href="/terminos" className="underline">
+                      Condiciones de uso
+                    </a>{" "}
+                    y confirma que has leído nuestra{" "}
+                    <a href="/cookies" className="underline">
+                      Declaración de privacidad y cookies
+                    </a>
+                    .
+                  </p>
+                  <p className="text-xs">
+                    Este sitio está protegido por reCAPTCHA y el{" "}
+                    <a href="/politicas" className="underline">
+                      Política de privacidad de Google
+                    </a>{" "}
+                    y{" "}
+                    <a href="/terminos" className="underline">
+                      Términos de servicio
+                    </a>{" "}
+                    aplicar.
+                  </p>
                 </div>
               </div>
             </div>

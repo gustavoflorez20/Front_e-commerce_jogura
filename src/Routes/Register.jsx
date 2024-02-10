@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -21,13 +23,14 @@ export default function Register() {
   const handleSubmitRegister = (e) => {
     e.preventDefault();
     console.log("Formulario enviado:", formData);
+   
   };
 
   // POST AGREGAR USUARIOS//
   // ESTA FUNCION  NO SE IRA A LA CARPETA USE CONTEXT SE QUEDA EN LOCAL STORAGE POR TEMAS DE ACTUALIZACION DE LA PAHGINA Y PODEMOS PERDER LA INFO  EN LA//
   const postUser = async () => {
     try {
-      const url = "http://172.16.1.127:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
+      const url = "http://localhost:3001/User";  // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
 
       const objectPost = {
         firstName: formData.firstName,
@@ -40,8 +43,10 @@ export default function Register() {
 
       const answer = await axios.post(url, objectPost);
       console.log("Respuesta del servidor:", answer.data);
+      toast.success("Registrado", { position: "top-right" });
     } catch (error) {
       console.error("Error al enviar la solicitud:", error);
+      toast.warning("Complete los Campos", { position: "bottom-left" });
     }
   };
 
@@ -169,6 +174,7 @@ export default function Register() {
                       className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800"
                     >Registrarse
                     </button>
+                    <ToastContainer />
                   </div>
 
 
