@@ -1,7 +1,29 @@
-
+import { useEffect } from 'react';
+import GoogleLogin from 'react-google-login';
+import { gapi } from 'gapi-script';
 import { Link } from 'react-router-dom';
 
 const LogingUser = () => {
+  const clientId = "322113758059-nqbi9s4e0bdmcpv42kln7mk229qom92a.apps.googleusercontent.com";
+
+  useEffect (() => {
+    const initialstart = () => {
+      gapi.auth2.init({
+        clientId: clientId
+      });
+    };
+  
+    gapi.load("client:auth2", initialstart);
+  }, []);
+  
+  const onSuccess = (response) => {
+    console.log(response);
+  };
+  
+  const onFailure = () => {
+    console.log("Error de logueo - intenta de nuevo");
+  };
+
   return (
     <div>
       <div className="container mx-auto my-8 p-8 bg-gray-100">
@@ -21,12 +43,29 @@ const LogingUser = () => {
 
 
                 <div className="mt-16 grid space-y-4">
+
+                  <div className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">>
+
+                  <GoogleLogin 
+          clientId={clientId}
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          cookiePolicy={'single_host_policy'}
+          />
+      
+                  {/* CABEZON ACA ESTA EL BOTON DE TAILWIND  
+                  
                   <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
                     <div className="relative flex items-center space-x-4 justify-center">
                       <img src="https://tailus.io/sources/blocks/social/preview/images/google.svg" className="absolute left-0 w-5" alt="google logo" />
                       <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue con Google</span>
                     </div>
-                  </button>
+                  </button> */}
+                  
+                  </div>
+
+                 
+
                   <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
                     <div className="relative flex items-center space-x-4 justify-center">
                       <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" className="absolute left-0 w-10" alt="Instagram logo" />
