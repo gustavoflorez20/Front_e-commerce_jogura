@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { useNavigate } from "react-router-dom";
 export default function Register() {
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -44,9 +45,12 @@ export default function Register() {
       const answer = await axios.post(url, objectPost);
       console.log("Respuesta del servidor:", answer.data);
       toast.success("Registrado", { position: "top-right" });
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     } catch (error) {
       console.error("Error al enviar la solicitud:", error);
-      toast.warning("Complete los Campos", { position: "bottom-left" });
+      toast.warning("Verifique los Datos", { position: "bottom-left" });
     }
   };
 

@@ -17,12 +17,20 @@ import DeliveryPage from './Containers/DeliveryPage.Jsx';
 import UbicationPage from './Containers/UbicationPage';
 import LoginListPage from './Containers/LoginListPage';
 import ProfilePage from './Containers/ProfilePage';
+import PasswordPage from './Containers/PaswordPage';
+import { AmountContextProvider } from './Routes/Cant';
+import { ProductoContextProvider } from './Routes/Cant';
 
 
 function App() {
+
+
+
   return (
     
     <div>
+      <ProductoContextProvider>
+      <AmountContextProvider>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -43,9 +51,12 @@ function App() {
       <Route path="/registersUser" element= {<RegisterPage/>} />
       <Route path="/clientRegisterUser" element= {<LoginListPage/>} />
       <Route path="/miPerfil" element= {<ProfilePage/>} />
+      <Route path="/restablecer" element= {<PasswordPage/>} />
 
     </Routes>
     </BrowserRouter>
+    </AmountContextProvider>
+    </ProductoContextProvider>
     </div>
   );
 }

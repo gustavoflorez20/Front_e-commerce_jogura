@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaSearch, FaWhatsapp } from "react-icons/fa";
 import classNames from 'classnames';
+import { AmountContext } from "../Routes/Cant";
+import React, { useContext } from "react";
 
 import {
   Bars3Icon,
@@ -31,13 +33,13 @@ const Productos = [
     name: "Promociones",
     description: "Consulta Nuestras Promociones",
     href: "/promociones",
-    icon: ShoppingCartIcon,
+    icon: ShoppingCartIcon ,
   },
 ];
 
 const callsToAction = [
   {
-    name: "Comprar",
+    name: "Finalizar Compra",
     href: "/carrito",
     icon: ShoppingCartIcon,
   },
@@ -50,6 +52,10 @@ const callsToAction = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const Displayamount = () => {
+    const { amount } = useContext(AmountContext);
+    return amount > 0 ? <p>{amount}</p> : null;
+  };
 
   return (
     <header className="bg-orange-600">
@@ -58,10 +64,10 @@ export default function Header() {
           <Link to="/" className="-m-2 p-2">
             <span className="sr-only">Tequetapas Foods</span>
             <img
-              className="h-30 w-30 rounded-full"
-              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
-              alt="Tequetapas Foods"
-            />
+            className="w-20  bg-white rounded-full"
+            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
+            alt="LogoTequetapas"
+          />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -156,15 +162,10 @@ export default function Header() {
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
-          <Link
-            to="/carrito"
-            className="mt-4 text-lx font-semibold text-2xl text-white"
-          >
-            <FiShoppingCart
-              className="h-12 w-12 text-white mr-5"
-              aria-hidden="true"
-            />
-          </Link>
+          <Link to="/carrito" className="mt-4 text-lx font-semibold text-2xl text-white"><Displayamount />
+  <FiShoppingCart  className="h-12 w-12 text-white mr-5" aria-hidden="true" />
+  
+</Link>
         </Popover.Group>
 
 
@@ -179,11 +180,12 @@ export default function Header() {
         <div className="flex">
           <Link to="/" className="-m-2 p-2">
             <span className="sr-only">Tequetapas Foods</span>
-            <img
-              className="h-30 w-30 rounded-full"
-              src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
-              alt="Canaima"
-            />
+           <img
+  className="w-20 bg-white rounded-full border border-orange-500"
+  src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
+  alt="LogoCanaima"
+/>
+
           </Link>
         </div>
       </nav>
