@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AmountContext , ProductoContext} from "../Routes/Cant";
-import productos from "../Routes/Products";
+import productos from "./ProductsFrozen";
 
 const Displayamount = () => {
   const { amount } = useContext(AmountContext);

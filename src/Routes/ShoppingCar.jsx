@@ -31,8 +31,17 @@ const DisplayProducto = () => {
     }
     agrupados[producto.id].cantidadTotal += producto.cantidad;
     return agrupados;
-  }, {});
+  }, 
+  
+  {});
 
+
+  const calcularTotaliva = () => {
+    const totalGeneral = calcularTotalGeneral();
+    const iva = totalGeneral > 0 ? totalGeneral * 0.21 : 0;
+    return iva.toFixed(2);
+  };
+  
   const calcularTotalGeneral = () => {
     let totalGeneral = 0;
 
@@ -55,7 +64,11 @@ const DisplayProducto = () => {
           <p>*&nbsp;{producto.name} Cantidad: {producto.cantidadTotal} Precio: {producto.price}€</p>
         </div>
       ))}
-      <p>Total General: {calcularTotalGeneral()}€</p>
+      <br />
+      <p>-Impuestos : {calcularTotaliva()}€</p>
+      
+      <p>-Total General: {calcularTotalGeneral()}€</p>
+      <br />
     </>
   ) : null;
 };
@@ -66,8 +79,8 @@ const DisplayProducto = () => {
 const ShoppingCar = () => {
   const { seleccionarProducto } = useContext(ProductoContext);
   return (
-    <div className="container mx-auto my-8 p-8 bg-gray-100">  
-      <div className="flex items-center justify-center h-screen ">
+<div className="container mx-auto my-16 p-8 bg-gray-100">
+        <div className="flex items-center justify-center h-screen ">
         <div className="bg-white p-8 rounded-md shadow-md border border-black">
           <h1 className="text-3xl font-semibold mb-4">{<Displayamount />}</h1>
           <DisplayProducto/>
