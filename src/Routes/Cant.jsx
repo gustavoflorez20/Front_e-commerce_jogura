@@ -4,15 +4,14 @@ export const ProductoContext = createContext();
 
 export const ProductoContextProvider = ({ children }) => {
   const [productosSeleccionados, setProductosSeleccionados] = useState([]);
+  const [amount, setAmount] = useState(0);
 
   const seleccionarProducto = (nuevoProducto) => {
-    
     const productoExistente = productosSeleccionados.find(
       (producto) => producto.id === nuevoProducto.id
     );
 
     if (productoExistente) {
-      
       setProductosSeleccionados((prevProductos) =>
         prevProductos.map((producto) =>
           producto.id === nuevoProducto.id
@@ -21,45 +20,64 @@ export const ProductoContextProvider = ({ children }) => {
         )
       );
     } else {
-      
       setProductosSeleccionados((prevProductos) => [
         ...prevProductos,
         { ...nuevoProducto, cantidad: 1 },
       ]);
     }
+    addition(); 
   };
 
-  return (
-    <ProductoContext.Provider value={{ productosSeleccionados, seleccionarProducto }}>
-      {children}
-    </ProductoContext.Provider>
-  );
-};
-
-
-
-export const AmountContext = createContext();
-
-export const AmountContextProvider = ({ children }) => {
-  const [amount, setAmount] = useState(0);
+  const eliminarProducto = (id) => {
+    const productoExistente = productosSeleccionados.find(
+      (producto) => producto.id === id
+    );
+  
+    if (productoExistente) {
+      if (productoExistente.cantidad > 1) {
+        
+        setProductosSeleccionados((prevProductos) =>
+          prevProductos.map((producto) =>
+            producto.id === id
+              ? { ...producto, cantidad: producto.cantidad - 1 }
+              : producto
+          )
+        );
+      } else {
+       
+        setProductosSeleccionados((prevProductos) =>
+          prevProductos.filter((producto) => producto.id !== id)
+        );
+      }
+  
+      subtract();
+    }
+  };
 
   const addition = () => setAmount(amount + 1);
-  const subtract = () => {
   
+  const subtract = () => {
     if (amount > 0) {
       setAmount(amount - 1);
     }
   };
 
+  const eliminarTodo = () => {
+    setProductosSeleccionados([]);
+    setAmount(0); 
+  }
+
   const contextValue = {
+    productosSeleccionados,
+    seleccionarProducto,
+    eliminarProducto,
     amount,
     addition,
     subtract,
+    eliminarTodo
   };
 
-  return <AmountContext.Provider 
-  value={contextValue}>{children}
-  </AmountContext.Provider>;
+  return <ProductoContext.Provider value={contextValue}>{children}</ProductoContext.Provider>;
 };
 
     

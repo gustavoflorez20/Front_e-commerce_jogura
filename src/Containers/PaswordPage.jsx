@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../Routes/Header'
 import Footer from '../Routes/Footer'
-import Password from '../Routes/password'
-import Section2 from '../Routes/Section2';
+import Password from '../Routes/Password'
+import Section2 from '../Routes/Section2'
 
 
 const PaswordPage = () => {

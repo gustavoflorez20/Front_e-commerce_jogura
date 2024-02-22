@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaSearch, FaWhatsapp } from "react-icons/fa";
 import classNames from 'classnames';
-import { AmountContext } from "../Routes/Cant";
+
+import { ProductoContext } from "../Routes/Cant";
 import React, { useContext } from "react";
 
 import {
@@ -52,9 +53,13 @@ const callsToAction = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const Displayamount = () => {
-    const { amount } = useContext(AmountContext);
-    return amount > 0 ? <p>{amount}</p> : null;
+  const { amount, cantidadTotalProductos } = useContext(ProductoContext);
+  const DisplayProducto = () => {
+    return amount > 0 ? (
+      <p>
+        {amount} 
+      </p>
+    ) : null;
   };
 
   return (
@@ -162,8 +167,8 @@ export default function Header() {
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
-          <Link to="/carrito" className="mt-4 text-lx font-semibold text-2xl text-white"><Displayamount />
-  <FiShoppingCart  className="h-12 w-12 text-white mr-5" aria-hidden="true" />
+          <Link to="/carrito" className="mt-4 text-lx font-semibold text-2xl text-white">
+  <FiShoppingCart  className="h-12 w-12 text-white mr-5" aria-hidden="true" /><DisplayProducto />
   
 </Link>
         </Popover.Group>

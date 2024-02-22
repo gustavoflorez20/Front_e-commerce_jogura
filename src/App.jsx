@@ -13,12 +13,12 @@ import CookiesPage from './Containers/CookiesPage';
 import LegalPage from './Containers/LegalPage';
 import AtcPage from './Containers/AtcPage';
 import WorkwUPage from './Containers/WorkwUPage';
-import DeliveryPage from './Containers/DeliveryPage.Jsx';
+import DeliveryPage from './Containers/DeliveryPage';
 import UbicationPage from './Containers/UbicationPage';
 import LoginListPage from './Containers/LoginListPage';
 import ProfilePage from './Containers/ProfilePage';
 import PasswordPage from './Containers/PaswordPage';
-import { AmountContextProvider } from './Routes/Cant';
+
 import { ProductoContextProvider } from './Routes/Cant';
 
 
@@ -30,7 +30,7 @@ function App() {
     
     <div>
       <ProductoContextProvider>
-      <AmountContextProvider>
+      
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -55,7 +55,7 @@ function App() {
 
     </Routes>
     </BrowserRouter>
-    </AmountContextProvider>
+  
     </ProductoContextProvider>
     </div>
   );
