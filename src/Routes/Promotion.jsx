@@ -7,8 +7,7 @@ import productos from "../Routes/ProductsPromo";
 
 
 const Promotion = () => {
-  const { addition, subtract } = useContext(AmountContext);
-  const { seleccionarProducto } = useContext(ProductoContext);
+  const {  seleccionarProducto ,addition,  } = useContext(ProductoContext);
 
   const handleButtonClick = (action, producto) => {
   if (action === "select") {
@@ -16,6 +15,8 @@ const Promotion = () => {
       addition();
     }
   };
+
+ 
 
   return (
     <div className="container mx-auto my-8 p-8 bg-gray-100">
@@ -38,7 +39,7 @@ const Promotion = () => {
                   alt={name}
                 />
                 <h2 className="ml-12 text-2xl font-bold text-gray-800 mb-3">
-                  <p>Precio {price}€</p>
+                  <p>Precio {price}</p>
                 </h2>
               </div>
               <div>

@@ -61,8 +61,9 @@ const DisplayProducto = () => {
   return Object.values(productosAgrupados).length > 0 ? (
     <>
       {Object.values(productosAgrupados).map((producto) => (
+        
         <div key={producto.id}>
-           <h1>Cantidad Total de Productos: {cantidadTotalProductos}</h1>
+       
            <br />
           <p>
             *&nbsp;{producto.name} Cantidad: {producto.cantidadTotal} Precio:{" "}
