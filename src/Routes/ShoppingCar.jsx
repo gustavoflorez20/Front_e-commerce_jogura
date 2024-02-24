@@ -1,36 +1,24 @@
-import React from "react";
-import { useContext,useEffect } from "react";
-import { ProductoContext } from "./Cant";
+import React, { useContext } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import { ProductoContext } from "./Cant";
 
-
-const DisplayProducto = () => {
-  const { productosSeleccionados, eliminarProducto, eliminarTodo } = useContext(
-    ProductoContext
-  );
- 
-  
-
-  const handleEliminarTodo = () => {
-    eliminarTodo([]);
-  
-  };
+const DisplayProducto = ({ handleEliminarTodo }) => {
+  const { productosSeleccionados, eliminarProducto } = useContext(ProductoContext);
 
   const handleEliminarProducto = (id) => {
     eliminarProducto(id);
   };
 
-  const productosAgrupados = productosSeleccionados.reduce(
-    (agrupados, producto) => {
-      if (!agrupados[producto.id]) {
-        agrupados[producto.id] = { ...producto, cantidadTotal: 0 };
-      }
-      agrupados[producto.id].cantidadTotal += producto.cantidad;
-      return agrupados;
-    },
-
-    {}
-  );
+  const productosAgrupados = productosSeleccionados.reduce((agrupados, producto) => {
+    if (!agrupados[producto.id]) {
+      agrupados[producto.id] = { ...producto, cantidadTotal: 0 };
+    }
+    agrupados[producto.id].cantidadTotal += producto.cantidad;
+    return agrupados;
+  }, {});
 
   const calcularTotaliva = () => {
     const totalGeneral = calcularTotalGeneral();
@@ -53,25 +41,14 @@ const DisplayProducto = () => {
     return totalGeneral.toFixed(2);
   };
 
-  const cantidadTotalProductos = Object.values(productosAgrupados).reduce(
-    (total, producto) => {
-      return total + producto.cantidadTotal;
-    },
-    0
-  );
- 
-  
   return Object.values(productosAgrupados).length > 0 ? (
     <>
       {Object.values(productosAgrupados).map((producto) => (
-        
         <div key={producto.id}>
-       
-           <br />
+          <br />
           <p>
             *&nbsp;{producto.name} Cantidad: {producto.cantidadTotal} Precio:{" "}
             {producto.price}€
-            
           </p>
           <br />
           <img
@@ -89,36 +66,50 @@ const DisplayProducto = () => {
       ))}
       <br />
       <p>-Impuestos : {calcularTotaliva()}€</p>
-
       <p>-Total General: {calcularTotalGeneral()}€</p>
-     
       <br />
-
       <button
-          className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
-          onClick={() => handleEliminarTodo()}
-        >
-          Vaciar Carrito
-        </button>
+        className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
+        onClick={() => handleEliminarTodo()}
+      >
+        Vaciar Carrito
+      </button>
+      
     </>
   ) : null;
 };
 
 const ShoppingCar = () => {
-  const { productosSeleccionados } = useContext(ProductoContext);
+  const { productosSeleccionados, eliminarTodo } = useContext(ProductoContext);
+  const navigate = useNavigate();
+
+  const handleEliminarTodo = () => {
+    eliminarTodo([]);
+  };
 
   const handleFinalizarCompra = () => {
-    sendComands();
-    console.log('Productos Enviados:', productosSeleccionados);
+    if (productosSeleccionados.length > 0) {
+      sendComands();
+      console.log('Productos Enviados:', productosSeleccionados);
+      handleEliminarTodo();
+    } else {
+     
+      toast.warning("No puedes finalizar la compra sin productos en el carrito", { position: "top-right" });
+    }
   };
-  
+
   const sendComands = () => {
     console.log('Contenido de productos Seleccionados send:', productosSeleccionados);
-  
+
     axios
       .post('http://localhost:3001/Products', { car: productosSeleccionados })
       .then((response) => {
         console.log('Productos Enviados desde el Carrito:', productosSeleccionados);
+        toast.success("Pedido Enviado", { position: "top-right" });
+        setTimeout(() => {
+          handleEliminarTodo();
+          navigate("/");
+        }, 2000);
       })
       .catch((err) => {
         console.log('Error al enviar productos:', err);
@@ -127,17 +118,17 @@ const ShoppingCar = () => {
 
   return (
     <div className="mx-auto my-16 p-8 bg-gray-100">
+      <h1 className="text-4xl">Carrito de Compras</h1>
       <div className="bg-white p-8 rounded-xxl shadow-md border border-black">
         <h1 className="text-3xl font-semibold mb-4"></h1>
-        <DisplayProducto />
-
+        <DisplayProducto handleEliminarTodo={handleEliminarTodo} />
         <button
           className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
           onClick={handleFinalizarCompra}
         >
           Finalizar Compra
         </button>
-      
+        <ToastContainer />
         <div>
           <p className="mt-4">
             Explora nuestra tienda y encuentra productos increíbles para agregar

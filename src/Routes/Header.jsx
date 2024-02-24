@@ -56,11 +56,21 @@ export default function Header() {
   const { amount, cantidadTotalProductos } = useContext(ProductoContext);
   const DisplayProducto = () => {
     return amount > 0 ? (
-      <p>
-        {amount} 
-      </p>
+      <p style={{
+        position: 'relative',
+        color: 'rgb(234, 88, 11)',
+        background: 'white',
+        width: '26px',
+        height: '26px',
+        borderRadius: '13px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000,
+      }}>{amount}</p>
     ) : null;
   };
+   
 
   return (
     <header className="bg-orange-600">
