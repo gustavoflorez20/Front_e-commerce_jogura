@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const LoginListUser = () => {
+  const navigate = useNavigate(); 
   const [formLogin, setFormLogin] = useState({
     email: "",
     password: "",
   });
-
+  
   const handleChangelogin = (e) => {
     const { name, value } = e.target;
     setFormLogin({
@@ -21,21 +24,26 @@ const LoginListUser = () => {
     e.preventDefault();
     console.log("Conectado al servidor:", formLogin);
     await connectLogin();
-   
   };
 
   const connectLogin = async () => {
     try {
       const url = "http://localhost:3001/User/login";
-
+  
       const credentials = {
         email: formLogin.email,
         password: formLogin.password,
       };
-
+  
       const answer = await axios.post(url, credentials);
       console.log("Conectado sin problema:", answer.data.token);
+      localStorage.setItem('userToken', JSON.stringify(answer.data.token));
+      
       toast.success("Logueado", { position: "top-right" });
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+      
     } catch (error) {
       console.error("Error al enviar la solicitud:", error);
       toast.error("Contraseña Incorrecta", { position: "bottom-left" });
@@ -106,31 +114,39 @@ const LoginListUser = () => {
                     </h2>
                   </button>
                   <ToastContainer />
-                </div>
+                  
 
-                <div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
+                </div>
+              
+                
+                   
+                < div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
+                <Link to={"/restablecer"} className="underline">
+                      Restablecer Contraseña
+                    </Link>{" "}
                   <p className="text-xs">
                     Al proceder, usted acepta nuestra{" "}
-                    <a href="/terminos" className="underline">
+                    <Link to={"/terminos"} className="underline">
                       Condiciones de uso
-                    </a>{" "}
+                    </Link>{" "}
                     y confirma que has leído nuestra{" "}
-                    <a href="/cookies" className="underline">
+                    <Link to={"/cookies"} className="underline">
                       Declaración de privacidad y cookies
-                    </a>
+                    </Link>
                     .
                   </p>
                   <p className="text-xs">
                     Este sitio está protegido por reCAPTCHA y el{" "}
-                    <a href="/politicas" className="underline">
+                    <Link to={"/politicas"} className="underline">
                       Política de privacidad de Google
-                    </a>{" "}
+                    </Link>{" "}
                     y{" "}
-                    <a href="/terminos" className="underline">
-                      Términos de servicio
-                    </a>{" "}
+                    <Link to={"/terminos"} className="underline">
+                      Condiciones de uso
+                    </Link>{" "}
                     aplicar.
                   </p>
+                  
                 </div>
               </div>
             </div>

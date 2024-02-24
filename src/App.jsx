@@ -13,16 +13,24 @@ import CookiesPage from './Containers/CookiesPage';
 import LegalPage from './Containers/LegalPage';
 import AtcPage from './Containers/AtcPage';
 import WorkwUPage from './Containers/WorkwUPage';
-import DeliveryPage from './Containers/DeliveryPage.Jsx';
+import DeliveryPage from './Containers/DeliveryPage';
 import UbicationPage from './Containers/UbicationPage';
 import LoginListPage from './Containers/LoginListPage';
 import ProfilePage from './Containers/ProfilePage';
+import PasswordPage from './Containers/PaswordPage';
+
+import { ProductoContextProvider } from './Routes/Cant';
 
 
 function App() {
+
+
+
   return (
     
     <div>
+      <ProductoContextProvider>
+      
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -43,9 +51,12 @@ function App() {
       <Route path="/registersUser" element= {<RegisterPage/>} />
       <Route path="/clientRegisterUser" element= {<LoginListPage/>} />
       <Route path="/miPerfil" element= {<ProfilePage/>} />
+      <Route path="/restablecer" element= {<PasswordPage/>} />
 
     </Routes>
     </BrowserRouter>
+  
+    </ProductoContextProvider>
     </div>
   );
 }
