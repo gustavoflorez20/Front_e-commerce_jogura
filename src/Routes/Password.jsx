@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';  
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -11,8 +14,10 @@ const Password = () => {
     
       await axios.post('http://localhost:3001/User/restablecer', { email });
       console.log('Correo electrónico enviado exitosamente.',email);
+      toast.success("Enviado", { position: "top-right" });
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error.message);
+      toast.warning("Verifique los Datos", { position: "bottom-left" });
     }
   };
 
@@ -34,6 +39,7 @@ const Password = () => {
           <button className="w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-400 focus:outline-none" onClick={handleSendEmail}>
             Enviar
           </button>
+          <ToastContainer />
         </div>
       </div>
     </div>

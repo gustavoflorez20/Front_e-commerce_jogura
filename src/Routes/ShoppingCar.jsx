@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { ProductoContext } from "./Cant";
 
+
 const DisplayProducto = () => {
   const { productosSeleccionados, eliminarProducto, eliminarTodo,sendComands } = useContext(
     ProductoContext
