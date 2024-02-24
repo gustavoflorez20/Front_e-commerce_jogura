@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { createContext, useState } from 'react';
 
 export const ProductoContext = createContext();
@@ -25,17 +26,16 @@ export const ProductoContextProvider = ({ children }) => {
         { ...nuevoProducto, cantidad: 1 },
       ]);
     }
-    addition(); 
+    addition();
   };
 
   const eliminarProducto = (id) => {
     const productoExistente = productosSeleccionados.find(
       (producto) => producto.id === id
     );
-  
+
     if (productoExistente) {
       if (productoExistente.cantidad > 1) {
-        
         setProductosSeleccionados((prevProductos) =>
           prevProductos.map((producto) =>
             producto.id === id
@@ -44,18 +44,17 @@ export const ProductoContextProvider = ({ children }) => {
           )
         );
       } else {
-       
         setProductosSeleccionados((prevProductos) =>
           prevProductos.filter((producto) => producto.id !== id)
         );
       }
-  
+
       subtract();
     }
   };
 
   const addition = () => setAmount(amount + 1);
-  
+
   const subtract = () => {
     if (amount > 0) {
       setAmount(amount - 1);
@@ -64,8 +63,19 @@ export const ProductoContextProvider = ({ children }) => {
 
   const eliminarTodo = () => {
     setProductosSeleccionados([]);
-    setAmount(0); 
-  }
+    setAmount(0);
+  };
+
+  const sendComands = () => {
+    axios
+      .post('http://localhost:3001/Comands/comandas', { productosSeleccionados })
+      .then((response) => {
+        console.log('Productos Enviados:', response.data);
+      })
+      .catch((err) => {
+        console.log('Error al enviar productos:', err);
+      });
+  };
 
   const contextValue = {
     productosSeleccionados,
@@ -74,12 +84,13 @@ export const ProductoContextProvider = ({ children }) => {
     amount,
     addition,
     subtract,
-    eliminarTodo
+    eliminarTodo,
+    sendComands,
   };
 
-  return <ProductoContext.Provider value={contextValue}>{children}</ProductoContext.Provider>;
+  return (
+    <ProductoContext.Provider value={contextValue}>
+      {children}
+    </ProductoContext.Provider>
+  );
 };
-
-    
-  
-        
