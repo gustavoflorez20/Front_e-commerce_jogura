@@ -66,16 +66,8 @@ export const ProductoContextProvider = ({ children }) => {
     setAmount(0);
   };
 
-  const sendComands = () => {
-    axios
-      .post('http://localhost:3001/Comands/comandas', { productosSeleccionados })
-      .then((response) => {
-        console.log('Productos Enviados:', response.data);
-      })
-      .catch((err) => {
-        console.log('Error al enviar productos:', err);
-      });
-  };
+  
+  
 
   const contextValue = {
     productosSeleccionados,
@@ -85,7 +77,7 @@ export const ProductoContextProvider = ({ children }) => {
     addition,
     subtract,
     eliminarTodo,
-    sendComands,
+  
   };
 
   return (

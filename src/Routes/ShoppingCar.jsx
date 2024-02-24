@@ -1,15 +1,14 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { ProductoContext } from "./Cant";
+import axios from "axios";
 
 
 const DisplayProducto = () => {
-  const { productosSeleccionados, eliminarProducto, eliminarTodo,sendComands } = useContext(
+  const { productosSeleccionados, eliminarProducto, eliminarTodo } = useContext(
     ProductoContext
   );
-const handlesendComands = () => {
-  sendComands("1");
-}
+ 
   
 
   const handleEliminarTodo = () => {
@@ -60,7 +59,8 @@ const handlesendComands = () => {
     },
     0
   );
-
+ 
+  
   return Object.values(productosAgrupados).length > 0 ? (
     <>
       {Object.values(productosAgrupados).map((producto) => (
@@ -105,8 +105,25 @@ const handlesendComands = () => {
 };
 
 const ShoppingCar = () => {
-  
+  const { productosSeleccionados } = useContext(ProductoContext);
 
+  const handleFinalizarCompra = () => {
+    sendComands();
+    console.log('Productos Enviados:', productosSeleccionados);
+  };
+  
+  const sendComands = () => {
+    console.log('Contenido de productos Seleccionados send:', productosSeleccionados);
+  
+    axios
+      .post('http://localhost:3001/Products', { car: productosSeleccionados })
+      .then((response) => {
+        console.log('Productos Enviados desde el Carrito:', productosSeleccionados);
+      })
+      .catch((err) => {
+        console.log('Error al enviar productos:', err);
+      });
+  };
 
   return (
     <div className="mx-auto my-16 p-8 bg-gray-100">
@@ -114,14 +131,13 @@ const ShoppingCar = () => {
         <h1 className="text-3xl font-semibold mb-4"></h1>
         <DisplayProducto />
 
-     
-
         <button
           className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
-          onClick={(sendComands) => console.log("Finalizar Compra")}
+          onClick={handleFinalizarCompra}
         >
           Finalizar Compra
         </button>
+      
         <div>
           <p className="mt-4">
             Explora nuestra tienda y encuentra productos increíbles para agregar
