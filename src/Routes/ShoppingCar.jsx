@@ -119,6 +119,7 @@ const ShoppingCar = () => {
   return (
     <div className="mx-auto my-16 p-8 bg-gray-100">
       <h1 className="text-4xl">Carrito de Compras</h1>
+      
       <div className="bg-white p-8 rounded-xxl shadow-md border border-black">
         <h1 className="text-3xl font-semibold mb-4"></h1>
         <DisplayProducto handleEliminarTodo={handleEliminarTodo} />
