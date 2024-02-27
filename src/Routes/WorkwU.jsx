@@ -1,40 +1,57 @@
-import React from 'react'
+import React from 'react';
 
 const WorkwU = () => {
   return (
-    <div className="container mx-auto my-8 p-8 bg-gray-100">
-      <div className="text-center text-2xl font-bold text-gray-800 mb-6">Trabaja con Nosotros</div>
-
-      <div className="max-w-md mx-auto bg-white p-6 rounded shadow-md">
-        <form>
-          <div className="mb-4">
-            <label htmlFor="nombre" className="block text-gray-700 font-bold mb-2">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" className="w-full p-3 border border-gray-300 rounded" required />
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="correo" className="block text-gray-700 font-bold mb-2">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" className="w-full p-3 border border-gray-300 rounded" required />
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="mensaje" className="block text-gray-700 font-bold mb-2">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" className="w-full p-3 border border-gray-300 rounded" required></textarea>
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="curriculum" className="block text-gray-700 font-bold mb-2">Adjuntar Currículum:</label>
-            <input type="file" id="curriculum" name="curriculum" className="w-full p-3 border border-gray-300 rounded" />
-            <p className="text-sm text-gray-500">Adjunta tu currículum en formato PDF o Word.</p>
-          </div>
-
-          <button type="submit" className="bg-orange-600 text-white py-3 px-6 rounded hover:bg-blue-600 cursor-pointer">
-            Enviar
-          </button>
-        </form>
+    <div className="container mx-auto my-8 p-8 bg-gray-100 text-center text-justify">
+      <div className="text-2xl font-bold text-gray-800 mb-6">
+        Bienvenidos a la Familia Tequetapas
       </div>
-    </div>
-  )
-}
+      <p>
+        Es un placer darles la más cordial bienvenida a Tequetapas. Nos
+        sentimos emocionados y honrados de tenerlos a bordo en esta apasionante
+        travesía. En todos los integrantes, no solo somos una empresa, somos
+        una familia unida por la dedicación a la excelencia, la innovación y
+        el compromiso con el éxito mutuo.
+      </p>
+      <br />
+      <p>
+        Nuestro compromiso con la calidad y la satisfacción del cliente nos
+        impulsa a superar constantemente los límites y a ofrecer soluciones
+        excepcionales. Estamos comprometidos con la creación de un ambiente de
+        trabajo colaborativo donde cada uno de ustedes pueda florecer y
+        contribuir al crecimiento y prosperidad de la empresa.
+      </p> 
+      <br />
+      <p>
+        En la familia, valoramos la diversidad de talentos y experiencias que
+        cada uno de ustedes aporta. Creemos que la diversidad es la clave para
+        la creatividad y la innovación, y estamos emocionados de trabajar
+        juntos para alcanzar nuevas alturas.
+      </p>
+      <br />
+      <p>
+        A medida que embarcamos en este viaje, esperamos construir relaciones
+        sólidas, alcanzar metas ambiciosas y celebrar juntos los éxitos. La
+        puerta de nuestra empresa siempre estará abierta para nuevas ideas,
+        sugerencias y colaboraciones que nos ayuden a crecer y prosperar.
+      </p>
+      <br />
+      <p>
+        Gracias por ser parte de la familia. Estamos emocionados por el futuro
+        y ansiosos por lograr grandes cosas juntos.
+      </p>
+      <br />
+      <p>¡Bienvenidos a Tequetapas!, envia tu hoja aqui..</p>
+      <br />
 
-export default WorkwU
+      <a
+        href="mailto:gustavoflorez20@gmail.com"
+        className="bg-orange-600 text-white py-3 px-6 rounded hover:bg-orange-400 cursor-pointer"
+      >
+        Enviar
+      </a>
+    </div>
+  );
+};
+
+export default WorkwU;
