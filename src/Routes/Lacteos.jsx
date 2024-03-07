@@ -53,11 +53,11 @@ const Lacteos = () => {
               <button
                 className="w-full bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
                 onClick={() => handleButtonClick("select", { id, name, image, price, shortDescription })}>
-                 {/* <button style={{ marginRight: "80px" }}>+</button>  */}
-                <button>Pruebalo</button>
-                 {/* <button style={{ marginLeft: "80px" }}>-</button>  */}
+                 
+                Pruebalo</button>
+                 
                    
-              </button>
+              
             </div>
           </div>
         ))}

@@ -115,14 +115,14 @@ const ShoppingCar = () => {
       setTimeout(() => {
         handleEliminarTodo();
         navigate("/");
-      }, 2000);
+      }, 3000);
     })
     .catch((err) => {
       console.log('Error al enviar productos:', err);
       toast.warning("Debes estar Logueado", { position: "top-right" });
       setTimeout(
         () => navigate('/login'),
-        2000
+        3000
       );
       
     });
