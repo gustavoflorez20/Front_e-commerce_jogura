@@ -37,7 +37,7 @@ const LoginListUser = () => {
   
       const answer = await axios.post(url, credentials);
       console.log("Conectado sin problema:", answer.data.token);
-      localStorage.setItem('userToken', JSON.stringify(answer.data.token));
+      localStorage.setItem('userToken', answer.data.token);
       
       toast.success("Logueado", { position: "top-right" });
       setTimeout(() => {

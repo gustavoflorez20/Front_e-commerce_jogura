@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { ProductoContext } from "./Cant";
+import { set } from "mongoose";
 
 const DisplayProducto = ({ handleEliminarTodo }) => {
   const { productosSeleccionados, eliminarProducto } = useContext(ProductoContext);
@@ -100,21 +101,33 @@ const ShoppingCar = () => {
 
   const sendComands = () => {
     console.log('Contenido de productos Seleccionados send:', productosSeleccionados);
-
-    axios
-      .post('http://localhost:3001/Products', { car: productosSeleccionados })
-      .then((response) => {
-        console.log('Productos Enviados desde el Carrito:', productosSeleccionados);
-        toast.success("Pedido Enviado", { position: "top-right" });
-        setTimeout(() => {
-          handleEliminarTodo();
-          navigate("/");
-        }, 2000);
-      })
-      .catch((err) => {
-        console.log('Error al enviar productos:', err);
-      });
+  
+    const token = localStorage.getItem('userToken');
+  
+    axios.post('http://localhost:3001/Products', { car: productosSeleccionados }, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => {
+      console.log('Productos Enviados desde el Carrito:', productosSeleccionados);
+      toast.success("Pedido Enviado", { position: "top-right" });
+      setTimeout(() => {
+        handleEliminarTodo();
+        navigate("/");
+      }, 2000);
+    })
+    .catch((err) => {
+      console.log('Error al enviar productos:', err);
+      toast.warning("Debes estar Logueado", { position: "top-right" });
+      setTimeout(
+        () => navigate('/login'),
+        2000
+      );
+      
+    });
   };
+  
 
   return (
     <div className="mx-auto my-16 p-8 bg-gray-100">

@@ -36,7 +36,8 @@ const Password = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <button className="w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-400 focus:outline-none" onClick={handleSendEmail}>
+          <button className="w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-400 focus:outline-none" 
+          onClick={handleSendEmail}>
             Enviar
           </button>
           <ToastContainer />
