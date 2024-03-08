@@ -5,10 +5,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 export default function Register() {
   const [email, setEmail] = useState("");
+  const [tuToken, setTuToken] = useState("");
 
   const handleSendEmail = async () => {
+    const headers = {
+      Authorization: `Bearer ${tuToken}`
+    };
     try {
-      await axios.post("http://localhost:3001/User/restablecer", { email });
+      await axios.post("http://localhost:3001/User/email", { email }, { headers });
       console.log("Correo electrónico enviado exitosamente.", email);
       toast.success("Enviado", { position: "top-right" });
     } catch (error) {
@@ -186,8 +190,8 @@ export default function Register() {
                   <div className="text-lx font-semibold leading-6 text-2xl text-white">
                     <button
                       onClick={async () => {
-                        await postUser(); // Llamada a la función postUser
-                        await handleSendEmail(); // Llamada a la función handleSendEmail
+                        await postUser(); 
+                        await handleSendEmail(); 
                       }}
                       type="submit"
                       className="h-12 px-8 bg-orange-600 border-8 border-orange-600 rounded-full text-white transition duration-300 hover:bg-orange-600 focus:outline-none focus:border-orange-700 active:bg-orange-800"
