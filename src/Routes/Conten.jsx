@@ -27,14 +27,14 @@ const Conten = () => {
           style={props}
         />
       </div>
-      <p className="Conten-text py-20">
-        La felicidad en pequeñas dimensiones! 🤤
+      <p className="Conten-text py-40" style={{ fontSize: '24px' }}>
+  La felicidad en pequeñas dimensiones! 🤤
 
-        Tequeños de plátano y queso fresco, disponibles para preparar en casa en blister de 8 unidades y bolsas de 85 unidades.
+  Tequeños de plátano y queso fresco, disponibles para preparar en casa en blister de 8 unidades y bolsas de 85 unidades.
 
-        📲 Mañana estamos activos para recibir todos sus pedidos. <br />
-        No nos hacemos responsables si tienes la necesidad de pedirte <strong>TODO</strong> 😏
-      </p>
+  📲 Mañana estamos activos para recibir todos sus pedidos. <br />
+  No nos hacemos responsables si tienes la necesidad de pedirte <strong>TODO</strong> 😏
+</p>
     </div>
   );
 };
