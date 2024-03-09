@@ -12,7 +12,7 @@ const Password = () => {
   const handleSendEmail = async () => {
     try {
     
-      await axios.post('http://localhost:3001/User/restablecer', { email });
+      await axios.post('https://tequetapasb-es.onrender.com/User/restablecer', { email });
       console.log('Correo electrónico enviado exitosamente.',email);
       toast.success("Enviado", { position: "top-right" });
     } catch (error) {

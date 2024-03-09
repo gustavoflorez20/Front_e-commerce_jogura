@@ -10,7 +10,7 @@ function Create() {
 
   const handleAdd = () => {
     axios
-      .post('http://localhost:3001/Products',
+      .post('https://tequetapasb-es.onrender.com/Products',
        { products: products 
       ,cantidad : cantidad 
       , precio:precio,
