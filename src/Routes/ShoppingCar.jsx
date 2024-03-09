@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { ProductoContext } from "./Cant";
-import { set } from "mongoose";
 
 const DisplayProducto = ({ handleEliminarTodo }) => {
   const { productosSeleccionados, eliminarProducto } = useContext(ProductoContext);
