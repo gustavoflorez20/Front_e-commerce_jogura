@@ -22,7 +22,7 @@ const LoginListUser = () => {
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
-    console.log("Conectado al servidor:", formLogin);
+    console.log("Conectado al servidor:");
     await connectLogin();
   };
 
