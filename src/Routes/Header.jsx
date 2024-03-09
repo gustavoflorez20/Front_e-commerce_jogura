@@ -21,19 +21,19 @@ const Productos = [
   {
     name: "Congelados",
     description: "Consulta nuestra Gran Variedad",
-    href: "/productos",
+    to: "/productos",
     icon: SparklesIcon,
   },
   {
     name: "Lacteos",
     description: "Disfruta del verdadero sabor Venezolano",
-    href: "/lacteos",
+    to: "/lacteos",
     icon: TrashIcon,
   },
   {
     name: "Promociones",
     description: "Consulta Nuestras Promociones",
-    href: "/promociones",
+    to: "/promociones",
     icon: ShoppingCartIcon ,
   },
 ];
@@ -41,12 +41,12 @@ const Productos = [
 const callsToAction = [
   {
     name: "Finalizar Compra",
-    href: "/carrito",
+    to: "/carrito",
     icon: ShoppingCartIcon,
   },
   {
     name: "Contacto Comercial",
-    href: "/ubicacion",
+    to: "/ubicacion",
     icon: FaWhatsapp,
   },
 ];
@@ -128,7 +128,7 @@ export default function Header() {
                       </div>
                       <div className="flex-auto">
                         <Link
-                          to={item.href}
+                          to={item.to}
                           className="block font-semibold text-white-900"
                         >
                           {item.name}
@@ -143,7 +143,7 @@ export default function Header() {
                   {callsToAction.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
+                      href={item.to}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-3xl font-semibold leading-8 text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon
@@ -213,14 +213,14 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Nosotros</span>
               <img
                 className="h-12 w-auto"
                 src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
                 alt="tequetapas"
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -250,7 +250,7 @@ export default function Header() {
                         {[...Productos, ...callsToAction].map((item) => (
                           <Link
                             key={item.name}
-                            to={item.href}
+                            to={item.to}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
