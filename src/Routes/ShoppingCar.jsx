@@ -103,7 +103,7 @@ const ShoppingCar = () => {
   
     const token = localStorage.getItem('userToken');
   
-    axios.post('https://tequetapas-es.onrender.com/Products', { car: productosSeleccionados }, {
+    axios.post('http://localhost:3001/Products', { car: productosSeleccionados }, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -46,7 +46,7 @@ export default function Register() {
   // ESTA FUNCION  NO SE IRA A LA CARPETA USE CONTEXT SE QUEDA EN LOCAL STORAGE POR TEMAS DE ACTUALIZACION DE LA PAHGINA Y PODEMOS PERDER LA INFO  EN LA//
   const postUser = async () => {
     try {
-      const url = "https://tequetapasb-es.onrender.com/User"; // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
+      const url = "http://localhost:3001/User"; // NO TOCAR ESTA VARIABLE, ES LA CONEXION AL SERVER//
 
       const objectPost = {
         firstName: formData.firstName,
@@ -57,7 +57,7 @@ export default function Register() {
       };
 
       const answer = await axios.post(url, objectPost);
-      console.log("Respuesta del :", answer.data);
+      console.log("Respuesta del servidor:", answer.data);
       toast.success("Registrado", { position: "top-right" });
       setTimeout(() => {
         navigate("/");
