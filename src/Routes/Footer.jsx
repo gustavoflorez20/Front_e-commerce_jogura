@@ -10,17 +10,23 @@ const Footer = () => {
         
         <div className="flex  justify-evenly gap-4 border-b p-8 border-primary">
         <div className="flex gap-10 mr-10">
-        <span className="sr-only">Tequetapas Foods</span>
-        <img
+        <Link to="/" className="-m-2 p-2">
+            <span className="sr-only">Tequetapas Foods</span>
+            <img
             className="w-20  bg-white rounded-full"
             src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706447831/LogoTequetapas_znf13d.jpg"
             alt="LogoTequetapas"
           />
-          <img
-            className="w-20  bg-white rounded-full "
-            src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
-            alt="LogoCanaima"
-          />
+          </Link>
+          <Link to="/" className="-m-2 p-2">
+            <span className="sr-only">Tequetapas Foods</span>
+           <img
+  className="w-20 bg-white rounded-full border border-orange-500"
+  src="https://res.cloudinary.com/djkxqbsns/image/upload/v1706047071/LogoCanaima_j5ry8h.png"
+  alt="LogoCanaima"
+/>
+
+          </Link>
         </div>
   
           <div className="text-black">
