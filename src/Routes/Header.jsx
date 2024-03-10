@@ -146,13 +146,14 @@ export default function Header() {
     to={item.to}
     className="flex items-center justify-center gap-x-2.5 p-3 text-3xl font-semibold leading-8 text-gray-900 hover:bg-gray-100"
   >
-                      <item.icon
-                        className="h-5 w-5 flex-none text-gray-400"
-                        aria-hidden="true"
-                      />
-                      {item.name}
-                    </a>
-                  ))}
+    {React.createElement(item.icon, {
+      className: "h-5 w-5 flex-none text-gray-400",
+      "aria-hidden": "true",
+    })}
+    {item.name}
+  </Link>
+))}
+
                 </div>
               </Popover.Panel>
             </Transition>
