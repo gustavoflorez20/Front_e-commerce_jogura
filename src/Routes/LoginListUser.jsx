@@ -121,9 +121,9 @@ const LoginListUser = () => {
                 
                    
                 < div className="mt-32 space-y-4 text-gray-600 text-center sm:-mb-8">
-                <Link to={"/restablecer"} className="underline">
-                      Restablecer Contraseña
-                    </Link>{" "}
+                <Link to="/restablecer" className="underline">
+  <span style={{ fontWeight: 'bold' }}>Restablecer Contraseña</span>
+</Link>
                   <p className="text-xs">
                     Al proceder, usted acepta nuestra{" "}
                     <Link to={"/terminos"} className="underline">
