@@ -12,7 +12,7 @@ export default function Register() {
       Authorization: `Bearer ${tuToken}`
     };
     try {
-      await axios.post("https://tequetapasb-es.onrender.com/User/email", { email }, { headers });
+      await axios.post("http://localhost:3001User/email", { email }, { headers });
       console.log("Correo electrónico enviado exitosamente.", email);
       toast.success("Enviado", { position: "top-right" });
     } catch (error) {

@@ -39,7 +39,7 @@ const Promotion = () => {
                   alt={name}
                 />
                 <h2 className="ml-12 text-2xl font-bold text-gray-800 mb-3">
-                  <p>Precio {price}</p>
+                  <p>Precio {price} €</p>
                 </h2>
               </div>
               <div>

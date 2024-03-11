@@ -47,8 +47,9 @@ const DisplayProducto = ({ handleEliminarTodo }) => {
         <div key={producto.id}>
           <br />
           <p>
-            *&nbsp;{producto.name} Cantidad: {producto.cantidadTotal} Precio:{" "}
-            {producto.price}€
+            <strong>{producto.name} </strong><br />
+            Cantidad:<strong> {producto.cantidadTotal} Ud<br /></strong> 
+            Precio:<strong>{" "}{producto.price}€</strong>
           </p>
           <br />
           <img
@@ -60,13 +61,13 @@ const DisplayProducto = ({ handleEliminarTodo }) => {
             className="ml-4 text-red-500"
             onClick={() => handleEliminarProducto(producto.id)}
           >
-            Eliminar
+            <strong>Eliminar</strong> 
           </button>
         </div>
       ))}
       <br />
-      <p>-Impuestos : {calcularTotaliva()}€</p>
-      <p>-Total General: {calcularTotalGeneral()}€</p>
+      <p>-Impuestos :<strong>{calcularTotaliva()}€</strong> </p>
+      <p>-Total General: <strong>{calcularTotalGeneral()}€</strong></p>
       <br />
       <button
         className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
@@ -103,7 +104,7 @@ const ShoppingCar = () => {
   
     const token = localStorage.getItem('userToken');
   
-    axios.post('https://tequetapasb-es.onrender.com/Products', { car: productosSeleccionados }, {
+    axios.post('http://localhost:3001/Products', { car: productosSeleccionados }, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -129,10 +130,9 @@ const ShoppingCar = () => {
   
 
   return (
-    <div className="mx-auto my-16 p-8 bg-gray-100">
-      <h1 className="text-4xl">Carrito de Compras</h1>
-      
-      <div className="bg-white p-8 rounded-xxl shadow-md border border-black">
+<div className="container mx-auto my-8 p-8 bg-gray-100">
+<h1 className="text-center text-3xl text-cyan-900 font-bold mt-10">Carrito de Compras</h1>
+      <div className="grid-rows-1 sm:grid-rows-2 lg:grid-rows-3 gap-6bg-white p-8 rounded-xxl shadow-md border-black mt-10 flex flex-col items-center space-y-4">
         <h1 className="text-3xl font-semibold mb-4"></h1>
         <DisplayProducto handleEliminarTodo={handleEliminarTodo} />
         <button
@@ -141,7 +141,10 @@ const ShoppingCar = () => {
         >
           Finalizar Compra
         </button>
+        
         <ToastContainer />
+
+        
         <div>
           <p className="mt-4">
             Explora nuestra tienda y encuentra productos increíbles para agregar

@@ -22,6 +22,7 @@ import PasswordPage from './Containers/PaswordPage';
 import { ProductoContextProvider } from './Routes/Cant';
 
 
+
 function App() {
 
 
@@ -52,7 +53,7 @@ function App() {
       <Route path="/clientRegisterUser" element= {<LoginListPage/>} />
       <Route path="/miPerfil" element= {<ProfilePage/>} />
       <Route path="/restablecer" element= {<PasswordPage/>} />
-
+      
     </Routes>
     </BrowserRouter>
   
