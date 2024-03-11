@@ -167,17 +167,17 @@ export default function Header() {
             href="https://api.whatsapp.com/send?phone=34657511851&text=Hola%20%F0%9F%91%8B%20quiero%20hacer%20un%20pedido%20"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 text-lx font-semibold text-2xl text-white"
+            className="mt-5 text-lx font-semibold text-2xl text-white"
           >
             Pedidos <FaWhatsapp className="inline-block" />
           </a>
           <Link
             to="/login"
-            className="mt-4 text-lx font-semibold text-2xl text-white"
+            className="mt-5 text-lx font-semibold text-2xl text-white"
           >
             Login <span aria-hidden="true">&rarr;</span>
           </Link>
-          <Link to="/carrito" className="mt-4 text-lx font-semibold text-2xl text-white">
+          <Link to="/carrito" className="mt-5 text-lx font-semibold text-2xl text-white">
   <FiShoppingCart  className="h-12 w-12 text-white mr-5" aria-hidden="true" /><DisplayProducto />
   
 </Link>
@@ -275,7 +275,7 @@ export default function Header() {
               <div className="py-6">
                 <Link
                   to="/login"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mt-5 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Login
                 </Link>

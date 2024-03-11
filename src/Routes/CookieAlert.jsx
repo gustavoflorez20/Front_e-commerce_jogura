@@ -7,12 +7,12 @@ const CookieAlert = ({ onClose }) => {
     setShow(false);
     onClose(accepted ? 'accept' : 'decline');
 
-    // Guardar la elección del usuario en localStorage
+    // Guarda la elección del usuario en localStorage
     localStorage.setItem('cookieAccepted', accepted ? 'true' : 'false');
   };
 
   useEffect(() => {
-    // Verificar si el usuario ya ha aceptado las cookies
+    // Verifica si el usuario ya ha aceptado las cookies
     const isCookieAccepted = localStorage.getItem('cookieAccepted') === 'true';
     setShow(!isCookieAccepted);
   }, []);

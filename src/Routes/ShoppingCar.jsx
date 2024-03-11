@@ -69,7 +69,7 @@ const DisplayProducto = ({ handleEliminarTodo }) => {
       <p>-Total General: {calcularTotalGeneral()}€</p>
       <br />
       <button
-        className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
+        className="bg-orange-600 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
         onClick={() => handleEliminarTodo()}
       >
         Vaciar Carrito
@@ -129,21 +129,20 @@ const ShoppingCar = () => {
   
 
   return (
-    <div className="mx-auto my-16 p-8 bg-gray-100">
-      <h1 className="text-4xl">Carrito de Compras</h1>
-      
-      <div className="bg-white p-8 rounded-xxl shadow-md border border-black">
+    <div className="container mx-auto my-8 p-8 bg-gray-100">
+      <h1 className="text-center text-3xl text-cyan-900 font-bold mt-10">Carrito de Compras</h1>
+      <div className="gap-6bg-white p-8 rounded-xxl shadow-md border-black mt-10 flex flex-col items-center space-y-4">
         <h1 className="text-3xl font-semibold mb-4"></h1>
         <DisplayProducto handleEliminarTodo={handleEliminarTodo} />
         <button
-          className="bg-orange-500 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-800"
+          className="bg-orange-600 text-white rounded-full px-4 py-2 hover:bg-orange-700 focus:outline-none focus:shadow-outline-purple active:bg-orange-600"
           onClick={handleFinalizarCompra}
         >
           Finalizar Compra
         </button>
         <ToastContainer />
         <div>
-          <p className="mt-4">
+          <p className="mt-4 text-cyan-900 font-bold">
             Explora nuestra tienda y encuentra productos increíbles para agregar
             a tu carrito.
           </p>
